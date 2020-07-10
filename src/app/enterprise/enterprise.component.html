@@ -1,0 +1,649 @@
+<section class="api-landing" id="landing_section" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-6%' }" (inViewportAction)="onIntersection8($event)">
+    <div class="container">
+        <div class="row" >
+            <div class="col-lg-7 text-center">
+                <div class="header-contain">
+                    <p class="api-landing-header">{{apiText.api_header}} <span>{{apiText.api_header_bold}}</span></p>
+                    <p class="api-landing-header-text">{{apiText.api_header_text}}</p>
+
+                    <div class="row link-panel">
+                        <div class="col-lg-5 link-partner-contain">
+                            <a target="_blank" [ngxScrollTo]="partner" class="link-partner">{{apiText.api_partner_text}}</a>
+                        </div>
+                        <div class="col-lg-7 link-doc-contain res-header-doc">
+                            <a target="_blank" target="_blank" href="{{apiText.api_doc_link}}" class="link-doc res-header-link">
+                                {{apiText.api_doc_text}}
+                                <svg width="143" class="arrow" height="8" viewBox="0 0 143 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                    </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 res-landing-asset">
+                <img src="assets/images/money_globe.png" class="api-landing-image">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="api-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" id="parent_sideNav">
+                <div class="row sidenav-fixed" [ngClass] = "{'sticky': isSticky}" id="sideNavContain" >
+                    <div class="col-2" id="sidenav" style="margin-top: 2.5%;margin-bottom: 6.5%;height: 250px;">
+                        <span id="gradDown" class="sidenav-grad-down"></span>
+                        <span id="gradUp" class="sidenav-grad-up"></span>
+                        <div id="bubbleOne" class="sidenav-bubble-one">
+                            <div id="bubbleOneRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleTwo" class="sidenav-bubble-two">
+                            <div id="bubbleTwoRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleThree" class="sidenav-bubble-three">
+                            <div id="bubbleThreeRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleFour" class="sidenav-bubble-four">
+                            <div id="bubbleFourRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleFive" class="sidenav-bubble-five">
+                            <div id="bubbleFiveRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleSix" class="sidenav-bubble-six">
+                            <div id="bubbleSixRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleSeven" class="sidenav-bubble-seven">
+                            <div id="bubbleSevenRing" class="sidenav-ring"></div>
+                        </div>
+                    </div>
+                    <div class="col-10 sidenav-text">
+                        <p class="select" [ngxScrollTo]="wallet" id="wallets" (click)="sideNavAnimate('1','wallets')">WALLETS</p>
+                        <p  id="lending" [ngxScrollTo]="lendings" (click)="sideNavAnimate('2','lending')">LENDING</p>
+                        <p [ngxScrollTo]="borrow" id="borrow" (click)="sideNavAnimate('3','borrow')">BORROWING</p>
+                        <p [ngxScrollTo]="inr" id="inr" (click)="sideNavAnimate('4','inr')">INR FIAT RAILS</p>
+                        <p [ngxScrollTo]="credit" id="credit" (click)="sideNavAnimate('5','credit')">CREDIT ON MATIC</p>
+                        <p [ngxScrollTo]="pricing" id="pricing" (click)="sideNavAnimate('6','pricing')">PRICING</p>
+                        <p [ngxScrollTo]="partner" id="partner" (click)="sideNavAnimate('7','partner')">PARTNER WITH US</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 body-left-padding" >
+                <div class="inner-padding" #wallet></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+                    <div>
+                        <h4>{{apiText.api_wallets_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_wallets_sub_header}}</p>
+                        <p>{{apiText.api_wallets_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_wallets_point_one_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_wallets_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_wallets_point_two_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_wallets_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_wallets_point_three_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_wallets_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_wallets_point_four_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_wallets_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_wallets_point_five_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_wallets_point_five}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_wallets_point_six_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_wallets_point_six}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link ">
+                                <a target="_blank" [ngxScrollTo]="partner" class="link-doc p0">
+                                    {{apiText.api_wallets_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a target="_blank" target="_blank" href="{{apiText.api_wallets_link_two}}" class="link-doc p0">
+                                    {{apiText.api_wallets_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a target="_blank" [ngxScrollTo]="partner" class="link-doc p0 cta-mobile">
+                                    {{apiText.api_wallets_link_one_text}}
+                                </a>
+                            </div>
+                            <div class=" p0 mobile-view-link">
+                                <a target="_blank" target="_blank" href="{{apiText.api_wallets_link_two}}" class="link-doc p0">
+                                    {{apiText.api_wallets_link_two_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #lendings></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
+                    <div>
+                        <h4>{{apiText.api_lending_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_lending_sub_header}}</p>
+                        <p>{{apiText.api_lending_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_lending_point_one_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_lending_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_lending_point_two_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_lending_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_lending_point_three_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_lending_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_lending_point_four_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_lending_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-12 p0">
+                                <h6 class="point-title m-bot-2 point-block">{{apiText.api_lending_rate}}</h6>
+                                <div class="row rates-container-main">
+                                    <div class="rates-container rate1">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/btc.svg">
+                                             <div class="rates-item-text">{{apiText.rate_one_name}}</div>
+                                             <span>{{apiText.lending_rate_btc}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate2">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/eth.svg">
+                                            <div class="rates-item-text">{{apiText.rate_two_name}}</div>
+                                             <span>{{apiText.lending_rate_eth}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate3">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/bat.svg">
+                                            <div class="rates-item-text">{{apiText.rate_three_name}}</div>
+                                             <span>{{apiText.lending_rate_bat}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate4">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/busd.svg">
+                                            <div class="rates-item-text">{{apiText.rate_four_name}}</div>
+                                             <span>{{apiText.lending_rate_busd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate5">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/pax.svg">
+                                            <div class="rates-item-text">{{apiText.rate_five_name}}</div>
+                                             <span>{{apiText.lending_rate_pax}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate6">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" class="rates-item-img" src="assets/svg/tusd.svg">
+                                            <div class="rates-item-text">{{apiText.rate_six_name}}</div>
+                                             <span>{{apiText.lending_rate_tusd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate7">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdc.svg">
+                                            <div class="rates-item-text">{{apiText.rate_seven_name}}</div>
+                                             <span>{{apiText.lending_rate_usdc1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate8">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdt.svg">
+                                            <div class="rates-item-text">{{apiText.rate_eight_name}}</div>
+                                             <span>{{apiText.lending_rate_usdc2}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate9">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xlm.svg">
+                                            <div class="rates-item-text">{{apiText.rate_nine_name}}</div>
+                                             <span>{{apiText.lending_rate_usdc3}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate10">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xrp.svg">
+                                            <div class="rates-item-text">{{apiText.rate_ten_name}}</div>
+                                             <span>{{apiText.lending_rate_usdc4}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0">
+                                    {{apiText.api_lending_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_lending_link_two}}" class="link-doc p0">
+                                    {{apiText.api_lending_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0 cta-mobile">
+                                    {{apiText.api_lending_link_one_text}}
+                                </a>
+                            </div>
+                            <div class=" p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_lending_link_two}}" class="link-doc p0">
+                                    {{apiText.api_lending_link_two_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #borrow></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+                    <div>
+                        <h4>{{apiText.api_borrow_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_borrow_sub_header}}</p>
+                        <p>{{apiText.api_borrow_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_borrow_point_one_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_borrow_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_borrow_point_two_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_borrow_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_borrow_point_three_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_borrow_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_borrow_point_four_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_borrow_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-12 p0">
+                                <h6 class="point-title m-bot-2 point-block">{{apiText.api_borrow_rate}}</h6>
+                                <div class="row rates-container-main">
+                                    <div class="rates-container rate1">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/btc.svg">
+                                            <div class="rates-item-text">{{apiText.rate_one_name}}</div>
+                                             <span>{{apiText.borrow_rate_btc}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate2">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/eth.svg">
+                                            <div class="rates-item-text">{{apiText.rate_two_name}}</div>
+                                             <span>{{apiText.borrow_rate_eth}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate3">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/bat.svg">
+                                            <div class="rates-item-text">{{apiText.rate_three_name}}</div>
+                                             <span>{{apiText.borrow_rate_bat}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate4">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/busd.svg">
+                                            <div class="rates-item-text">{{apiText.rate_four_name}}</div>
+                                             <span>{{apiText.borrow_rate_busd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate5">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/pax.svg">
+                                            <div class="rates-item-text">{{apiText.rate_five_name}}</div>
+                                             <span>{{apiText.borrow_rate_pax}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate6">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/tusd.svg">
+                                            <div class="rates-item-text">{{apiText.rate_six_name}}</div>
+                                             <span>{{apiText.borrow_rate_tusd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate7">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdc.svg">
+                                            <div class="rates-item-text">{{apiText.rate_seven_name}}</div>
+                                             <span>{{apiText.borrow_rate_usdc1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate8">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdt.svg">
+                                            <div class="rates-item-text">{{apiText.rate_eight_name}}</div>
+                                             <span>{{apiText.borrow_rate_usdc2}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate9">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xlm.svg">
+                                            <div class="rates-item-text">{{apiText.rate_nine_name}}</div>
+                                             <span>{{apiText.borrow_rate_usdc3}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate10">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xrp.svg">
+                                            <div class="rates-item-text">{{apiText.rate_ten_name}}</div>
+                                             <span>{{apiText.borrow_rate_usdc4}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0">
+                                    {{apiText.api_borrow_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_borrow_link_two}}" class="link-doc p0">
+                                    {{apiText.api_borrow_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0 cta-mobile">
+                                    {{apiText.api_borrow_link_one_text}}
+                                </a>
+                            </div>
+                            <div class=" p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_borrow_link_two}}" class="link-doc p0">
+                                    {{apiText.api_borrow_link_two_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #inr></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection4($event)">
+                    <div>
+                        <h4>{{apiText.api_inr_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_inr_sub_header}}</p>
+                        <p>{{apiText.api_inr_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_inr_point_one_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_inr_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_inr_point_two_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_inr_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_inr_point_three_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_inr_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_inr_point_four_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_inr_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_inr_point_five_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_inr_point_five}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_inr_point_six_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_inr_point_six}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0">
+                                    {{apiText.api_inr_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_inr_link_two}}" class="link-doc p0">
+                                    {{apiText.api_inr_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0 cta-mobile">
+                                    {{apiText.api_inr_link_one_text}}
+                                </a>
+                            </div>
+                            <div class=" p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_inr_link_two}}" class="link-doc p0">
+                                    {{apiText.api_inr_link_two_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #credit></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection5($event)">
+                    <div>
+                        <h4>{{apiText.api_credit_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_credit_sub_header}}</p>
+                        <p>{{apiText.api_credit_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_credit_point_one_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_credit_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{apiText.api_credit_point_two_tittle}}</h6>
+                                <p class="point-text">{{apiText.api_credit_point_two}}</p>
+                            </div>
+                        </div>
+
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0">
+                                    {{apiText.api_credit_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_credit_link_two}}" class="link-doc p0">
+                                    {{apiText.api_credit_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a [ngxScrollTo]="partner" class="link-doc p0 cta-mobile">
+                                    {{apiText.api_credit_link_one_text}}
+                                </a>
+                            </div>
+                            <div class=" p0 mobile-view-link">
+                                <a target="_blank" href="{{apiText.api_credit_link_two}}" class="link-doc p0">
+                                    {{apiText.api_credit_link_two_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #pricing></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection6($event)">
+                    <div>
+                        <h4>{{apiText.api_pricing_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_pricing_sub_header}}</p>
+                        <p>{{apiText.api_pricing_para}}</p>
+
+                        <div class="row p0 m-top-4">
+                            <div class="p1 text-center height-inherit no-display">
+                                <img src="assets/images/vertical_line.png" style="height: 100px; width: 1px">
+                            </div>
+                            <div class="col-lg-11 height-inherit pricing-grid">
+                                <div class="no-display-pc">
+                                    <img class="mar-left-15" src="assets/images/vertical_line1.png">
+                                </div>
+                                <div>
+                                    <div class="row" style="width: 83%;">
+                                        <p><span class="api-font-color">{{apiText.api_pricing_point_one_bold}}</span>
+                                        {{apiText.api_pricing_point_one}}</p>
+                                    </div>
+                                    <div class="row" style="width: 83%;">
+                                        <p><span class="api-font-color">{{apiText.api_pricing_point_two_bold}}</span>
+                                        {{apiText.api_pricing_point_two}}</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row p0 grid-pricing">
+                            <div class=" p0 m-top-4" style="min-width: 200px;">
+                                <div class="">
+                                    <h6 class="m-bot-2" style="padding-left: 35px;">{{apiText.api_colomn_one_title}}</h6>
+                                    <div class="">
+                                        <p class="grey-left">{{apiText.api_row_one}}</p>
+
+                                        <p class="grey">{{apiText.api_row_two}}</p>
+
+                                        <p class="grey-left">{{apiText.api_row_three}}</p>
+
+                                        <p class="grey">{{apiText.api_row_four}}</p>
+
+                                        <p class="grey-left">{{apiText.api_row_five}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" p0 m-top-4" style="min-width: 476px;margin-right: 25px;">
+                                <div class="">
+                                    <h6 class=" m-bot-2" style="padding-left: 35px;">{{apiText.api_colomn_two_title}}</h6>
+                                    <div class="">
+                                        <p class="grey-right">{{apiText.api_row_two_one}}</p>
+
+                                        <p class="grey">{{apiText.api_row_two_two}}</p>
+
+                                        <p class="grey-right">{{apiText.api_row_two_three}}</p>
+
+                                        <p class="grey">{{apiText.api_row_two_four}}</p>
+
+                                        <p class="grey-right">{{apiText.api_row_two_five}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-bot-2 m-top-4 m-top-50">
+                            <p><span class="api-font-color-alt" [ngxScrollTo]="partner" >{{apiText.api_pricing_para_two_bold}} </span>
+                            {{apiText.api_pricing_para_two}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #partner></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection7($event)">
+                    <div style="width: 100%;">
+                        <h4>{{apiText.api_partner_header}}</h4>
+                        <p class="api-sub-header">{{apiText.api_partner_sub_header}}</p>
+                        <p>{{apiText.api_partner_para}}</p>
+
+                        <div class="row p0 m-top-3">
+                            <div class="col-lg-3 p0-res">
+                                <div class="api-schedule" >
+                                    <a target="_blank" href="http://bit.ly/talktodarshan" class="api-call">{{apiText.api_partner_link_one_text}}</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 p0-res or-section no-display">
+                                <!-- <p>|</p> -->
+                                <p>or</p>
+                                <!-- <p>|</p> -->
+                            </div>
+                            <div class="col-lg-1 p0-res or-section no-display-pc" style="width: max-content;margin: auto;">
+                                <!-- <p>&#x2015; </p> -->
+                                <p>or</p>
+                                <!-- <p> &#x2015;</p> -->
+                            </div>
+                            <div class="col-lg-7 p0-res">
+                                <div class="email-contain">
+                                    <input class="api-email" id="emailInput" placeholder="{{apiText.api_partner_link_two}}">
+                                    <button class="api-submit" (click)="submitEmail()">{{apiText.api_partner_link_two_text}}</button>
+                                </div>
+                                <p *ngIf="isNotEmail" style="padding: 10px 25px 10px 25px;color: black;" id="emailMsg">Please enter a vaild Email ID</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="mobile-sidenav" id="mobile_side">
+    <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="wallet">WALLETS</div>
+    <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="lendings">LENDING</div>
+    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="borrow">BORROWING</div>
+    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="inr">INR FIAT RAILS</div>
+    <div class="mobile-sidenav-header" id="section5_mobile" [ngxScrollTo]="credit">CREDIT ON MATIC</div>
+    <div class="mobile-sidenav-header" id="section6_mobile" [ngxScrollTo]="pricing">PRICING</div>
+    <div class="mobile-sidenav-header" id="section7_mobile" [ngxScrollTo]="partner">PARTNER WITH US</div>
+</div>

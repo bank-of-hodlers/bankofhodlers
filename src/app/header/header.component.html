@@ -1,0 +1,53 @@
+<nav class="navbar navbar-light sticky-top navbar-expand-lg margin-nav" id="main_nav">
+  <a class="navbar-brand" routerLink="/">
+    <img class="logo" src="assets/images/logo.png" alt="Bank of Hodlers">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item" id="/" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+        <a class="nav-link" routerLink="/">{{dyna.home}}</a>
+      </li>
+      <li class="nav-item" id="/about" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">{{dyna.about}}</a>
+      </li>
+      <li class="nav-item" id="/enterprise" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+        <a class="nav-link" routerLink="/enterprise">{{dyna.enterprise}}</a>
+      </li>
+      <li class="nav-item" id="/faq" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+        <a class="nav-link" routerLink="/faq">{{dyna.faq}}</a>
+      </li>
+      <li class="nav-item" id="/market" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+        <a class="nav-link" routerLink="/market">{{dyna.market}}</a>
+      </li>
+      <li class="nav-item" id="/fee" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+        <a class="nav-link" routerLink="/fee">{{dyna.fee}}</a>
+      </li>
+      <li class="nav-item support" id="/telegram" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="hubspotInit()">
+        <a class="nav-link pointer" >
+          <span>
+            <img class="support-img" src="assets/images/support.png" >
+        </span>
+        {{dyna.telegram}}
+      </a>
+      </li>
+      <!-- routerLink="/faq" [queryParams]="{ faq_qid: 'faTrada'}" -->
+    </ul>
+    <div class="navbar-signup" data-toggle="collapse" data-target=".navbar-collapse.show" >{{dyna.signup}}</div>
+  </div>
+</nav>
+
+<div *ngIf="supportActive" class="hs-container">
+  <div (click)="hubspotInit()" class="hs-close">
+    <img class="hs-close-img" src="assets/images/white_close.png" alt="">
+  </div>
+  <div id="hsWidget"></div>
+</div>
+<div *ngIf="isLoading"  class="hs-container loading-container">
+  <div class="loading-sub-container">
+    <img class="loader-logo" src="assets/images/logo_blue.png">
+  </div>
+</div>

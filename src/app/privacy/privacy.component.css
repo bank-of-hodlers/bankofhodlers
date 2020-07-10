@@ -1,0 +1,44 @@
+.text-center{
+    width: max-content;
+    margin: auto;
+}
+
+.margin-top-100{
+    margin-top: 100px;
+}
+.margin-top-30{
+    margin-top: 50px;
+}
+
+.contain{
+    width: 90%;
+}
+
+.text-left-align{
+    text-align: start;
+}
+
+li{
+    margin-bottom: 20px;
+    font-family: RobotoThin;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+h5{
+    margin-bottom: 20px;
+}
+
+.text-bold{
+    font-family: Roboto;
+}
+
+.margin-right-12{
+    margin-right: 12px;
+}
+
+a{
+    text-decoration: none;
+}

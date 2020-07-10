@@ -1,0 +1,301 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'roboto', 'arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+@font-face {
+    font-family:Roboto;
+    src: url("assets/font/Roboto-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family:RobotoLight;
+    src: url("assets/font/Roboto-Light.ttf") format("opentype");
+}
+@font-face {
+    font-family:RobotoBold;
+    src: url("assets/font/Roboto-Bold.ttf") format("opentype");
+}
+@font-face {
+    font-family:RobotoThin;
+    src: url("assets/font/Roboto-Thin.ttf") format("opentype");
+}
+
+:root {
+    /* --main-color:#1E90FF; */
+    /* --main-font-size: calc(.3vw + .3vh + 10px);
+    --main-font-size-header: calc(.3vw + .3vh + 30px);
+    --main-font-size-sub-header: calc(.3vw + .3vh + 14px);
+    --main-font-size-sub-header-two: calc(.3vw + .3vh + 12px);
+    --main-font-size-nav: calc(.3vw + .3vh + 6px); */
+    --main-color:#1E90FF;
+    --main-color-secondary:#4fa6fc ;
+    --main-font-size: 14px;
+    --main-font-size-header: 42px;
+    --main-font-size-header-two: 24px;
+    --main-font-size-sub-header: 18px;
+    --main-font-size-sub-header-two: 16px;
+    --main-font-size-nav: 14px;
+
+    --margin-20:20px;
+    --margin-30:30px;
+    --margin-18:18px;
+    --margin-45:45px;
+    --margin-10:10px;
+
+    --animation-time: 100ms
+  }
+  /* var(--animation-time); */
+
+
+body{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: var(--main-font-size);
+    line-height: 1.75em;
+    letter-spacing: .0825em;
+
+    background: url("assets/images/Ellipse_home.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    background-position-y: 13%;
+}
+
+.body-left-padding{
+    padding-left: 3%;
+}
+
+.container{
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+/* .col-lg-9{
+    padding-left: 9%;
+}
+.col-lg-10{
+    padding-left: 9%;
+} */
+
+.row{
+    margin: 0;
+}
+
+a{
+    outline: 0;
+    text-decoration: none !important;
+    font-size: var(--main-font-size);
+}
+
+
+.center-align{
+    text-align: center;
+}
+
+p{
+    font-family: RobotoThin ;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 0.45px;
+    text-shadow: #fff 0px 1px 1px; */
+}
+
+
+
+.mobile-sidenav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    height: 100%;
+    width: max-content;
+    min-width: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--main-color);;
+    color: white;
+    text-align: center;
+    z-index: 3335;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(31,20,26,0.8071428400461748) 100%);
+    transition: all ease-in-out 250ms;
+    transform: translateX(100%);
+    opacity: .75;
+}
+
+.mobile-sidenav-header{
+    text-align: end;
+    margin: 1vh;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Roboto !important;
+    transition: all ease-in-out 250ms;
+}
+.mobile-sidenav-header:hover{
+    transform: translateX(-8%) scale(1.1);
+}
+
+.hs-container{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1111;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid#f7f8fc;  
+    box-shadow: 0px 0px 24px -13px rgba(0,0,0,0.75);
+}
+
+.hs-close{
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#hubspot-conversations-inline-parent iframe{
+    border-radius: 16px;
+    height: 63vh;
+    outline: none;
+    border: none;  
+    width: 300px;           
+}
+
+.loading-sub-container{
+    width: max-content;
+    margin: auto;
+}
+
+.loader-logo{
+    height: 45px;
+    width: auto;
+    -webkit-animation:wiggle 2s ease-in-out infinite;
+    -moz-animation:wiggle 2s ease-in-out infinite;
+    animation:wiggle 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes wiggle {
+	0% {-webkit-transform:rotate(100deg);}
+	50% {-webkit-transform:rotate(-100deg);}
+	100% {-webkit-transform:rotate(100deg);}
+}
+
+/* firefox */
+@-moz-keyframes wiggle {
+	0% {-moz-transform:rotate(100deg);}
+	50% {-moz-transform:rotate(-100deg);}
+	100% {-moz-transform:rotate(100deg);}
+}
+
+/* anyone brave enough to implement the ideal method */
+@keyframes wiggle {
+	0% {transform:rotate(100deg);}
+	50% {transform:rotate(-100deg);}
+	100% {transform:rotate(100deg);}
+}
+
+.loading-container{
+    border-radius: 16px;
+    height: 64vh;
+    outline: none;
+    border: none;
+    width: 300px; 
+    display: flex;
+    justify-content: center; 
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+    :root {
+        --main-color:#1E90FF;
+        --main-font-size: 14px;
+        --main-font-size-header: 42px;
+        --main-font-size-sub-header: 18px;
+        --main-font-size-sub-header-two: 16px;
+        --main-font-size-nav: 14px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+}
+
+/* @media (min-width: 2161px) {
+    :root {
+        --main-color:#1E90FF;
+        --main-font-size: calc(18px + 0.5vw);
+        --main-font-size-header: 42px;
+        --main-font-size-sub-header: 18px;
+        --main-font-size-sub-header-two: 16px;
+        --main-font-size-nav: 14px;
+    }
+  }
+  
+  @media (max-width: 2160px) {
+    body {
+      font-size: calc(10px + 0.5vw);
+    }
+    :root {
+        --main-color:#1E90FF;
+        --main-font-size: 14px;
+        --main-font-size-header: 42px;
+        --main-font-size-sub-header: 18px;
+        --main-font-size-sub-header-two: 16px;
+        --main-font-size-nav: 14px;
+    }
+  }
+  
+  @media (max-width: 1690px) {
+    body {
+      font-size: calc(8px + 0.5vw);
+    }
+    :root {
+        --main-color:#1E90FF;
+        --main-font-size: 14px;
+        --main-font-size-header: 42px;
+        --main-font-size-sub-header: 18px;
+        --main-font-size-sub-header-two: 16px;
+        --main-font-size-nav: 14px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    body {
+      font-size: 14px;
+    }
+    :root {
+        --main-color:#1E90FF;
+        --main-font-size: 14px;
+        --main-font-size-header: 42px;
+        --main-font-size-sub-header: 18px;
+        --main-font-size-sub-header-two: 16px;
+        --main-font-size-nav: 14px;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    body {
+      font-size: 12px;
+    }
+    :root {
+        --main-color:#1E90FF;
+        --main-font-size: 14px;
+        --main-font-size-header: 42px;
+        --main-font-size-sub-header: 18px;
+        --main-font-size-sub-header-two: 16px;
+        --main-font-size-nav: 14px;
+    }
+  } */

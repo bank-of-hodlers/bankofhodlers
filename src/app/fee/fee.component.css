@@ -1,0 +1,245 @@
+/* Side Nav Css */
+
+.sidenav-fixed{
+    margin-top: 55px;
+    width: 22% !important;
+    position: fixed;
+    top: 100px;
+    /* transform: translate(-110%); */
+    transition: all ease-in-out 800ms;
+    /* display: none; */
+}
+.sidenav-line{
+    width: max-content;
+    margin: auto;
+}
+
+.sidenav-text p{
+    font-size: var(--main-font-size);
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.sidenav-text .select{
+    font-size: var(--main-font-size-sub-header);
+    margin-bottom: 20px;
+    font-family: Roboto;
+}
+
+.sidenav-text .select span{
+    font-family: RobotoThin;
+}
+
+.sidenav-grad-down{
+    height: 0%;
+    display: block;
+    width: 1px;
+    background: linear-gradient(0deg,#1E90FF 0%, #f4fdff 100%);
+    transition: height ease-in var(--animation-time);
+}
+.sidenav-grad-up{
+    height: 100%;
+    display: block;
+    width: 1px;
+    /* margin-top: -6px; */
+    background: linear-gradient(180deg,#1E90FF 0%, #f4fdff 100%);
+    transition: height ease-in var(--animation-time);
+}
+
+.sidenav-bubble-one{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: -121px; */
+    margin-left: -4.5px;
+    background: #1E90FF;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 0%;
+}
+.sidenav-bubble-two{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 34px; */
+    margin-left: -4.5px;
+    background: #9AC6F8;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 45%;
+}
+.sidenav-bubble-three{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 26px; */
+    margin-left: -4.5px;
+    background: #BDD6F6;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 74%;
+}
+.sidenav-bubble-four{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 24px; */
+    margin-left: -4.5px;
+    background: #E3E6F3;;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 97%;
+}
+
+
+.sidenav-ring{
+    border: 0px solid transparent;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    transform: translate(-31%,-30%);
+    transition: border ease-in-out var(--animation-time);
+}
+
+#bubbleFourRing{
+    border: 1px solid #dcf7fd;
+}
+
+.inner-padding{
+    height: 80px;
+}
+
+h4{
+    font-size: var(--main-font-size-header-two) !important;
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+div{
+    font-family: RobotoThin;
+}
+
+span{
+    font-family: RobotoThin;
+    margin-right: 5px;
+}
+
+.grid-header{
+    display: grid;
+    grid-template-areas: "col1 col2 col3 col4 col5 col6 col7" ;
+    grid-template-columns: 18% 11% 15% 14% 12% 15% 15%;
+}
+
+.grid-header-two{
+    display: grid;
+    grid-template-areas: "col1 col2 col3 col4 col5 col6" ;
+    grid-template-columns: 18% 15% 21% 15% 15% 16%;
+}
+
+.grid-header-three{
+    display: grid;
+    grid-template-areas: "col1 col2 col3 col4" ;
+    grid-template-columns: 30% 20% 20% 30%;
+}
+
+.grid-header-four{
+    display: grid;
+    grid-template-areas: "col1 col2 col3 col4" ;
+    grid-template-columns: 10% 30% 30% 30%;
+}
+
+.margin-header-top{
+    padding: 1.5em;
+    -webkit-box-shadow: 0px 10px 20px #F7F8FC;
+    -moz-box-shadow: 0px 10px 2px #F7F8FC;
+    box-shadow: 0px 10px 20px #F7F8FC;
+    border-radius: 16px;
+    border: 1px solid #f7f8fc;
+}
+
+.header-item{
+    margin: auto;
+    margin-left: 0;
+    font-family: Roboto;
+    text-align: end;
+    text-transform: capitalize;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.list-item{
+    display: flex;
+    justify-self: flex-end;
+    text-align: end;
+    margin: auto;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.align-start{
+    text-align: start !important;
+}
+
+.seperator{
+    width: 100%;
+}
+
+.list-contain{
+    margin-top: 1.5em;
+}
+
+.no-display{
+    display: none;
+}
+
+.row{
+    width: 100%;
+}
+
+.flex-rev{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.mt-24{
+    margin-top: 1.5em;
+}
+
+.mt-24 span{
+    font-family: Roboto;
+}
+
+.sideNav-mobile-select{
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.list-min-width{
+    min-width: 900px;
+    overflow: auto;
+}
+
+.scroll-row{
+    overflow: auto;
+    margin-top: 32px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .sidenav-fixed{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+}
+

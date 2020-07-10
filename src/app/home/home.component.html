@@ -1,0 +1,773 @@
+<section class="home-landing" id="home_landing_section" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '0%' }" (inViewportAction)="onIntersection10($event)">
+    <div class="container">
+        <div class="row" >
+            <div class="col-lg-12">
+                <div class="home-tag">
+                    <span><img class="home-mega" src="assets/images/mega_phone.png"></span>
+                    <p [innerHTML]="dynm.home_tag"></p>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="header-contain">
+                    <p class="api-landing-header">{{dynm.home_header_one}} <span>{{dynm.home_header_one_bold}}</span></p>
+                    <div class="api-landing-header-text">{{dynm.home_header_one_cont}}</div>
+                    <a class="home-header-link" href="{{dynm.home_header_link}}">{{dynm.home_header_link_text}}</a>
+                </div>
+            </div>
+            <div class="col-lg-5 res-landing-asset">
+                <img src="assets/images/iPhone_mock.png" class="home-landing-image">
+            </div>
+            <div class="col-lg-2 res-landing-get-started">
+                    <div class="get-started-header">{{dynm.home_header_get_start}}</div>
+                    <div class="get-started-contain">
+                    <div class="get-started-item">
+                        <a href="{{dynm.home_header_get_plat_one_link}} ">
+                            <p>{{dynm.home_header_get_plat_one}}</p> 
+                            <span><img src="assets/images/apple.png"></span>
+                        </a>
+                    </div>
+                    <div class="get-started-item">
+                        <a href="{{dynm.home_header_get_plat_two_link}} ">
+                            <p>{{dynm.home_header_get_plat_two}}</p>
+                            <span><img src="assets/images/android.png"></span>
+                        </a>
+                    </div>
+                    <div class="get-started-item">
+                        <a href="{{dynm.home_header_get_plat_three_link}} ">
+                            <p>{{dynm.home_header_get_plat_three}}</p>
+                            <span><img src="assets/images/desktop.png"></span>
+                        </a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="home-section" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="row sidenav-fixed" id="sideNavContain">
+                    <div class="row" style="width: 100%;">
+                        <div class="col-2" id="sidenav" style="margin-top: 1vh;height: 91%;">
+                            <span id="gradDown" class="sidenav-grad-down"></span>
+                            <span id="gradUp" class="sidenav-grad-up"></span>
+                            <div id="bubbleOne" class="sidenav-bubble-one">
+                                <div id="bubbleOneRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleTwo" class="sidenav-bubble-two">
+                                <div id="bubbleTwoRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleThree" class="sidenav-bubble-three">
+                                <div id="bubbleThreeRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleFour" class="sidenav-bubble-four">
+                                <div id="bubbleFourRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleFive" class="sidenav-bubble-five">
+                                <div id="bubbleFiveRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleSix" class="sidenav-bubble-six">
+                                <div id="bubbleSixRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleSeven" class="sidenav-bubble-seven">
+                                <div id="bubbleSevenRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleEight" class="sidenav-bubble-eight">
+                                <div id="bubbleEightRing" class="sidenav-ring"></div>
+                            </div>
+                            <div id="bubbleNine" class="sidenav-bubble-nine">
+                                <div id="bubbleNineRing" class="sidenav-ring"></div>
+                            </div>
+                            <!-- <div id="bubbleTen" class="sidenav-bubble-ten">
+                                <div id="bubbleTenRing" class="sidenav-ring"></div>
+                            </div> -->
+                        </div>
+                        <div class="col-10 sidenav-text">
+                            <!-- <p class="select font-18" [ngxScrollTo]="sectionOne" id="sectionOne" (click)="sideNavAnimate('1','sectionOne')"><span>OUR</span> PRODUCTS</p> -->
+                            <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne_2" (click)="sideNavAnimate('1','sectionOne_2')">LENDING</p>
+                            <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">BORROWING</p>
+                            <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">TRADE (FIAT)</p>
+                            <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">TRADE (CRYPTO)</p>
+                            <p [ngxScrollTo]="sectionFive" id="sectionFive" (click)="sideNavAnimate('5','sectionFive')">CARDS (INDIA)</p>
+                            <p [ngxScrollTo]="sectionSix" id="sectionSix" (click)="sideNavAnimate('6','sectionSix')">IN THE PIPELINE</p>
+                            <p [ngxScrollTo]="sectionSeven"  id="sectionSeven" (click)="sideNavAnimate('7','sectionSeven')"><span>OUR</span> PARTNERS</p>
+                            <p [ngxScrollTo]="sectionEight"  id="sectionEight" (click)="sideNavAnimate('8','sectionEight')"><span>BOH</span> WORKS</p>
+                            <p [ngxScrollTo]="sectionNine"  id="sectionNine" (click)="sideNavAnimate('9','sectionNine')"><span>WHY</span> US?</p>
+                        </div>
+                    </div>
+                    <!-- <div class="row" style="width: 100%;">
+                        <div class="col-2" id="sidenav" style="margin-top: 1vh;margin-bottom: 5vh;">
+                            <span id="gradDown_2" class="sidenav-grad-down-2"></span>
+                            <span id="gradUp_2" class="sidenav-grad-up-2"></span>
+                        </div>
+                        <div class="col-10 sidenav-text">
+
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+            <div class="col-lg-9 body-left-padding" >
+                <div class="inner-padding" #sectionOne></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection1($event)">
+                    <div>
+                        <h4>{{dynm.api_interest_header_bold}} <span>{{dynm.api_interest_header}}</span></h4>
+                        <p class="api-sub-header">{{dynm.api_interest_para}}</p>
+                        <!-- <p>{{dynm.api_interest_para}}</p> -->
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">
+                                    {{dynm.api_interest_point_one_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_interest_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_interest_point_two_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_interest_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_interest_point_three_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_interest_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_interest_point_four_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_interest_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-12 p0">
+                                <h6 class="point-title m-bot-2 point-block" >{{dynm.api_interest_rate}}</h6>
+                                <div class="row rates-container-main">
+                                    <div class="rates-container rate1">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/btc.svg">
+                                            <div class="rates-item-text">{{dynm.rate_one_name}}</div>
+                                             <span>{{dynm.interest_rate_btc}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate2">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/eth.svg">
+                                            <div class="rates-item-text">{{dynm.rate_two_name}}</div>
+                                             <span>{{dynm.interest_rate_eth}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate3">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/bat.svg">
+                                            <div class="rates-item-text">{{dynm.rate_three_name}}</div>
+                                             <span>{{dynm.interest_rate_bat}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate4">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/busd.svg">
+                                            <div class="rates-item-text">{{dynm.rate_four_name}}</div>
+                                             <span>{{dynm.interest_rate_busd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate5">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/pax.svg">
+                                            <div class="rates-item-text">{{dynm.rate_five_name}}</div>
+                                             <span>{{dynm.interest_rate_pax}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate6">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/tusd.svg">
+                                            <div class="rates-item-text">{{dynm.rate_six_name}}</div>
+                                             <span>{{dynm.interest_rate_tusd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate7">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdc.svg">
+                                            <div class="rates-item-text">{{dynm.rate_seven_name}}</div>
+                                             <span>{{dynm.interest_rate_usdc1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate8">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdt.svg">
+                                            <div class="rates-item-text">{{dynm.rate_eight_name}}</div>
+                                             <span>{{dynm.interest_rate_usdc2}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate9">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xlm.svg">
+                                            <div class="rates-item-text">{{dynm.rate_nine_name}}</div>
+                                             <span>{{dynm.interest_rate_usdc3}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate10">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xrp.svg">
+                                            <div class="rates-item-text">{{dynm.rate_ten_name}}</div>
+                                             <span>{{dynm.interest_rate_usdc4}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link ">
+                                <a href="{{dynm.api_interest_link_one}}" class="link-doc p0">
+                                    {{dynm.api_interest_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <!-- <div class="col-lg-6 p0 mobile-view-link">
+                                <a href="{{dynm.api_interest_link_two}}" class="link-doc p0">
+                                    {{dynm.api_interest_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_interest_link_one}}" class="link-doc p0">
+                                    {{dynm.api_interest_link_one_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                            <!-- <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_interest_link_two}}" class="link-doc p0">
+                                    {{dynm.api_interest_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionTwo></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%'  }" (inViewportAction)="onIntersection2($event)">
+                    <div>
+                        <h4>{{dynm.api_borrow_header_bold}} <span>{{dynm.api_borrow_header}}</span></h4>
+                        <p class="api-sub-header">{{dynm.api_borrow_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_borrow_point_one_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_borrow_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_borrow_point_two_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_borrow_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_borrow_point_three_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_borrow_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_borrow_point_four_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_borrow_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-12 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_borrow_rate}}</h6>
+                                <div class="row rates-container-main">
+                                    <div class="rates-container rate1">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/btc.svg">
+                                            <div class="rates-item-text">{{dynm.rate_one_name}}</div>
+                                             <span>{{dynm.borrow_rate_btc}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate2">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/eth.svg">
+                                            <div class="rates-item-text">{{dynm.rate_two_name}}</div>
+                                             <span>{{dynm.borrow_rate_eth}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate3">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/bat.svg">
+                                            <div class="rates-item-text">{{dynm.rate_three_name}}</div>
+                                             <span>{{dynm.borrow_rate_bat}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate4">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/busd.svg">
+                                            <div class="rates-item-text">{{dynm.rate_four_name}}</div>
+                                             <span>{{dynm.borrow_rate_busd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate5">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/pax.svg">
+                                            <div class="rates-item-text">{{dynm.rate_five_name}}</div>
+                                             <span>{{dynm.borrow_rate_pax}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate6">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/tusd.svg">
+                                            <div class="rates-item-text">{{dynm.rate_six_name}}</div>
+                                             <span>{{dynm.borrow_rate_tusd}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate7">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdc.svg">
+                                            <div class="rates-item-text">{{dynm.rate_seven_name}}</div>
+                                             <span>{{dynm.borrow_rate_usdc1}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate8">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/usdt.svg">
+                                            <div class="rates-item-text">{{dynm.rate_eight_name}}</div>
+                                             <span>{{dynm.borrow_rate_usdc2}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate9">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xlm.svg">
+                                            <div class="rates-item-text">{{dynm.rate_nine_name}}</div>
+                                             <span>{{dynm.borrow_rate_usdc3}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="rates-container rate10">
+                                        <div class="rates-item-contain">
+                                            <img class="rates-item-img" src="assets/svg/xrp.svg">
+                                            <div class="rates-item-text">{{dynm.rate_ten_name}}</div>
+                                             <span>{{dynm.borrow_rate_usdc4}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a href="{{dynm.api_borrow_link_one}}" class="link-doc p0">
+                                    {{dynm.api_borrow_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                            <!-- <div class="col-lg-6 p0 mobile-view-link">
+                                <a href="{{dynm.api_borrow_link_two}}" class="link-doc p0">
+                                    {{dynm.api_borrow_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_borrow_link_one}}" class="link-doc p0">
+                                    {{dynm.api_borrow_link_one_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                            <!-- <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_borrow_link_two}}" class="link-doc p0">
+                                    {{dynm.api_borrow_link_two_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionThree></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+                    <div>
+                        <h4>{{dynm.api_trade_header_bold}} <span>{{dynm.api_trade_header}}</span></h4>
+                        <p class="api-sub-header">{{dynm.api_trade_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_trade_point_one_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_trade_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_trade_point_two_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_trade_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_trade_point_three_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_trade_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_trade_point_four_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_trade_point_four}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_trade_point_five_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_trade_point_five}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_trade_point_six_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_trade_point_six}}</p>
+                            </div>
+                        </div>
+
+                        <p class="api-sub-header font-italc">{{dynm.api_trade_para_last}}</p>
+
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a href="{{dynm.api_trade_link_one}}" class="link-doc p0">
+                                    {{dynm.api_trade_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_trade_link_one}}" class="link-doc p0">
+                                    {{dynm.api_trade_link_one_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionFour></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection4($event)">
+                    <div>
+                        <h4>{{dynm.api_crypto_header_bold}} <span>{{dynm.api_crypto_header}}</span></h4>
+                        <p class="api-sub-header">{{dynm.api_crypto_para}}</p>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_crypto_point_one_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_crypto_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_crypto_point_two_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_crypto_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_crypto_point_three_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_crypto_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_crypto_point_four_tittle}}</h6>
+                                <p class="point-text">{{dynm.api_crypto_point_four}}</p>
+                            </div>
+                        </div>
+
+                        <p class="api-sub-header font-italc" >{{dynm.api_crypto_point_para_last}}</p>
+
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a href="{{dynm.api_crypto_link_one}}" class="link-doc p0">
+                                    {{dynm.api_crypto_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_crypto_link_one}}" class="link-doc p0">
+                                    {{dynm.api_crypto_link_one_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionFive></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection5($event)">
+                    <div>
+                        <h4>{{dynm.api_card_ind_header_bold}} <span>{{dynm.api_card_ind_header}}</span></h4>
+                        <p class="api-sub-header">{{dynm.api_card_ind_para}}</p>
+
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_card_ind_point_one_bold}}</h6>
+                                <p class="point-text">{{dynm.api_card_ind_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_card_ind_point_two_bold}}</h6>
+                                <p class="point-text">{{dynm.api_card_ind_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_card_ind_point_three_bold}}</h6>
+                                <p class="point-text">{{dynm.api_card_ind_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_card_ind_point_four_bold}}</h6>
+                                <p class="point-text">{{dynm.api_card_ind_point_four}}</p>
+                            </div>
+                        </div>
+
+                        <p class="api-sub-header font-italc">{{dynm.api_card_ind_para_last}}</p>
+
+
+                        <div class="row p0 m-top-4 no-display-moblie">
+                            <div class="col-lg-6 p0 mobile-view-link">
+                                <a href="{{dynm.api_card_ind_link_one}}" class="link-doc p0">
+                                    {{dynm.api_card_ind_link_one_text}}
+                                    <svg width="143" style="margin-right: 10px;" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                        </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4 no-display-pc">
+                            <div class=" p0 mobile-view-link">
+                                <a href="{{dynm.api_card_ind_link_one}}" class="link-doc p0">
+                                    {{dynm.api_card_ind_link_one_text}}
+                                    <img class="small-arrow" src="assets/images/arrow _pic.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionSix></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-15%' }" (inViewportAction)="onIntersection6($event)">
+                    <div>
+                        <h4>{{dynm.api_pipeline_header_bold}} <span>{{dynm.api_pipeline_header}}</span></h4>
+                        <p class="api-sub-header">{{dynm.api_pipeline_para}}</p>
+
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_pipeline_point_one_bold}}</h6>
+                                <p class="point-text">{{dynm.api_pipeline_point_one}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_pipeline_point_two_bold}}</h6>
+                                <p class="point-text">{{dynm.api_pipeline_point_two}}</p>
+                            </div>
+                        </div>
+                        <div class="row p0 m-top-4">
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_pipeline_point_three_bold}}</h6>
+                                <p class="point-text">{{dynm.api_pipeline_point_three}}</p>
+                            </div>
+                            <div class="col-lg-6 p0">
+                                <h6 class="point-title m-bot-2">{{dynm.api_pipeline_point_four_bold}}</h6>
+                                <p class="point-text">{{dynm.api_pipeline_point_four}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionSeven></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection7($event)">
+                    <h4 class="center-align-mobile"><span>{{dynm.home_partner_header}} </span> {{dynm.home_partner_header_bold}}</h4>
+
+                    <div class="row p0 m-top-4 m-top-4-2 grid-partners" style="width: 100%;">
+                        <div class="col-lg-3 p0-res" >
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img class="home-partner-img" src="assets/images/partners/lunex_logo_mobile_horizontal.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_one}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p0-res">
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img class="home-partner-img" src="assets/images/partners/BitGo_Wallet.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_two}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p0-res">
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img class="home-partner-img" src="assets/images/partners/copper_logo.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_three}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p0-res">
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img  class="home-partner-img" src="assets/images/partners/binance.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_four}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p0-res">
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img class="home-partner-img" src="assets/images/partners/wazirX-exchange.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_five}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p0-res">
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img class="home-partner-img" src="assets/images/partners/coin_dcx.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_six}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 p0-res">
+                            <div class="partners-contain">
+                                <div class="image-contain-home">
+                                    <img class="home-partner-img" src="assets/images/partners/MobiKwik_Logo.png">
+                                </div>
+                                <p class="home-partner-text">{{dynm.home_partner_seven}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inner-padding" #sectionEight></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection8($event)">
+                    <h4><span>{{dynm.home_liquidity_header}} </span>{{dynm.home_liquidity_header_bold}}</h4>
+                    <p class="api-sub-header">{{dynm.home_liquidity_para}}</p>
+
+                    <div class="row p0 m-top-4">
+                        <!-- <div class="p1 text-center height-inherit no-display">
+                            <img src="assets/images/vertical_line.png" style="height: 93%;">
+                        </div> -->
+                        <div class="col-lg-11 height-inherit">
+                            <div class="">
+                                <img class="mar-left-15" src="assets/images/vertical_line1.png">
+                            </div>
+                            <div class="row" style="width: 83%;">
+                                <p><span class="api-font-color">{{dynm.home_liquidity_point_one_bold}}</span>
+                                {{dynm.home_liquidity_point_one}} <br>
+                                {{dynm.home_liquidity_point_one_cont}}
+                                </p>
+                            </div>
+                            <div class="row" style="width: 83%;">
+                                <p><span class="api-font-color">{{dynm.home_liquidity_point_two_bold}}</span>
+                                    {{dynm.home_liquidity_point_two}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p0 m-top-4 home-info-contain">
+                        <div class="col-lg-12 liquidity-img">
+                            <!-- <img class="liquidity-img" src="assets/images/infographics1.png"> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inner-padding" #sectionNine></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection9($event)">
+                    <h4><span>{{dynm.home_why_header}}</span> {{dynm.home_why_header_bold}}</h4>
+                    <p class="api-sub-header">{{dynm.home_why_para}}</p>
+
+                    <div class="row p0 m-top-4">
+                        <div class="p1 text-center height-inherit no-display why-div-height">
+                            <img src="assets/images/vertical_line1.png" class="vertical-line-home">
+                            <!-- <div class="home-blue-bubble pos-1"></div>
+                            <div class="home-blue-bubble pos-2"></div>
+                            <div class="home-blue-bubble pos-3"></div> -->
+                        </div>
+                        <div class="col-lg-5 height-inherit mobile-grid-liquidity">
+                            <!-- <div class="no-display-pc">
+                                <img src="assets/images/vertical_line1.png">
+                            </div> -->
+                            <div class="row why-grid" >
+                                <div class="col-lg-12">
+                                    <div class="home-blue-bubble no-display-moblie  pos-1"></div>
+                                    <span class="api-font-color api-font-color2 font-sub-header">{{dynm.home_why_point_one_bold}}</span>
+                                    <p class="mt-13">
+                                        {{dynm.home_why_point_one}}
+                                    </p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="home-blue-bubble no-display-moblie  pos-1"></div>
+                                    <span class="api-font-color api-font-color2 font-sub-header">{{dynm.home_why_point_three_bold}}</span>
+                                    <p class="mt-13">
+                                        {{dynm.home_why_point_three}}
+                                    </p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="home-blue-bubble no-display-moblie  pos-1"></div>
+                                    <span class="api-font-color api-font-color2 font-sub-header">{{dynm.home_why_point_five_bold}}</span>
+                                    <p class="mt-13">
+                                        {{dynm.home_why_point_five}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p1 text-center height-inherit no-display why-div-height" >
+                            <img src="assets/images/vertical_line1.png"  class="vertical-line-home">
+                            <!-- <div class="home-blue-bubble pos-1"></div>
+                            <div class="home-blue-bubble pos-2"></div>
+                            <div class="home-blue-bubble pos-3"></div> -->
+                        </div>
+                        <div class="col-lg-5 height-inherit mobile-grid-liquidity">
+                            <!-- <div class="no-display-pc">
+                                <img src="assets/images/vertical_line1.png" >
+                            </div> -->
+                            <div class="row why-grid why-grid-2" >
+                                <div class="col-lg-12">
+                                    <div class="home-blue-bubble no-display-moblie pos-1"></div>
+                                    <span class="api-font-color api-font-color2 font-sub-header">{{dynm.home_why_point_two_bold}}</span>
+                                    <p class="mt-13">
+                                        {{dynm.home_why_point_two}}
+                                    </p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="home-blue-bubble no-display-moblie  pos-1"></div>
+                                    <span class="api-font-color api-font-color2 font-sub-header">{{dynm.home_why_point_four_bold}}</span>
+                                    <p class="mt-13">
+                                        {{dynm.home_why_point_four}}
+                                    </p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="home-blue-bubble no-display-moblie  pos-1"></div>
+                                    <span class="api-font-color api-font-color2 font-sub-header">{{dynm.home_why_point_six_bold}}</span>
+                                    <p class="mt-13">
+                                        {{dynm.home_why_point_six}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p0 m-top-4 home-margin-auto">
+                <div class="col-lg-12">
+                    <p class="para-home-last">
+                        {{dynm.home_last_para}}
+                        <span class="chat-text" (click)="hubspotInit()">{{dynm.home_last_para_click}}</span>
+                        {{dynm.home_last_para_cont}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="mobile-sidenav" id="mobile_side">
+    <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="sectionOne">LENDING</div>
+    <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="sectionTwo">BORROWING</div>
+    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">TRADE (FIAT)</div>
+    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="sectionFour">TRADE (CRYPTO)</div>
+    <div class="mobile-sidenav-header" id="section5_mobile" [ngxScrollTo]="sectionFive">IN THE PIPELINE</div>
+    <div class="mobile-sidenav-header" id="section6_mobile" [ngxScrollTo]="sectionSix">OUR PARTNERS</div>
+    <div class="mobile-sidenav-header" id="section7_mobile" [ngxScrollTo]="sectionSeven">PARTNER WITH US</div>
+    <div class="mobile-sidenav-header" id="section8_mobile" [ngxScrollTo]="sectionEight">HOW BOH WORKS</div>
+    <div class="mobile-sidenav-header" id="section9_mobile" [ngxScrollTo]="sectionNine">WHY US?</div>
+</div>

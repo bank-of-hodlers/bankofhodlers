@@ -1,0 +1,175 @@
+<section class="fee-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="row sidenav-fixed" id="sideNavContain" >
+                    <div class="col-2" id="sidenav" style="margin-top: 1vh;margin-bottom: 3vh;">
+                        <span id="gradDown" class="sidenav-grad-down"></span>
+                        <span id="gradUp" class="sidenav-grad-up"></span>
+                        <div id="bubbleOne" class="sidenav-bubble-one">
+                            <div id="bubbleOneRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleTwo" class="sidenav-bubble-two">
+                            <div id="bubbleTwoRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleThree" class="sidenav-bubble-three">
+                            <div id="bubbleThreeRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleFour" class="sidenav-bubble-four">
+                            <div id="bubbleFourRing" class="sidenav-ring"></div>
+                        </div>
+                    </div>
+                    <div class="col-10 sidenav-text">
+                        <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne" (click)="sideNavAnimate('1','sectionOne')">Deposit & Withdrawals</p>
+                        <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">INR FEES</p>
+                        <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">Trading Fees</p>
+                        <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">Interest Rates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9" >
+                <div class="inner-padding" #sectionOne></div>
+                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+                    <div class="col-lg-12 no-padding">
+                        <h4 class="row"><span>{{dynm.fee_header_one}}</span>  {{dynm.fee_header_one_cont}}</h4>
+
+                        <div class="row scroll-row">
+
+                            <div class="row grid-header margin-header-top list-min-width">
+                                <div class="header-item">Token</div>
+                                <div class="header-item">Network</div>
+                                <div class="header-item">Deposit Fees</div>
+                                <div class="header-item">Minimum Deposit</div>
+                                <div class="header-item">Minimum Fees</div>
+                                <div class="header-item">Minimum Withdrawal</div>
+                                <div class="header-item">Maximum Withdrawal</div>
+                            </div>
+    
+                            <div class="row list-contain list-min-width">
+                                <div class="row" *ngFor="let item of depositWithdrawal; last as isLast">
+                                    <div class="col-sm-12 grid-header">
+                                        <div class="list-item align-start">{{item.token}}</div>
+                                        <div class="list-item align-start">{{item.network}}</div>
+                                        <div class="list-item align-start">{{item.d_fees}}</div>
+                                        <div class="list-item">{{item.min_deposit}}</div>
+                                        <div class="list-item">{{item.w_fees}}</div>
+                                        <div class="list-item flex-rev">{{item.min_withdraw}}</div>
+                                        <div class="list-item flex-rev">{{item.max_withdraw}}</div>
+                                    </div>
+                                    <div class="col-sm-12 no-padding" >
+                                        <img class="seperator" *ngIf="!isLast" src="assets/images/footer_line.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionTwo></div>
+                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection2($event)">
+                    <h4 class="row"><span>{{dynm.fee_header_two}}</span>  {{dynm.fee_header_two_cont}}</h4>
+
+                    <div class="row scroll-row">
+
+                        <div class="row grid-header-two margin-header-top list-min-width">
+                            <div class="header-item">Action </div>
+                            <div class="header-item">Mode</div>
+                            <div class="header-item">Fees</div>
+                            <div class="header-item">Minimum amount</div>
+                            <div class="header-item">maximum amount</div>
+                            <div class="header-item">Maximum Processing Time</div>
+                        </div>
+    
+                        <div class="row list-contain list-min-width">
+                            <div class="row" *ngFor="let item of depositWithdrawalInr; last as isLast">
+                                <div class="col-sm-12 grid-header-two">
+                                    <div class="list-item align-start">{{item.action}}</div>
+                                    <div class="list-item align-start">{{item.mode}}</div>
+                                    <div class="list-item align-start">{{item.fees}}</div>
+                                    <div class="list-item flex-rev">{{item.min_amount}}</div>
+                                    <div class="list-item flex-rev">{{item.max_amount}}</div>
+                                    <div class="list-item flex-rev">{{item.max_pro_time}}</div>
+                                </div>
+                                <div class="col-sm-12 no-padding" >
+                                    <img class="seperator" *ngIf="!isLast" src="assets/images/footer_line.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="inner-padding" #sectionThree></div>
+                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection3($event)">
+                    <h4 class="row"><span>{{dynm.fee_header_three}}</span>  {{dynm.fee_header_three_cont}}</h4>
+
+                    <div class="row scroll-row">
+
+                        <div class="row grid-header-three margin-header-top list-min-width">
+                            <div class="header-item">Pair</div>
+                            <div class="header-item">Maker Fee</div>
+                            <div class="header-item">Taker Fee</div>
+                            <div class="header-item">Minimum Trade Value</div>
+                        </div>
+    
+                        <div class="row list-contain list-min-width">
+                            <div class="row" *ngFor="let item of tradingFee; last as isLast">
+                                <div class="col-sm-12 grid-header-three">
+                                    <div class="list-item align-start">{{item.pair}}</div>
+                                    <div class="list-item align-start">{{item.make_fee}}</div>
+                                    <div class="list-item align-start">{{item.take_fee}}</div>
+                                    <div class="list-item align-start">{{item.min_trade_val}}</div>
+                                </div>
+                                <div class="col-sm-12 no-padding" >
+                                    <img class="seperator" *ngIf="!isLast" src="assets/images/footer_line.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="inner-padding" #sectionFour></div>
+                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection4($event)">
+                    <h4 class="row"><span>{{dynm.fee_header_four}}</span>  {{dynm.fee_header_four_cont}}</h4>
+
+                    <div class="mt-24 row">
+                        <p><span>{{dynm.fee_rate_one}}</span> {{dynm.fee_rate_one_cont}}</p>
+                        <p><span>F{{dynm.fee_rate_two}}</span> {{dynm.fee_rate_two_cont}}</p>
+                        <p><span>{{dynm.fee_rate_three}}</span> {{dynm.fee_rate_three_cont}}</p>
+                    </div>
+
+                    
+                    <div class="row scroll-row" style="margin-top: 15px;">
+                        <div class="row grid-header-four margin-header-top list-min-width">
+                            <div class="header-item" style="padding-left: 0;">Token</div>
+                            <div class="header-item flex-rev">Savings Rate (APR)</div>
+                            <div class="header-item flex-rev">Fixed Deposit Rate (APR)</div>
+                            <div class="header-item flex-rev">Borrowing Rate (APR)</div>
+                        </div>
+    
+                        <div class="row list-contain list-min-width">
+                            <div class="row" *ngFor="let item of interestRates; last as isLast">
+                                <div class="col-sm-12 grid-header-four">
+                                    <div class="list-item align-start">{{item.token}}</div>
+                                    <div class="list-item flex-rev">{{item.sav_rate}}</div>
+                                    <div class="list-item flex-rev">{{item.fd_rate}}</div>
+                                    <div class="list-item flex-rev">{{item.borrow_rate}}</div>
+                                </div>
+                                <div class="col-sm-12 no-padding" >
+                                    <img class="seperator" *ngIf="!isLast" src="assets/images/footer_line.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>           
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="mobile-sidenav" id="mobile_side">
+    <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="sectionOne">Deposit & Withdrawals</div>
+    <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="sectionTwo">Inr Fees</div>
+    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">Trading Fees</div>
+    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="sectionFour">Interest Rates</div>
+</div>

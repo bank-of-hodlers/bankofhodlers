@@ -1,0 +1,182 @@
+<section class="faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="row sidenav-fixed" id="sideNavContain" >
+                    <div class="col-2" id="sidenav" style="margin-top: 1vh;margin-bottom: 3vh;">
+                        <span id="gradDown" class="sidenav-grad-down"></span>
+                        <span id="gradUp" class="sidenav-grad-up"></span>
+                        <div id="bubbleOne" class="sidenav-bubble-one">
+                            <div id="bubbleOneRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleTwo" class="sidenav-bubble-two">
+                            <div id="bubbleTwoRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleThree" class="sidenav-bubble-three">
+                            <div id="bubbleThreeRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleFour" class="sidenav-bubble-four">
+                            <div id="bubbleFourRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleFive" class="sidenav-bubble-five">
+                            <div id="bubbleFiveRing" class="sidenav-ring"></div>
+                        </div>
+                    </div>
+                    <div class="col-10 sidenav-text">
+                        <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne" (click)="sideNavAnimate('1','sectionOne')">Earning Interest</p>
+                        <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">Trading</p>
+                        <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">Deposits & Withdrawals</p>
+                        <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">Fees</p>
+                        <p [ngxScrollTo]="sectionFive" id="sectionFive" (click)="sideNavAnimate('5','sectionFive')">The Company</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9  body-left-padding" >
+                <div class="inner-padding" #sectionOne></div>
+                <div class="row"   inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+                    <div class="col-lg-12">
+
+                        <div class="row">
+                            <div class="searchbar col-lg-6">
+                                <img class="search-icon" src="assets/images/search_icon.png" (click)="searcher()">
+                                <input class="searchfield" id="searchToken" (keyup)="searcher()" placeholder="Search For A Keyword">
+                                <img class="search-close-icon" [@enterAnimation] *ngIf="isSearching" src="assets/images/close.png" (click)="searcherClose()">
+                                <img class="search-close-icon" [@enterAnimation] *ngIf="isSearchingNotFound" src="assets/images/close.png" (click)="searcherClose()">
+                            </div>
+                            <div class="col-lg-5">
+                                <p class="search-help" *ngIf="isSearching"> Showing Questions Related to <span>{{searchToken}}</span> </p>
+                                <p class="search-help" *ngIf="isSearchingNotFound"> No item found for : <span>{{searchToken}}</span> </p>
+                            </div>
+                        </div>
+
+                        <h4 class="faq-header-b-m" *ngIf="isEmptyDisplayFaqEI()"><span>{{dynm.faqs_header_one}}</span> {{dynm.faqs_header_one_cont}}</h4>
+
+                        <div class="row grid-header margin-header-top">
+                            <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" [activeIds]="activeIdsEI" >
+                                <ngb-panel *ngFor="let item of displayFaqEI; let i= index" id="{{item.id}}">
+                                    <ng-template ngbPanelTitle class="back" ngbPanelHeader let-opened="opened">
+                                          <button ngbPanelToggle class="btn btn-link p-0 back">
+                                            <span class="arrow" [ngClass]="{ 'm-r-15'  : opened }">
+                                                <img *ngIf="opened"  class="accor-open"  src="assets/images/accordion_open.png">
+                                                <img *ngIf="!opened"  class="accor-close"  src="assets/images/accordion_close.png">
+                                            </span>  {{item.ques}}
+                                          </button>
+                                    </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    {{item.answer}}
+                                  </ng-template>
+                                </ngb-panel>
+                            </ngb-accordion>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionTwo></div>
+                <div class="row"   inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
+
+                    <div class="col-lg-12" *ngIf="isEmptyDisplayFaqTrad()">
+                        <h4><span>{{dynm.faqs_header_two}}</span> {{dynm.faqs_header_two_cont}}</h4>
+
+                        <div class="row grid-header margin-header-top">
+                            <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" [activeIds]="activeIdsTrad" >
+                                <ngb-panel [@enterAnimation] *ngFor="let item of displayFaqTrad; let i= index" id="{{item.id}}">
+                                    <ng-template ngbPanelTitle class="back" ngbPanelHeader let-opened="opened">
+                                          <button ngbPanelToggle class="btn btn-link p-0 back">
+                                            <span class="arrow" [ngClass]="{ 'm-r-15'  : opened }">
+                                                <img *ngIf="opened" class="accor-open" src="assets/images/accordion_open.png">
+                                                <img *ngIf="!opened" class="accor-close" src="assets/images/accordion_close.png">
+                                            </span>  {{item.ques}}
+                                          </button>
+                                    </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    {{item.answer}}
+                                  </ng-template>
+                                </ngb-panel>
+                            </ngb-accordion>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="inner-padding" #sectionThree></div>
+                <div class="row"   inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+                    <div class="col-lg-12" *ngIf="isEmptyDisplayFaqDepWith()">
+                        <h4><span>{{dynm.faqs_header_three}}</span> {{dynm.faqs_header_three_cont}}</h4>
+
+                        <div class="row grid-header margin-header-top">
+                            <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" [activeIds]="activeIdsDepWith" >
+                                <ngb-panel *ngFor="let item of displayFaqDepWith; let i= index" id="{{item.id}}">
+                                    <ng-template ngbPanelTitle class="back" ngbPanelHeader let-opened="opened">
+                                          <button ngbPanelToggle class="btn btn-link p-0 back">
+                                            <span class="arrow" [ngClass]="{ 'm-r-15'  : opened }">
+                                                <img *ngIf="opened" class="accor-open" src="assets/images/accordion_open.png">
+                                                <img *ngIf="!opened" class="accor-close" src="assets/images/accordion_close.png">
+                                            </span>  {{item.ques}}
+                                          </button>
+                                    </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    {{item.answer}}
+                                  </ng-template>
+                                </ngb-panel>
+                            </ngb-accordion>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionFour></div>
+                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection4($event)">
+                    <div class="col-lg-12" *ngIf="isEmptyDisplayFaqFees()">
+                        <h4><span>{{dynm.faqs_header_five}}</span> {{dynm.faqs_header_five_cont}}</h4>
+
+                        <div class="row grid-header margin-header-top">
+                            <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" [activeIds]="activeIdsFees" >
+                                <ngb-panel *ngFor="let item of displayFaqFees; let i= index" id="{{item.id}}">
+                                    <ng-template ngbPanelTitle class="back" ngbPanelHeader let-opened="opened">
+                                          <button ngbPanelToggle class="btn btn-link p-0 back">
+                                            <span class="arrow" [ngClass]="{ 'm-r-15'  : opened }">
+                                                <img *ngIf="opened" class="accor-open" src="assets/images/accordion_open.png">
+                                                <img *ngIf="!opened" class="accor-close" src="assets/images/accordion_close.png">
+                                            </span>  {{item.ques}}
+                                          </button>
+                                    </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    {{item.answer}}
+                                  </ng-template>
+                                </ngb-panel>
+                            </ngb-accordion>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-padding" #sectionFive></div>
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection5($event)">
+                    <div class="col-lg-12" *ngIf="isEmptyDisplayFaqComp()">
+                        <h4><span>{{dynm.faqs_header_four}}</span> {{dynm.faqs_header_four_cont}}</h4>
+
+                        <div class="row grid-header margin-header-top">
+                            <ngb-accordion [closeOthers]="true" #acc="ngbAccordion" [activeIds]="activeIdsComp" >
+                                <ngb-panel *ngFor="let item of displayFaqComp; let i= index" id="{{item.id}}">
+                                    <ng-template ngbPanelTitle class="back" ngbPanelHeader let-opened="opened">
+                                          <button ngbPanelToggle class="btn btn-link p-0 back">
+                                            <span class="arrow" [ngClass]="{ 'm-r-15'  : opened }">
+                                                <img *ngIf="opened" class="accor-open" src="assets/images/accordion_open.png">
+                                                <img *ngIf="!opened" class="accor-close" src="assets/images/accordion_close.png">
+                                            </span>  {{item.ques}}
+                                          </button>
+                                    </ng-template>
+                                  <ng-template ngbPanelContent>
+                                    {{item.answer}}
+                                  </ng-template>
+                                </ngb-panel>
+                            </ngb-accordion>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="mobile-sidenav" id="mobile_side">
+    <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="sectionOne">Earning Interest</div>
+    <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="sectionTwo">Trading</div>
+    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">Deposits & Withdrawals</div>
+    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="sectionFour">Fees</div>
+    <div class="mobile-sidenav-header" id="section5_mobile" [ngxScrollTo]="sectionFive">The Company</div>
+</div>

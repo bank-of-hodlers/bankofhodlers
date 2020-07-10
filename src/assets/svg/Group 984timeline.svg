@@ -1,0 +1,16 @@
+<svg width="355" height="588" viewBox="0 0 355 588" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.3426 10.6024C58.4564 48.5303 32.4323 68.2739 53.5052 105.999C74.492 143.57 104.713 132.006 125.807 169.515C147.161 207.488 121.149 227.9 142.504 265.872C163.598 303.382 193.873 291.787 214.806 329.388C235.738 366.99 209.878 386.643 230.701 424.305C251.695 462.276 282.433 450.871 303.537 488.781C324.641 526.692 298.698 546.841 319.967 584.658" stroke="url(#paint0_linear)"/>
+<circle r="5.19653" transform="matrix(-0.873738 0.486396 0.486396 0.873738 50.345 98.6668)" fill="white" stroke="#399DFF"/>
+<circle r="7.59538" transform="matrix(-0.873738 0.486396 0.486396 0.873738 37.737 11.0549)" fill="#1E90FF"/>
+<circle r="5.19653" transform="matrix(-0.873738 0.486396 0.486396 0.873738 125.349 167.975)" fill="white" stroke="#5BADFE"/>
+<circle r="5.19653" transform="matrix(-0.873738 0.486396 0.486396 0.873738 142.439 265.765)" fill="white" stroke="#7BBDFE"/>
+<circle r="5.19653" transform="matrix(-0.873738 0.486396 0.486396 0.873738 212.696 326.528)" fill="white" stroke="#98CAFD"/>
+<circle r="5.19653" transform="matrix(-0.873738 0.486396 0.486396 0.873738 230.735 424.319)" fill="white" stroke="#B9DAFD"/>
+<circle r="5.19653" transform="matrix(-0.873738 0.486396 0.486396 0.873738 303.841 488.88)" fill="white" stroke="#D7E9FC"/>
+<defs>
+<linearGradient id="paint0_linear" x1="23.241" y1="18.4526" x2="334.069" y2="576.808" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E90FF"/>
+<stop offset="1" stop-color="#F7F8FC"/>
+</linearGradient>
+</defs>
+</svg>

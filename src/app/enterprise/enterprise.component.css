@@ -1,0 +1,878 @@
+.api-landing{
+    width: 100%;
+    height: 73vh;
+    /* height: 83vh; */
+}
+
+.api-landing-image{
+    width: 96%;
+    height: auto;
+}
+
+.sticky{
+    position: sticky !important;
+    width: 100%;
+}
+
+.api-section{
+    position: relative;
+    top: -1%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.height-inherit{
+    max-height: inherit;
+}
+
+.p1{
+    padding: 0 10px 0 10px;
+}
+
+p{
+    /* color: rgb(117, 117, 117); */
+    font-size: var(--main-font-size);
+    font-weight: 200;
+}
+
+a{
+    color: var(--main-color); ;
+}
+
+
+
+.header-contain{
+    position: relative;
+    top: 25vh;
+    left: 5vw;
+}
+
+.api-landing-header{
+    font-size: var(--main-font-size-header);
+    width: max-content;
+}
+
+.api-landing-header-text{
+    font-size: var(--main-font-size-sub-header);
+    text-align: start;
+    position: relative;
+    top: 20px;
+    line-height: 1.5em;
+    letter-spacing: 1.8px !important;
+}
+
+.api-landing-header span{
+    color: rgba(0, 0, 0, 0.82);
+}
+
+.api-font-color{
+    color: rgba(0, 0, 0, 0.82);
+}
+
+.api-font-color-alt{
+    color: var(--main-color); 
+    cursor: pointer;
+}
+
+.link-panel{
+    position: relative;
+    top: 45px;
+}
+
+.link-partner-contain{
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    max-width: max-content;
+    margin-right: 25px;
+}
+
+.link-partner{
+    background:var(--main-color); ;
+    color:white !important;
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: uppercase;
+    box-shadow: 5px 10px 20px rgba(30, 144, 255, 0.2);
+    cursor: pointer;
+}
+
+/* .link-partner:hover{
+    background:var(--main-color-secondary); ;
+    color:black !important;
+    cursor: pointer;
+    transition: ease-in-out 500ms;
+} */
+
+.link-doc-contain{
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+
+.link-doc{
+    padding: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color) !important;
+    cursor: pointer;
+}
+
+h4{
+    line-height: 1.5em;
+}
+
+.small-arrow{
+    width: 45px;
+    margin-left: 12px;
+    position: relative !important;
+    top: -2px;
+    transition: margin ease-in-out 250ms;
+}
+
+.or-section{
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    flex-direction: row !important;
+}
+
+.or-section p{
+    margin-bottom: 0;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.mar-left-15{
+    margin-left: -15px;
+    margin-top: 5px;
+    width: 1px;
+    position: absolute;
+    height: 85%;
+}
+
+.pricing-grid{
+    display: grid;
+    grid-template-areas: "row1 row2";
+}
+
+.inner-padding{
+    height: 112px;
+}
+
+.h4{
+    font-size: var(--main-font-size-header-two);
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+.p0{
+    padding: 0;
+}
+
+.p-l-35{
+    padding-left: 35px;
+}
+
+.grey-left{
+    background: #F7F8FC;;
+    padding: 15px;
+    margin: 0;
+    padding-left: 35px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.grey-right{
+    background: #F7F8FC;;
+    padding: 15px;
+    margin: 0;
+    padding-left: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.grey{
+    padding: 15px;
+    margin: 0;
+    border-radius: 7px;
+    padding-left: 35px;
+}
+
+.m-top-4{
+    margin-top: 20px;
+}
+
+.m-top-3{
+    margin-top: 30px;
+}
+
+.m-bot-2{
+    margin-bottom: 20px;
+}
+h6{
+    line-height: 1.5em;
+}
+
+.api-sub-header{
+    font-weight: 200;
+    font-size: var(--main-font-size-sub-header);
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+}
+
+.point-title{
+    font-size: var(--main-font-size-sub-header-two);
+}
+
+.point-text{
+    width: 75%;
+    margin-bottom: 15px;
+}
+
+.m-top-50{
+    margin-top: 50px;
+}
+
+.rates-container{
+    width: max-content;
+    box-shadow: 5px 10px 24px #EEF0F8;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    margin: 25px auto 0 0;
+    min-width: 150px;
+    text-align: center;
+}
+
+.rates-container-main{
+    display: grid;
+    grid-template-areas: 
+    "rate1 rate2 rate3 rate4 rate5"
+    "rate6 rate7 rate8 rate9 rate10";
+    margin-bottom: 48px;
+    grid-template-columns:  max-content max-content max-content max-content max-content;
+}
+
+.rates-item-text{
+    width: 50px;
+    margin-left: 5px;
+}
+
+.rates-item-contain {
+	display: grid;
+    grid-template-areas: "col1 col2 col3";
+    grid-template-columns: 30px 50px auto;
+}
+
+.rates-container div{
+    line-height: 33px;
+    text-align: left;
+}
+
+.rates-item-img{
+    position: relative;
+    top: 2px;
+    padding-left: 5%;
+}
+
+.rate1{
+    grid-area: rate1;
+}
+
+.rate2{
+    grid-area: rate2;
+}
+
+.rate3{
+    grid-area: rate3;
+}
+
+.rate4{
+    grid-area: rate4;
+}
+
+.rate5{
+    grid-area: rate5;
+}
+
+.rate6{
+    grid-area: rate6;
+}
+
+.rate7{
+    grid-area: rate7;
+}
+
+.rate8{
+    grid-area: rate8;
+}
+
+.rate9{
+    grid-area: rate9;
+}
+
+.rate10{
+    grid-area: rate10;
+}
+
+.rates-container div span{
+    color: var(--main-color);
+    font-family: RobotoBold;
+}
+
+/* Side Nav Css */
+
+.sidenav-fixed{
+    width: 100%;
+    position: relative;
+    top: 115px;
+    /* transition: transform  ease-in-out 800ms; */
+    transition-property: transform, top;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+    /* display: none; */
+}
+.sidenav-line{
+    width: max-content;
+    margin: auto;
+}
+
+.sidenav-text p{
+    font-size: var(--main-font-size);
+    cursor: pointer;
+    letter-spacing: 0.1em;
+}
+
+.sidenav-text .select{
+    font-size: var(--main-font-size-sub-header);
+    margin-bottom: 20px;
+    font-family: Roboto;
+}
+
+.sidenav-text .select span{
+    font-family: RobotoThin;
+}
+
+.sidenav-grad-down{
+    height: 0%;
+    display: block;
+    width: 1px;
+    background: linear-gradient(0deg,#1E90FF 0%, #f4fdff 100%);
+    transition: height ease-in var(--animation-time);
+}
+.sidenav-grad-up{
+    height: 100%;
+    display: block;
+    width: 1px;
+    /* margin-top: -6px; */
+    background: linear-gradient(180deg,#1E90FF 0%, #f4fdff 100%);
+    transition: height ease-in var(--animation-time);
+}
+
+.sidenav-bubble-one{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: -121px; */
+    margin-left: -4.5px;
+    background: #1E90FF;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 0%;
+}
+.sidenav-bubble-two{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 34px; */
+    margin-left: -4.5px;
+    background: #4FA6FC;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 16%;
+}
+.sidenav-bubble-three{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 26px; */
+    margin-left: -4.5px;
+    background: #8DC0F8;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 33%;
+}
+.sidenav-bubble-four{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 24px; */
+    margin-left: -4.5px;
+    background: #94C5FF;;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 50%;
+}
+.sidenav-bubble-five{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 24px; */
+    margin-left: -4.5px;
+    background: #ABCEF7;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 67%;
+}
+.sidenav-bubble-six{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 24px; */
+    margin-left: -4.5px;
+    background: #CADCF5;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 84%;
+}
+.sidenav-bubble-seven{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* margin-top: 24px; */
+    margin-left: -4.5px;
+    background: #E3E6F3;
+    transition: background ease-in var(--animation-time);
+    position: absolute;
+    top: 100%;
+}
+
+
+.sidenav-ring{
+    border: 0px solid transparent;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    transform: translate(-31%,-30%);
+    transition: border ease-in-out var(--animation-time);
+}
+
+#bubbleSevenRing{
+    border: 1px solid #dcf7fd;
+}
+
+.api-call{
+    padding: 10px 19px 10px 20px;
+    background:var(--main-color); ;
+    color:white;
+    border-radius: 30px;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.api-email{
+    padding: 10px 25px 10px 25px;
+    outline: 0;
+    border: 0;
+    background:#F7F8FC;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 60%;
+}
+
+.api-submit{
+    border: 0;
+    outline: 0;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    background:var(--main-color); ;
+    transform: translateX(-10%);
+    -webkit-box-shadow: 5px 10px 24px rgba(30, 144, 255, 0.2);
+    -moz-box-shadow: 5px 10px 24px rgba(30, 144, 255, 0.2);
+    box-shadow: 5px 10px 24px rgba(30, 144, 255, 0.2);
+    color:white;
+}
+
+.arrow{
+    margin-left: 15px;
+    transition: margin ease-in-out 250ms;
+}
+
+
+.p0-res{
+    padding: 0;
+}
+
+.api-schedule{
+    /* margin: 10px 0px 10px 0px; */
+    cursor: pointer;
+    color:white;
+}
+
+.grid-pricing{
+    display: grid;
+    grid-template-areas: "row1 row 2";
+    overflow: auto;
+}
+
+.mobile-view-link{
+    /* margin: 0px 120px 0px 0px; */
+}
+
+.no-display-pc{
+    display: none;
+}
+
+.bitcoin-arrow{
+    margin-left: 12px;
+    transition: margin ease-in-out 250ms;
+}
+.link-doc:hover > .bitcoin-arrow{
+    margin-left: 20px;
+}
+.link-doc:hover > .arrow{
+    margin-left: 20px;
+}
+.link-doc a{
+    color: var(--main-color) !important;
+    cursor: pointer;
+}
+
+.res-header-doc:hover > .arrow{
+    margin-left: 25px;
+}
+
+
+.sideNav-mobile-select{
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+
+/* Responsive Styles */
+
+@media screen and (max-width: 991px) {
+    .sidenav-fixed{
+        display: none;
+    }
+
+    .res-landing-asset{
+        position: relative;
+        top: 18vh;
+        display: block !important;
+        margin-bottom: 25px;
+    }
+
+    .header-contain{
+        position: relative;
+        top: 25vh;
+        left: 0;
+    }
+
+    .link-partner-contain {
+        margin: auto;
+    }
+
+    
+    .cta-mobile{
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background: var(--main-color);
+        color:white !important;
+        border-radius: 25px;
+        margin-top: 15px !important;
+    }
+
+    .mobile-view-link{
+        width: max-content !important;
+        margin: auto !important;
+        margin-bottom: 30px !important;
+
+    }
+
+    .m-top-50{
+        margin-top: 40px !important;
+    }
+
+    .no-display-pc{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .m-top-4{
+        margin-top: 0px;
+    }
+
+    .m-top-4-2{
+        margin-top: 20px;
+    }
+
+    .point-text{
+        margin-bottom: 20px;
+    }
+
+    .link-doc{
+        width: max-content;
+        margin: auto;
+        display: block;
+    }
+
+    .point-title{
+        display: flex;
+        list-style-type: none;
+        list-style-position: inside;
+    }
+    .point-title::before{
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--main-color); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        font-size: 1.5em;
+        position: relative;
+        top: 3px;
+    }
+
+    .api-font-color2{
+        display: list-item;
+        list-style-type: none;
+        list-style-position: inside;
+    }
+    .api-font-color2::before{
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--main-color); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        font-size: 1.5em;
+        margin-left: -1em;
+        position: relative;
+        top: 3px;
+    }
+
+    .point-block{
+        display: block;
+    }
+
+    .point-block::before{
+        content: "";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--main-color); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        font-size: 1.5em;
+        margin-left: -1em;
+        position: relative;
+        top: 3px;
+    }
+
+    .api-schedule{
+        width: max-content;
+        margin: auto;
+    }
+
+    .point-text{
+        margin-left: 25px;
+        margin-top: -10px;
+    }
+    .p0-res{
+        padding-bottom: 30px;
+    }
+
+    .api-email{
+        width: calc(100% - 102px);
+    }
+
+    .no-display{
+        display: none;
+    }
+
+    .no-display-moblie{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 770px) {
+    .rates-container-main{
+        display: grid;
+        grid-template-areas: 
+        "rate1 rate2 rate3" 
+        "rate4 rate5 rate6"
+        "rate7 rate8 rate9"
+        "rate10 rate11 rate12" !important;
+        grid-template-rows: 
+        auto auto auto;
+        grid-template-columns: auto auto auto;
+    }
+
+    .point-block{
+        display: block;
+    }
+
+    .rates-container div {
+        text-align: left;
+        padding-left: 4%;
+    }
+
+    .rates-container{
+        min-width: 150px;
+    }
+
+
+
+    .link-partner-contain{
+        width: max-content;
+        margin: auto;
+    }
+
+    .no-display{
+        display: none;
+    }
+
+    .no-display-moblie{
+        display: none;
+    }
+
+
+    .res-landing-asset{
+        position: relative;
+        top: 18vh;
+        display: block !important;
+    }
+
+    .header-contain{
+        position: relative;
+        top: 10vh;
+        left: 0vw;
+    }
+
+    .arrow{
+        margin-left: 0px;
+    }
+
+    .api-landing-header{
+        width: 83vw;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    .api-landing-header-text{
+        width: 83vw;
+        text-align: center;
+    }
+
+    .p0-res{
+        padding-bottom: 30px;
+    }
+
+    .grid-pricing{
+        width: 83vw;
+    }
+
+    .sidenav-fixed{
+        display: none;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .bitcoin-arrow{
+        display: none;
+    }
+
+    .res-header-doc{
+        /* margin-top: 35px; */
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .api-landing{
+        height: auto;
+        margin-bottom: 70px;
+    }
+
+    .res-header-link{
+        /* padding-left: 0px; */
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    .rates-container-main{
+        display: grid;
+        grid-template-areas: 
+        "rate1 rate2" 
+        "rate3 rate4"
+        "rate5 rate6"
+        "rate7 rate8" 
+        "rate9 rate10" 
+        "rate11 rate12" !important;
+        grid-template-rows: 
+        auto auto;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+    .api-email{
+        width: 65%;
+    }
+
+    .email-contain{
+        width: max-content; 
+        margin: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 350px) {
+    .rates-container-main{
+        display: grid;
+        grid-template-areas: 
+        "rate1" 
+        "rate2" 
+        "rate3" 
+        "rate4"
+        "rate5" 
+        "rate6"
+        "rate7" 
+        "rate8" 
+        "rate9" 
+        "rate10" 
+        "rate11" 
+        "rate12" !important;
+        grid-template-rows: 
+        auto;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .res-landing-asset {
+        position: relative;
+        top: 14vh;
+        display: block !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1280px) {
+    .api-landing{
+        height: max-content;
+    }
+
+    .api-landing-image{
+        left: 7%;
+        position: relative;
+    }
+}

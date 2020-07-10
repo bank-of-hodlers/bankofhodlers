@@ -1,0 +1,609 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="container">
+                <div class="row sidenav-fixed" id="sideNavContain" >
+                    <div class="col-2" id="sidenav" style="margin-bottom: 8%;margin-top: 3%;height: 128px;">
+                        <span id="gradDown" class="sidenav-grad-down"></span>
+                        <span id="gradUp" class="sidenav-grad-up"></span>
+                        <div id="bubbleOne" class="sidenav-bubble-one">
+                            <div id="bubbleOneRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleTwo" class="sidenav-bubble-two">
+                            <div id="bubbleTwoRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleThree" class="sidenav-bubble-three">
+                            <div id="bubbleThreeRing" class="sidenav-ring"></div>
+                        </div>
+                        <div id="bubbleFour" class="sidenav-bubble-four">
+                            <div id="bubbleFourRing" class="sidenav-ring"></div>
+                        </div>
+                    </div>
+                    <div class="col-10 sidenav-text">
+                        <p class="select" id="story" [ngxScrollTo]="story" (click)="sideNavAnimate('0','story')">THE <span class="active">STORY</span></p>
+                        <p [ngxScrollTo]="exe" id="exe" (click)="sideNavAnimate('34','exe')">THE <span class="active">EXECUTION</span></p>
+                        <p [ngxScrollTo]="team" id="team" (click)="sideNavAnimate('68','team')">OUR <span class="active">TEAM</span></p>
+                        <p [ngxScrollTo]="invest" id="invest" (click)="sideNavAnimate('100','invest')">OUR <span class="active">INVESTORS</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10 body-left-padding">
+            
+            <div #story></div>
+            <section inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+                    <div class="container story-origin">
+                        <div class="row margin-top-about">
+                            <div class="col-lg-5 left-align no-display">
+                                <div>
+                                    <h4 [innerHTML]="dynm.story_Header"></h4>
+                                    <p [innerHTML]="dynm.story_para_one"></p>
+                                </div>
+                                <div class="story-point-two">
+                                    <p>{{dynm.story_point_two_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_two_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_two_c"></p>
+                                </div>
+                                <div class="story-point-four">
+                                    <p>{{dynm.story_point_four_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_four_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_four_c"></p>
+                                </div>
+                
+                            </div>
+                            <div class="col-lg-1 center-align no-display" style="margin-top: 10px;" >
+                                <img style="margin-top: 115px;" src="assets/images/cuve_divider.png">
+                            </div>
+                            <div class="col-lg-5 right-align no-display">
+                                <div class="story-point-one">
+                                    <p>{{dynm.story_point_one_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_one_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_one_c"></p>
+                                </div>
+                                <div class="story-point-three">
+                                    <p>{{dynm.story_point_three_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_three_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_three_c"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 right-align no-display-pc">
+                                <div>
+                                    <h4 [innerHTML]="dynm.story_Header"></h4>
+                                    <p [innerHTML]="dynm.story_para_one"></p>
+                                </div>
+                                <div class="story-point-one">
+                                    <p>{{dynm.story_point_one_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_one_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_one_c"></p>
+                                </div>
+                                <div class="story-point-two">
+                                    <p>{{dynm.story_point_two_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_two_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_two_c"></p>
+                                </div>
+                                <div class="story-point-three">
+                                    <p>{{dynm.story_point_three_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_three_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_three_c"></p>
+                                </div>
+                                <div class="story-point-four">
+                                    <p>{{dynm.story_point_four_a}}</p>
+                                    <p class="story-bold">{{dynm.story_point_four_b}}</p>
+                                    <p [innerHTML]="dynm.story_point_four_c"></p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 center-align origin-header-two">
+                                <p class="font-two font-18" [innerHTML]="dynm.story_para_two"></p>
+                                <p class="story-bold para_three">{{dynm.story_para_three}}</p>
+                            </div>
+                        </div>
+                
+                
+                    </div>
+
+                    <div class="container story-origin" >
+                        <div class="row">
+                            <h4 class="origin-header">{{dynm.origin_header}}</h4>    
+                        </div>
+                        <div class="row">
+                            <p class="origin-para font-two font-18" [innerHTML]="dynm.origin_para_one"></p>
+                        </div>
+                        <div class="row">
+                            <p class="origin-para">
+                                {{dynm.origin_para_two}}
+                                <span class="origin-points">        
+                                    {{dynm.origin_para_two_bold}}
+                                </span>
+                                {{dynm.origin_para_two_cont}}
+                            </p>
+                        </div>
+                        <div class="row origin-margin">
+                            <div class="col-lg-6 origin-video-padding" >
+                                <div class="origin-video-block">
+                                    <!-- <img src="" alt="Alan Greenspan"> -->
+                                    <!-- <iframe 
+                                    src="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                                    </iframe>  -->
+                                    <iframe class="origin-video" src="https://www.youtube.com/embed/Cu61qgp6XoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <!-- <iframe class="origin-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6 origin-padding">
+                                <p [innerHTML]="dynm.origin_para_three"></p>
+                                <p [innerHTML]="dynm.origin_para_four"></p>
+                            </div>
+                        </div>
+                        <div class="row bitcoin-link">
+                            <a href="assets/doc/bitcoin.pdf" download> 
+                                HERE'S THE BITCOIN WHITEPAPER 
+                                <svg width="143" height="8" viewBox="0 0 143 8" fill="none" class="bitcoin-arrow" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M142.354 4.35354C142.549 4.15828 142.549 3.8417 142.354 3.64643L139.172 0.464454C138.976 0.269192 138.66 0.269192 138.464 0.464454C138.269 0.659716 138.269 0.976299 138.464 1.17156L141.293 3.99999L138.464 6.82841C138.269 7.02368 138.269 7.34026 138.464 7.53552C138.66 7.73078 138.976 7.73078 139.172 7.53552L142.354 4.35354ZM4.37114e-08 4.5L142 4.49999L142 3.49999L-4.37114e-08 3.5L4.37114e-08 4.5Z" fill="#1E90FF"/>
+                                    </svg>
+                            </a>
+                        </div>
+                
+                        <div class="row margin-top-about">
+                            <div class="origin-header-two row">
+                                <h4 class="origin-header">{{dynm.origin_header_two}}</h4>
+                                <p [innerHTML]="dynm.origin_para_five"></p>
+                                <p class="origin-pointer font-18" [innerHTML]="dynm.origin_para_six"></p>
+                            </div>
+                            <div class="col-lg-1 origin-header-two center-align vertical-line">
+                                <img class="vert-line" src="assets/images/vertical_line.png" >
+                            </div>
+                            <div class="col-lg-8 origin-header-two no-padding" >
+                                <div class="no-display-pc">
+                                    <img class="mar-left-15" src="assets/images/vertical_line1.png">
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <p class="no-margin-bottom">{{dynm.origin_para_six_a_1}}</p>
+                                        <p class="origin-points">{{dynm.origin_para_six_a_2}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <p class="no-margin-bottom">{{dynm.origin_para_six_b_1}}</p>
+                                        <p class="origin-points">{{dynm.origin_para_six_b_2}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row origin-header-two">
+                                <div class="row">
+                                    <p [innerHTML]="dynm.origin_para_seven"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container story-origin ">
+                        <div class="row margin-top-about">
+                            <div class="row origin-margin">
+                                <div class="col-2 origin-logo-img-contain">
+                                    <img class="origin-logo-img" src="assets/images/logo_blue.png">
+                                </div>
+                                <div class="col-10">
+                                    <h4 class="origin-text-middle">{{dynm.story_three_header}}</h4>
+                                </div>
+                            </div>
+                            <div class="row origin-header-two">
+                                <p>
+                                    {{dynm.story_three_para_one}} 
+                                    <span class="origin-points">        
+                                        {{dynm.story_three_para_one_bold}}
+                                    </span>
+                                    <span [innerHTML]="dynm.story_three_para_one_cont"></span>
+                                </p>
+                            </div>
+                            <div class="row origin-header-two origin-font-20">
+                                <p class="font-18">
+                                    {{dynm.story_three_para_two}} 
+                                    <span class="origin-points font-18 font-light">        
+                                        {{dynm.story_three_para_two_bold}}
+                                    </span>
+                                     {{dynm.story_three_para_two_cont}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1  origin-header-two center-align vertical-line">
+                                <img class="vert-line" src="assets/images/vertical_line.png">
+                            </div>
+                            <div class="col-lg-5  origin-header-two no-padding">
+                                <p class="origin-points origin-font-20 font-16" [innerHTML]="dynm.story_three_para_points_one_title"></p>
+                                <p [innerHTML]="dynm.story_three_para_points_one"></p>
+                                <p class="origin-points origin-font-20 font-16"  [innerHTML]="dynm.story_three_para_points_two_title"></p>
+                                <p [innerHTML]="dynm.story_three_para_points_two"></p>
+                            </div>
+                            <div class="col-lg-1  origin-header-two center-align vertical-line">
+                                <img class="vert-line" src="assets/images/vertical_line.png">
+                            </div>
+                            <div class="col-lg-5  origin-header-two no-padding">
+                                <p class="origin-points origin-font-20 font-16" [innerHTML]="dynm.story_three_para_points_three_title"></p>
+                                <p [innerHTML]="dynm.story_three_para_points_three"></p>
+                                <p class="origin-points origin-font-20 font-16" [innerHTML]="dynm.story_three_para_points_four_title"></p>
+                                <p [innerHTML]="dynm.story_three_para_points_four"></p>
+                            </div>
+                        </div>
+                        <div class="row origin-header-two">
+                            <div>
+                                <p class="font-two font-18">
+                                    {{dynm.story_three_para_three}}
+                                    <span class="origin-points font-18 font-light" [innerHTML]="dynm.story_three_para_three_bold"></span>
+                                    {{dynm.story_three_para_three_cont}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container origin-header-two">
+                            <div class="row origin-padding origin-qoute-contain">
+                                <img class="origin-img" src="assets/images/quote.png">
+                                <p class="origin-qoute font-18  font-two" [innerHTML]="dynm.story_three_qoute"></p>
+                                <img class="origin-img left-origin-padding" src="assets/images/quote_close.png">
+                            </div>
+                            <div class="row origin-padding origin-qoute-margin-top">
+                                <div>
+                                    <p class="origin-points origin-qoute-margin font-normal-2 no-margin-bottom" [innerHTML]="dynm.story_three_qouter"></p>
+                                    <p class="origin-qoute-margin font-normal-2"[innerHTML]="dynm.story_three_cred"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+
+            
+            <div class="inner-padding" #exe></div>
+            <section  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
+                <div class="container story-origin">
+                    <div class="row origin-header-two">
+                        <h4 class="origin-header" [innerHTML]="dynm.exe_header"></h4>
+                    </div>
+                    <div class="row origin-header-two">
+                        <p [innerHTML]="dynm.exe_para_one"></p>
+                    </div>
+                    <div class="row origin-header-two origin-font-20">
+                        <div>
+                            <p class="font-18 no-margin">{{dynm.exe_para_two}} <span class="origin-points font-light font-18" [innerHTML]="dynm.exe_para_two_bold"></span></p>
+                            <p class="font-18">{{dynm.exe_para_two_cont}}</p>
+                        </div>
+                    </div>
+                    <div class="row background-image-center grid-system display-pc">
+                        <div class="point1" ></div>
+                        <div class="point2 exe-point-one no-display-pc-2" >
+                            <p class="origin-points font-18">{{dynm.exe_time_one_title}}</p>
+                            <p>{{dynm.exe_time_one}}</p>
+                        </div>
+                        <div class="point3 exe-point-two no-display-pc-2" >
+                            <p class="origin-points font-18">{{dynm.exe_time_two_title}}</p>
+                            <p>{{dynm.exe_time_two}}</p>
+                        </div>
+                        <div class="point4" ></div>
+                        <div class="point5" ></div>
+                        <div class="point6 exe-point-three no-display-pc-2" >
+                            <p class="origin-points font-18">{{dynm.exe_time_three_title}}</p>
+                            <p>{{dynm.exe_time_three}}</p>
+                        </div>
+                        <div class="point7 exe-point-four no-display-pc-2" >
+                            <p class="origin-points font-18">{{dynm.exe_time_four_title}}</p>
+                            <ul style="list-style:none;" >
+                                <li *ngFor="let item of dynm.exe_time_four;" [innerHTML]="item"></li>
+                            </ul>
+                        </div>
+                        <div class="point8" ></div>
+                        <div class="point9" ></div>
+                        <div class="point10 exe-point-five no-display-pc-2" >
+                            <p class="origin-points font-18 ">{{dynm.exe_time_five_title}}</p>
+                            <ul style="list-style:none;" >
+                                <li *ngFor="let item of dynm.exe_time_five;" [innerHTML]="item"></li>
+                            </ul>
+                        </div>
+                        <div class="point11 exe-point-six no-display-pc-2" >
+                            <p class="origin-points font-18 ">{{dynm.exe_time_six_title}}</p>
+                            <ul style="list-style:none;" >
+                                <li *ngFor="let item of dynm.exe_time_six;" [innerHTML]="item"></li>
+                            </ul>
+                        </div>
+                        <div class="point12" ></div>
+                        <div class="point13" ></div>
+                        <div class="point14 exe-point-seven no-display-pc-2" >
+                            <p class="origin-points font-18 ">{{dynm.exe_time_seven_title}}</p>
+                            <ul style="list-style:none;" >
+                                <li *ngFor="let item of dynm.exe_time_seven;" [innerHTML]="item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row display-mob">
+                        <div class="mobile-vert-line-contain">
+                            <img class="mobile-vertical-line" src="assets/images/vertical_line1.png">
+                            <!-- <div class="about-blue-bubble pos-1"></div>
+                            <div class="about-blue-bubble pos-2"></div>
+                            <div class="about-blue-bubble pos-3"></div>
+                            <div class="about-blue-bubble pos-4"></div>
+                            <div class="about-blue-bubble pos-5"></div>
+                            <div class="about-blue-bubble pos-6"></div>
+                            <div class="about-blue-bubble pos-7"></div> -->
+                        </div>
+                        <div class="mobile-points">
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_one_title}}
+                                </p>
+                                <p>{{dynm.exe_time_one}}</p>
+                            </div>
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_two_title}}</p>
+                                <p>{{dynm.exe_time_two}}</p>
+                            </div>
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_three_title}}</p>
+                                <p>{{dynm.exe_time_three}}</p>
+                            </div>
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_four_title}}</p>
+                                <ul style="list-style:none;" >
+                                    <li *ngFor="let item of dynm.exe_time_four_two_mobile;" [innerHTML]="item"></li>
+                                </ul>
+                            </div>
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_five_title}}</p>
+                                <ul style="list-style:none;" >
+                                    <li *ngFor="let item of dynm.exe_time_five_mobile;" [innerHTML]="item"></li>
+                                </ul>
+                            </div>
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_six_title}}</p>
+                                <ul style="list-style:none;" >
+                                    <li *ngFor="let item of dynm.exe_time_six_two_mobile;" [innerHTML]="item"></li>
+                                </ul>
+                            </div>
+                            <div class="" >
+                                <p class="origin-points">
+                                    <span class="about-blue-bubble pos-1"></span>
+                                    {{dynm.exe_time_seven_title}}</p>
+                                <ul style="list-style:none;" >
+                                    <li *ngFor="let item of dynm.exe_time_seven_mobile;" [innerHTML]="item"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="inner-padding" #team></div>
+            <section inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+                <div class="container story-origin">
+                    <div class="row">
+                        <h4>{{dynm.team_header}}</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img src="{{dynm.team_one_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_one_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_one_position}}</p>
+                            <span class="team-social">
+                                <a href="{{dynm.team_one_link_linkedin}}"><img class="team-social-indi" src="assets/images/twitter.png"></a>
+                                <a href="{{dynm.team_one_link_twitter}}"><img class="team-social-indi no-margin"  src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img src="{{dynm.team_two_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_two_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_two_position}}</p>
+                            <span class="team-social">
+                                <a href="{{dynm.team_two_link_linkedin}}"><img class="team-social-indi" src="assets/images/twitter.png"></a>
+                                <a href="{{dynm.team_two_link_twitter}}"><img class="team-social-indi no-margin" src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img src="{{dynm.team_three_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_three_name}}</p>
+                            <p class="font-normal font-thin">{{dynm.team_three_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_three_link_linkedin}}"><img class="team-social-indi no-margin" src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img src="{{dynm.team_four_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_four_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_four_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi " src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_four_link_linkedin}}"><img class="team-social-indi no-margin" src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img src="{{dynm.team_five_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_five_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_five_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_five_link_linkedin}}"><img class="team-social-indi no-margin" src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img class="padding-3" src="{{dynm.team_six_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_six_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_six_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_six_link_linkedin}}"><img class="team-social-indi no-margin" src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img class="padding-3" src="{{dynm.team_seven_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_seven_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_seven_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_seven_link_linkedin}}"><img class="team-social-indi no-margin" src="assets/images/instagram.png"></a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img class="padding-3" src="{{dynm.team_eight_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_eight_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_eight_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_eight_link_apply_now}}" class="site-links">APPLY NOW</a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img class="padding-3" src="{{dynm.team_nine_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_nine_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_nine_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_nine_link_apply_now}}" class="site-links">APPLY NOW</a>
+                            </span>
+                        </div>
+                        <div class="col-lg-3 center-align origin-header-two">
+                            <div class="team-image">
+                                <img class="padding-3" src="{{dynm.team_ten_image}}">
+                            </div>
+                            <p class="origin-font-20-2 origin-points team-bottom-margin-2">{{dynm.team_ten_name}}</p>
+                            <p class="font-normal font-thin team-bottom-margin">{{dynm.team_ten_position}}</p>
+                            <span class="team-social">
+                                <!-- <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a> -->
+                                <a href="{{dynm.team_ten_link_apply_now}}" class="site-links">APPLY NOW</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="inner-padding" #invest></div>
+            <section inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection4($event)">
+                <div class="container story-origin">
+                    <div class="row">
+                        <div class="row">
+                            <h4 class="inveset-header">{{dynm.inv_header}}</h4>
+                        </div>
+                        <div class="row">
+                            <div class="row inveset-header inveset-header-mob">
+                                <div class="col-lg-6 no-padding">
+                                    <div class="row">
+                                        <div class="img-contain no-padding">
+                                            <img class="invest-image" src="{{dynm.inv_one_image}}">
+                                        </div>
+                                        <div class="col-sm-8 no-padding">
+                                            <p class="origin-points origin-font-20-2 team-bottom-margin-2">{{dynm.inv_one_name}}</p>
+                                            <p class="team-bottom-margin">{{dynm.inv_one_position}}</p>
+                                            <span>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/instagram.png"></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <p class="para-on-mobile">{{dynm.inv_one_desc}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 no-padding">
+                                    <div class="row">
+                                        <div class="img-contain no-padding">
+                                            <img class="invest-image" src="{{dynm.inv_two_image}}">
+                                        </div>
+                                        <div class="col-sm-8 no-padding">
+                                            <p class="origin-points origin-font-20-2 team-bottom-margin-2">{{dynm.inv_two_name}}</p>
+                                            <p class="team-bottom-margin">{{dynm.inv_two_position}}</p>
+                                            <span>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/instagram.png"></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <p class="para-on-mobile">{{dynm.inv_two_desc}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row inveset-header inveset-header-mob">
+                                <div class="col-lg-6 no-padding">
+                                    <div class="row">
+                                        <div class="img-contain no-padding">
+                                            <img class="invest-image" src="{{dynm.inv_three_image}}">
+                                        </div>
+                                        <div class="col-sm-8 no-padding">
+                                            <p class="origin-points origin-font-20-2 team-bottom-margin-2">{{dynm.inv_three_name}}</p>
+                                            <p class="team-bottom-margin">{{dynm.inv_three_position}}</p>
+                                            <span>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/instagram.png"></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <p class="para-on-mobile">{{dynm.inv_three_desc}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 no-padding">
+                                    <div class="row">
+                                        <div class="img-contain no-padding">
+                                            <img class="invest-image" src="{{dynm.inv_four_image}}">
+                                        </div>
+                                        <div class="col-sm-8 no-padding">
+                                            <p class="origin-points origin-font-20-2 team-bottom-margin-2">{{dynm.inv_four_name}}</p>
+                                            <p class="team-bottom-margin">{{dynm.inv_four_position}}</p>
+                                            <span>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/twitter.png"></a>
+                                                <a href="#"><img class="team-social-indi" src="assets/images/instagram.png"></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <p class="para-on-mobile">{{dynm.inv_four_desc}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="mobile-sidenav" id="mobile_side">
+    <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="story">The Story</div>
+    <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="exe">The Execution</div>
+    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="team">Our Team</div>
+    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="invest">Our Investors</div>
+</div>
+

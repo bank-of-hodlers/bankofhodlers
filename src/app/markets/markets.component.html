@@ -1,0 +1,154 @@
+<section class="markets-section">
+    <div class="container">
+        <div class="row card">
+            <div class="col-lg-12 no-padding">
+                <div id="sideNavContain"></div>
+                <div class="row market-grid">
+
+                    <div class="col-sm-6 mt-1">
+                        <div class="row" style="width: max-content;">
+                          <div class="col-8 filters no-padding">
+                              <div class="font-normal" [ngClass]="{'select': item ==='ALL'}" *ngFor="let item of mainFilterArray" id="{{item}}" (click)="filterSelector(item)">{{item}}</div>
+                            </div>
+                        </div>
+                      </div>
+                    <div class="col-6 search mt-1">
+                        <div class="searchbar">
+                            <img class="search-icon" src="assets/images/search_icon.png" (click)="searcher()">
+                            <input class="searchfield" id="searchToken" (keyup)="searcher()" placeholder="Search All Tokens">
+                        </div>
+                        <!-- <select class="option" (change)="convert($event.target.value)">
+                            <option *ngFor="let cur of currencyArray" >{{cur.name}}</option>
+                        </select> -->
+
+                        <!-- <div class="col"> -->
+                            <div ngbDropdown class="d-inline-block ">
+                              <button class="option dropdown-toggle dropdown-menu-right" id="dropdownBasic1" ngbDropdownToggle>{{dropDownItem}}</button>
+                              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem *ngFor="let cur of currencyArray" (click)="convert(cur)" >{{cur.name}}</button>
+                              </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 no-padding">
+                        <img class="seperator" src="assets/images/footer_line.png">
+                    </div>
+                </div>
+                <div class="row header-margin">
+                    <div class="col-sm-12"> 
+                        <div class="row grid-header">
+                            <div>
+                                <img class="star" src="assets/images/star.png">
+                            </div>
+                            <div class="list-header align-start" (click)="sorterCol1('col1')">
+                                PAIR
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col1_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col1_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header align-start" (click)="sorterCol2('col2')">
+                                COIN
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col2_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col2_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header align-start" (click)="sorterCol3('col3')">
+                                LAST PRICE
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col3_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col3_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header" (click)="sorterCol4('col4')">
+                                24H CHANGE
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col4_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col4_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header" (click)="sorterCol5('col5')">
+                                24H CHANGE %
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col5_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col5_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header" (click)="sorterCol6('col6')">
+                                24H HIGH
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col6_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col6_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header" (click)="sorterCol7('col7')">
+                                24H LOW
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col7_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col7_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                            <div class="list-header" (click)="sorterCol8('col8')">
+                                24H VOLUME
+                                <span class="sort-container">
+                                    <img class="sort-up" id="col8_up" src="assets/images/sortup.png">
+                                    <img class="sort-down" id="col8_down" src="assets/images/sortup.png">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 no-padding">
+                        <img class="seperator" src="assets/images/footer_line.png">
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-sm-12">
+                        <div class="row grid-header header-margin" *ngFor="let item of displayData">
+                            <div>
+                                <img *ngIf="!isLoggedIn" (click)="doLike(item.id)" class="star" src="assets/images/star.png">
+                                <img *ngIf="item.isLiked=='false' && isLoggedIn" (click)="doLike(item.id)" class="star" src="assets/images/star.png">
+                                <img *ngIf="item.isLiked=='true' && isLoggedIn" (click)="unDoLike(item.id)" class="star" src="assets/images/star_filled.png">
+                            </div>
+                            <div class="list-item align-start">{{item.coin}}
+                                <span class="color-light">/{{item.cur}}</span>
+                            </div>
+                            <div class="list-item align-start">{{item.coin}}</div>
+                            <div class="list-item align-start">{{item.l_price}}
+                                <span class="color-light m-l-1"> {{item.amount}}</span>
+                            </div>
+                            <div class="list-item neg" *ngIf="item.attr">{{item.daliy_change}} 
+                                <span>
+                                     <img class="arrow_down" src="assets/images/down_arrow.png">
+                                </span>
+                            </div>
+                            <div class="list-item pos" *ngIf="!item.attr">{{item.daliy_change}} 
+                                <span>
+                                     <img class="arrow_down" src="assets/images/up_arrow.png">
+                                </span>
+                            </div>
+                            <div class="list-item neg" *ngIf="item.attr">{{item.daliy_change_per}}</div>
+                            <div class="list-item pos" *ngIf="!item.attr">{{item.daliy_change_per}}</div>
+                            <div class="list-item">{{item.daliy_high}}</div>
+                            <div class="list-item">{{item.daliy_low}}</div>
+                            <div class="list-item">
+                                {{item.daliy_vol}} 
+                                <span class="m-l-1"> {{item.cur}}</span>
+                            </div>
+                        </div>
+                        <div class="empty-data" *ngIf="isEmpty(displayData)">
+                            Sorry No Such Data is Available
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="mobile_side"></div>

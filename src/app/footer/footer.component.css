@@ -1,0 +1,130 @@
+.footer-center-align{
+    margin: auto;
+    width: max-content;
+}
+
+.footer-top-margin{
+    margin-top: 80px;
+}
+
+.footer-margin{
+    margin-top: 25px;
+}
+
+p{
+    color: rgb(117, 117, 117);
+    /* margin: 0 !important; */
+}
+
+.full-width{
+    width: 96vw;
+}
+
+.footer-text-align{
+    text-align: center;
+}
+.footer-text-align p{
+    margin: 0;
+    margin-bottom: var(--margin-10);
+}
+
+.footer-last-margin{
+    margin-bottom: 12px;
+}
+
+.footer-image{
+    height: 62px;
+    width: 62px;
+    margin-bottom: var(--margin-10);
+}
+
+.footer-line{
+    width: 90vw;
+}
+
+.footer-links{
+    text-decoration: none;
+}
+.footer-nav{
+    color: rgb(72, 72, 72);
+    margin: 0px 0px 30px 30px;
+}
+
+.footer-social{
+    height: 32px;
+    width: 32px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer-terms{
+    color: rgb(72, 72, 72);
+    margin-bottom: 30px;
+}
+.footer-terms a{
+    color: rgb(72, 72, 72);
+    text-decoration: none;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-areas: 
+    "footer1 footer2 footer3 footer4 footer5 footer6 footer7 footer8";
+    grid-auto-columns: auto;
+    min-height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+  /* Responsive Styles */
+@media screen and (max-width: 770px) {
+    .footer-grid{
+        display: grid;
+        grid-template-areas: 
+        "footer1 footer2 footer3 footer4" 
+        "footer5 footer6 footer7 footer8";
+        grid-auto-columns: 125px;
+        min-height: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-nav{
+        margin: 0px 0px 10px 0px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .footer-grid-2{
+        display: grid;
+        grid-template-areas: "row1 row1";
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+    }
+
+    .footer-grid{
+        display: grid;
+        grid-template-areas: 
+        "footer1 footer2" 
+        "footer3 footer4" 
+        "footer5 footer6" 
+        "footer7 footer8";
+        grid-template-columns: 50% 50%;
+    }
+
+    .margin-mobile{
+        width: 100% !important;
+    }
+
+    /* .footer-center-align{
+        width: 100%;
+    } */
+
+    .footer-grid-2 a{
+        margin-bottom: 32px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+}
