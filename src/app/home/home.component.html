@@ -64,18 +64,18 @@
                             <div id="bubbleFour" class="sidenav-bubble-four">
                                 <div id="bubbleFourRing" class="sidenav-ring"></div>
                             </div>
-                            <div id="bubbleFive" class="sidenav-bubble-five">
+                            <!-- <div id="bubbleFive" class="sidenav-bubble-five">
                                 <div id="bubbleFiveRing" class="sidenav-ring"></div>
-                            </div>
+                            </div> -->
                             <div id="bubbleSix" class="sidenav-bubble-six">
                                 <div id="bubbleSixRing" class="sidenav-ring"></div>
                             </div>
                             <div id="bubbleSeven" class="sidenav-bubble-seven">
                                 <div id="bubbleSevenRing" class="sidenav-ring"></div>
                             </div>
-                            <div id="bubbleEight" class="sidenav-bubble-eight">
+                            <!-- <div id="bubbleEight" class="sidenav-bubble-eight">
                                 <div id="bubbleEightRing" class="sidenav-ring"></div>
-                            </div>
+                            </div> -->
                             <div id="bubbleNine" class="sidenav-bubble-nine">
                                 <div id="bubbleNineRing" class="sidenav-ring"></div>
                             </div>
@@ -85,28 +85,17 @@
                         </div>
                         <div class="col-10 sidenav-text">
                             <!-- <p class="select font-18" [ngxScrollTo]="sectionOne" id="sectionOne" (click)="sideNavAnimate('1','sectionOne')"><span>OUR</span> PRODUCTS</p> -->
-                            <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne_2" (click)="sideNavAnimate('1','sectionOne_2')">LENDING</p>
-                            <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">BORROWING</p>
-                            <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">TRADE (FIAT)</p>
-                            <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">TRADE (CRYPTO)</p>
-                            <p [ngxScrollTo]="sectionFive" id="sectionFive" (click)="sideNavAnimate('5','sectionFive')">CARDS (INDIA)</p>
+                            <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne_2" (click)="sideNavAnimate('1','sectionOne_2')">LEND</p>
+                            <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">BORROW</p>
+                            <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">BUY & SELL</p>
+                            <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">SWAP</p>
+                            <!-- <p [ngxScrollTo]="sectionFive" id="sectionFive" (click)="sideNavAnimate('5','sectionFive')">CARDS (INDIA)</p> -->
                             <p [ngxScrollTo]="sectionSix" id="sectionSix" (click)="sideNavAnimate('6','sectionSix')">IN THE PIPELINE</p>
                             <p [ngxScrollTo]="sectionSeven"  id="sectionSeven" (click)="sideNavAnimate('7','sectionSeven')"><span>OUR</span> PARTNERS</p>
-                            <p [ngxScrollTo]="sectionEight"  id="sectionEight" (click)="sideNavAnimate('8','sectionEight')"><span>BOH</span> WORKS</p>
+                            <!-- <p [ngxScrollTo]="sectionEight"  id="sectionEight" (click)="sideNavAnimate('8','sectionEight')"><span>BOH</span> WORKS</p> -->
                             <p [ngxScrollTo]="sectionNine"  id="sectionNine" (click)="sideNavAnimate('9','sectionNine')"><span>WHY</span> US?</p>
                         </div>
                     </div>
-                    <!-- <div class="row" style="width: 100%;">
-                        <div class="col-2" id="sidenav" style="margin-top: 1vh;margin-bottom: 5vh;">
-                            <span id="gradDown_2" class="sidenav-grad-down-2"></span>
-                            <span id="gradUp_2" class="sidenav-grad-up-2"></span>
-                        </div>
-                        <div class="col-10 sidenav-text">
-
-                        </div>
-                    </div> -->
-
-
                 </div>
             </div>
             <div class="col-lg-9 body-left-padding" >
@@ -418,10 +407,10 @@
                                 <h6 class="point-title m-bot-2">{{dynm.api_trade_point_five_tittle}}</h6>
                                 <p class="point-text">{{dynm.api_trade_point_five}}</p>
                             </div>
-                            <div class="col-lg-6 p0">
+                            <!-- <div class="col-lg-6 p0">
                                 <h6 class="point-title m-bot-2">{{dynm.api_trade_point_six_tittle}}</h6>
                                 <p class="point-text">{{dynm.api_trade_point_six}}</p>
-                            </div>
+                            </div> -->
                         </div>
 
                         <p class="api-sub-header font-italc">{{dynm.api_trade_para_last}}</p>
@@ -447,7 +436,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionFour></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection4($event)">
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection4($event)">
                     <div>
                         <h4>{{dynm.api_crypto_header_bold}} <span>{{dynm.api_crypto_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_crypto_para}}</p>
@@ -462,14 +451,14 @@
                             </div>
                         </div>
                         <div class="row p0 m-top-4">
-                            <div class="col-lg-6 p0">
+                            <!-- <div class="col-lg-6 p0">
                                 <h6 class="point-title m-bot-2">{{dynm.api_crypto_point_three_tittle}}</h6>
                                 <p class="point-text">{{dynm.api_crypto_point_three}}</p>
                             </div>
                             <div class="col-lg-6 p0">
                                 <h6 class="point-title m-bot-2">{{dynm.api_crypto_point_four_tittle}}</h6>
                                 <p class="point-text">{{dynm.api_crypto_point_four}}</p>
-                            </div>
+                            </div> -->
                         </div>
 
                         <p class="api-sub-header font-italc" >{{dynm.api_crypto_point_para_last}}</p>
@@ -494,7 +483,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="inner-padding" #sectionFive></div>
+                <!-- <div class="inner-padding" #sectionFive></div>
                 <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection5($event)">
                     <div>
                         <h4>{{dynm.api_card_ind_header_bold}} <span>{{dynm.api_card_ind_header}}</span></h4>
@@ -521,9 +510,6 @@
                             </div>
                         </div>
 
-                        <p class="api-sub-header font-italc">{{dynm.api_card_ind_para_last}}</p>
-
-
                         <div class="row p0 m-top-4 no-display-moblie">
                             <div class="col-lg-6 p0 mobile-view-link">
                                 <a href="{{dynm.api_card_ind_link_one}}" class="link-doc p0">
@@ -543,9 +529,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="inner-padding" #sectionSix></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-15%' }" (inViewportAction)="onIntersection6($event)">
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection6($event)">
                     <div>
                         <h4>{{dynm.api_pipeline_header_bold}} <span>{{dynm.api_pipeline_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_pipeline_para}}</p>
@@ -636,15 +622,12 @@
                     </div>
                 </div>
 
-                <div class="inner-padding" #sectionEight></div>
+                <!-- <div class="inner-padding" #sectionEight></div>
                 <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection8($event)">
                     <h4><span>{{dynm.home_liquidity_header}} </span>{{dynm.home_liquidity_header_bold}}</h4>
                     <p class="api-sub-header">{{dynm.home_liquidity_para}}</p>
 
                     <div class="row p0 m-top-4">
-                        <!-- <div class="p1 text-center height-inherit no-display">
-                            <img src="assets/images/vertical_line.png" style="height: 93%;">
-                        </div> -->
                         <div class="col-lg-11 height-inherit">
                             <div class="">
                                 <img class="mar-left-15" src="assets/images/vertical_line1.png">
@@ -665,10 +648,9 @@
 
                     <div class="row p0 m-top-4 home-info-contain">
                         <div class="col-lg-12 liquidity-img">
-                            <!-- <img class="liquidity-img" src="assets/images/infographics1.png"> -->
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="inner-padding" #sectionNine></div>
                 <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection9($event)">
@@ -763,11 +745,11 @@
 <div class="mobile-sidenav" id="mobile_side">
     <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="sectionOne">LENDING</div>
     <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="sectionTwo">BORROWING</div>
-    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">TRADE (FIAT)</div>
-    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="sectionFour">TRADE (CRYPTO)</div>
-    <div class="mobile-sidenav-header" id="section5_mobile" [ngxScrollTo]="sectionFive">IN THE PIPELINE</div>
-    <div class="mobile-sidenav-header" id="section6_mobile" [ngxScrollTo]="sectionSix">OUR PARTNERS</div>
-    <div class="mobile-sidenav-header" id="section7_mobile" [ngxScrollTo]="sectionSeven">PARTNER WITH US</div>
-    <div class="mobile-sidenav-header" id="section8_mobile" [ngxScrollTo]="sectionEight">HOW BOH WORKS</div>
+    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">BUY & SELL</div>
+    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="sectionFour">SWAP</div>
+    <!-- <div class="mobile-sidenav-header" id="section5_mobile" [ngxScrollTo]="sectionFive">Cards</div> -->
+    <div class="mobile-sidenav-header" id="section6_mobile" [ngxScrollTo]="sectionSix">IN THE PIPELINE</div>
+    <div class="mobile-sidenav-header" id="section7_mobile" [ngxScrollTo]="sectionSeven">OUR PARTNERS</div>
+    <!-- <div class="mobile-sidenav-header" id="section8_mobile" [ngxScrollTo]="sectionEight">HOW BOH WORKS</div> -->
     <div class="mobile-sidenav-header" id="section9_mobile" [ngxScrollTo]="sectionNine">WHY US?</div>
 </div>

@@ -23,7 +23,11 @@
                         <p class="select" id="story" [ngxScrollTo]="story" (click)="sideNavAnimate('0','story')">THE <span class="active">STORY</span></p>
                         <p [ngxScrollTo]="exe" id="exe" (click)="sideNavAnimate('34','exe')">THE <span class="active">EXECUTION</span></p>
                         <p [ngxScrollTo]="team" id="team" (click)="sideNavAnimate('68','team')">OUR <span class="active">TEAM</span></p>
-                        <p [ngxScrollTo]="invest" id="invest" (click)="sideNavAnimate('100','invest')">OUR <span class="active">INVESTORS</span></p>
+                        <p [ngxScrollTo]="invest" id="invest" (click)="sideNavAnimate('100','invest')">
+                            <!-- OUR  -->
+                            <span class="active">
+                            <!-- INVESTORS -->
+                        </span></p>
                     </div>
                 </div>
             </div>
@@ -510,7 +514,7 @@
             
             <div class="inner-padding" #invest></div>
             <section inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection4($event)">
-                <div class="container story-origin">
+                <!-- <div class="container story-origin">
                     <div class="row">
                         <div class="row">
                             <h4 class="inveset-header">{{dynm.inv_header}}</h4>
@@ -594,7 +598,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
         </div>
     </div>
@@ -604,6 +608,6 @@
     <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="story">The Story</div>
     <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="exe">The Execution</div>
     <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="team">Our Team</div>
-    <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="invest">Our Investors</div>
+    <!-- <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="invest">Our Investors</div> -->
 </div>
 

@@ -21,8 +21,8 @@ export class MarketsComponent implements OnInit {
   toggleCol6 = 0;
   toggleCol7 = 0;
   toggleCol8 = 0;
-  filterArray = ["ETH","BTC","LTC","DASH"]
-  mainFilterArray = ["ALL","FAV"]
+  filterArray = []
+  mainFilterArray = ["ALL","FAV","ETH","BTC","LTC","DASH"]
   currencyArray = [{"name":"USD","icon":"$"},{"name":"INR","icon":"₹"},{"name":"EUR","icon":"€"}]
   convertArray ={
     "USD":
@@ -45,7 +45,7 @@ export class MarketsComponent implements OnInit {
         }
   };
 
-  dropDownItem = "SELECT"
+  dropDownItem = "USD"
   
   isLoggedIn : boolean = true;
   fetchData = [
@@ -161,10 +161,14 @@ displayData = []
     this.titleService.setTitle('Markets - Bank of Hodlers');
     this.statusCheck.onRefreashUrlChecker();
     this.displayData = this.attrChecker(this.fetchData);
-    for(let element of this.filterArray){
-      this.mainFilterArray.push(element.toString());
-    }
+    // for(let element of this.filterArray){
+    //   this.mainFilterArray.push(element.toString());
+    // }
+    window.onload = (event) => {
+      this.convert(this.currencyArray[0])
+    };
   }
+
 
   isEmpty(array){
     if(array.length == 0){

@@ -86,7 +86,7 @@ export class FaqsComponent implements OnInit {
       }
     })
   }
-
+  // Side nav animations controller
   sideNavAnimate(percen, tag){
     let listArray: string[] = ['sectionOne','sectionTwo','sectionThree','sectionFour','sectionFive']
     this.isSkippingSection(listArray, tag)
@@ -135,8 +135,9 @@ export class FaqsComponent implements OnInit {
                 document.getElementById("bubbleFive").style.top = "97%";
                 document.getElementById("bubbleFive").style.background = "#E3E6F3";
                 if(document.documentElement.offsetWidth <= 1440){
-                  document.getElementById("bubbleTwo").style.top = "21%";
+                  document.getElementById("bubbleTwo").style.top = "24%";
                   document.getElementById("bubbleFour").style.top = "76%";
+                  document.getElementById("bubbleThree").style.top = "54%";
                 }
                 else{
                   document.getElementById("bubbleTwo").style.top = "26%";
@@ -167,8 +168,9 @@ export class FaqsComponent implements OnInit {
                 document.getElementById("bubbleFive").style.top = "97%";
                 document.getElementById("bubbleFive").style.background = "#C5D9F5";
                 if(document.documentElement.offsetWidth <= 1440){
-                  document.getElementById("bubbleTwo").style.top = "21%";
-                  document.getElementById("bubbleFour").style.top = "76%";
+                  document.getElementById("bubbleTwo").style.top = "23%";
+                  document.getElementById("bubbleFour").style.top = "77%";
+                  document.getElementById("bubbleThree").style.top = "54%";
                 }
                 else{
                   document.getElementById("bubbleTwo").style.top = "24%";
@@ -198,7 +200,9 @@ export class FaqsComponent implements OnInit {
                 document.getElementById("bubbleFive").style.top = "97%";
                 document.getElementById("bubbleFive").style.background = "#E3E6F3";
                 if(document.documentElement.offsetWidth <= 1440){
-                  document.getElementById("bubbleFour").style.top = "76%";
+                  document.getElementById("bubbleFour").style.top = "78%";
+                  document.getElementById("bubbleTwo").style.top = "23%";
+                  document.getElementById("bubbleThree").style.top = "52%";
                 }
                 else{
                   document.getElementById("bubbleFour").style.top = "74%";
@@ -254,9 +258,12 @@ export class FaqsComponent implements OnInit {
                 document.getElementById("bubbleFour").style.background = "#4FA6FC";
                 document.getElementById("bubbleFive").style.top = "96%";
                 document.getElementById("bubbleFive").style.background = "#1E90FF";
-                if(document.documentElement.offsetWidth <= 1440){
+                if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1280){
                   document.getElementById("bubbleFour").style.top = "74%";
                   document.getElementById("bubbleFive").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("gradDown").style.top = "99%";
                 }
                 else{
                   document.getElementById("bubbleFour").style.top = "72%";
@@ -269,6 +276,7 @@ export class FaqsComponent implements OnInit {
     }
   }
 
+  // To check if users has selected a distant section to skip side nav animation
   isSkippingSection(listArray: string[], tag: any) {
     if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 2){
       this.isSkip = true;
@@ -293,6 +301,7 @@ export class FaqsComponent implements OnInit {
     this.sub.unsubscribe();
   }
 
+  // To load data from ts file and to refreash display data
   dataReloader(){
     this.displayFaqEI = this.dynm.faqsInterest;
     this.displayFaqTrad = this.dynm.faqsTrading;
@@ -302,6 +311,7 @@ export class FaqsComponent implements OnInit {
     
   }
 
+  // To Clear search field
   searcherClose(){
     this.isSearching = false;
     this.isSearchingNotFound = false;
@@ -316,6 +326,7 @@ export class FaqsComponent implements OnInit {
     this.activeIdsFees = [];
   }
 
+  // Searching on FAQs with text from search input
   searcher(){
     var temp = [];
     this.isSearching = true;
@@ -411,16 +422,17 @@ export class FaqsComponent implements OnInit {
       this.isSearching = false;
     }
   }
-
+  // Searching on FAQs with token from url 
+  // url action string 'search_token'
+  // eg: faq?search_token=fees
   searcherWithToken(token){
     var temp = [];
     this.isSearching = true;
-    // var searchTokenCur = token;
     this.searchToken = '"'+token+'"';
     this.dataReloader()
     this.titleService.setTitle(token +' - Faqs - Bank of Hodlers');
 
-    // Searching in Interest Data answer
+    // Searching in Interest Data
     for( let ele of this.displayFaqEI){
       if(ele.ques.toLowerCase().includes(token.toLowerCase()) || ele.answer.toLowerCase().includes(token.toLowerCase())){
         temp.push(ele);
@@ -499,7 +511,7 @@ export class FaqsComponent implements OnInit {
       }
     }
   }
-
+  // To animate side nav for 
   sideNavMobile(sectionName){
     let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile','section5_mobile']
     for (let entry of listArray) {
@@ -519,7 +531,7 @@ export class FaqsComponent implements OnInit {
       default:break;
     }
   }
-
+  // To check id the Display data is empty (INR Deposits & Withdrawals)
   isEmptyDisplayFaqTrad(){
     if(this.displayFaqTrad.length == 0){
       return false;
@@ -527,7 +539,7 @@ export class FaqsComponent implements OnInit {
       return true;
     }
   }
-
+  // To check id the Display data is empty (Earning Interest)
   isEmptyDisplayFaqEI(){
     if(this.displayFaqEI.length == 0){
       return false;
@@ -535,7 +547,7 @@ export class FaqsComponent implements OnInit {
       return true;
     }
   }
-
+  // To check id the Display data is empty (Deposits & Withdrawals)
   isEmptyDisplayFaqDepWith(){
     if(this.displayFaqDepWith.length == 0){
       return false;
@@ -543,7 +555,7 @@ export class FaqsComponent implements OnInit {
       return true;
     }
   }
-
+  // To check id the Display data is empty (Other Product Queries)
   isEmptyDisplayFaqFees(){
     if(this.displayFaqFees.length == 0){
       return false;
@@ -551,7 +563,7 @@ export class FaqsComponent implements OnInit {
       return true;
     }
   }
-
+  // To check id the Display data is empty (On the Company)
   isEmptyDisplayFaqComp(){
     if(this.displayFaqComp.length == 0){
       return false;
@@ -559,7 +571,7 @@ export class FaqsComponent implements OnInit {
       return true;
     }
   }
-
+  // Code to trigger side nav animations when the associated section scrolls to viewport 
   public onIntersection1({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
       this.sideNavAnimate("1","sectionOne");

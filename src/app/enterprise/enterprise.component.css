@@ -827,6 +827,10 @@ h6{
         justify-content: center;
     }
 
+    .point-text{
+        margin-left: 23px;
+    }
+
     .api-email{
         width: 65%;
     }

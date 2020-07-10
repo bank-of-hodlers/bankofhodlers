@@ -16,6 +16,7 @@ export class EnterpriseComponent implements OnInit {
   previousSection = "wallets";
   isSkip = false;
   isSticky: boolean = false;
+  email_notification_text :string = "Sorry please enter proper email address!"
 
   constructor( public apiText : ApiText, public statusCheck :StatuscheckerService, public titleService : Title ) { }
 
@@ -435,11 +436,15 @@ export class EnterpriseComponent implements OnInit {
   submitEmail(){
         var email = (<HTMLInputElement>document.getElementById("emailInput")).value
         if(email.includes('@')  && email.includes('.')){
-                this.isNotEmail = false;
+                this.email_notification_text = "Thank you! We will get in touch with you shortly"
+                setTimeout(()=>{
+                        this.isNotEmail = false;
+                },10000)
                 // Do Something Here
                 console.log("Submit Email")
         }else{
                 this.isNotEmail = true;
+                
         }
   }
 

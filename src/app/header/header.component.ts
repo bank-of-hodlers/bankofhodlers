@@ -76,7 +76,6 @@ export class HeaderComponent implements OnInit {
     var count = 0
     var interval = setInterval(() =>{
       count++
-      // console.log(count);
       var element =  document.getElementById("hubspot-conversations-inline-parent");
       if (element)
       {
@@ -84,7 +83,6 @@ export class HeaderComponent implements OnInit {
         clearInterval(interval)
       }
       else if(count == 5000){
-        // console.log("Timeout");
         this.isLoading = false;
         this.supportActive = false;
         this.hsWidget.close();
@@ -96,20 +94,15 @@ export class HeaderComponent implements OnInit {
 
 
   hubspotInit(){
-    // To do code
-    // console.log("isLoading : " + this.isLoading)
     if(!this.isLoading){
-      // console.log("supportActive : " + this.supportActive)
       if(this.supportActive) {
         this.supportActive = false;
         this.hsWidget.remove();
-        // this.hsWidget.load({widgetOpen: false});
       }else {
         this.isLoading = true;
         this.isLoadingChecker()
         setTimeout(() => {
           const status = this.hsWidget.status();
-          // console.log("status : "+status.loaded)
           if(!status.loaded) {
             this.supportActive = true;
             this.hsWidget.load({widgetOpen: true});
@@ -118,7 +111,7 @@ export class HeaderComponent implements OnInit {
       }
     }
     else{
-      // this.hsWidget.load({widgetOpen: false});
+      // To do code here
     }
 
   }

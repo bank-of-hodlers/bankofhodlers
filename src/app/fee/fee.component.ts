@@ -172,7 +172,8 @@ export class FeeComponent implements OnInit {
   }
 
   sideNavAnimate(percen, tag){
-    let listArray: string[] = ['sectionOne','sectionTwo','sectionThree','sectionFour']
+    // let listArray: string[] = ['sectionOne','sectionTwo','sectionThree','sectionFour']
+    let listArray: string[] = ['sectionOne','sectionTwo','sectionFour']
     this.isSkippingSection(listArray, tag)
     this.previousSection = tag
     for (let entry of listArray) {
@@ -203,7 +204,7 @@ export class FeeComponent implements OnInit {
                 document.getElementById("gradUp").style.height = "100%";
                 document.getElementById("bubbleOneRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid #eae9e9";
 
 
@@ -211,26 +212,26 @@ export class FeeComponent implements OnInit {
                 document.getElementById("bubbleOne").style.background = "#1E90FF";
                 document.getElementById("bubbleTwo").style.top = "33%";
                 document.getElementById("bubbleTwo").style.background = "#9AC6F8";
-                document.getElementById("bubbleThree").style.top = "65%";
-                document.getElementById("bubbleThree").style.background = "#BDD6F6";
+                // document.getElementById("bubbleThree").style.top = "65%";
+                // document.getElementById("bubbleThree").style.background = "#BDD6F6";
                 document.getElementById("bubbleFour").style.top = "97%";
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
                 if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1366){
-                  document.getElementById("bubbleTwo").style.top = "44%";
-                  document.getElementById("bubbleThree").style.top = "71%";
+                  document.getElementById("bubbleTwo").style.top = "62%";
+                  // document.getElementById("bubbleThree").style.top = "71%";
                 }
                 else if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
-                  document.getElementById("bubbleTwo").style.top = "43%";
-                  document.getElementById("bubbleThree").style.top = "68%";
+                  document.getElementById("bubbleTwo").style.top = "57%";
+                  // document.getElementById("bubbleThree").style.top = "68%";
                   document.getElementById("bubbleFour").style.top = "93%";
                 }
                 else if(document.documentElement.offsetWidth <= 1280 && document.documentElement.offsetWidth > 1024){
-                    document.getElementById("bubbleTwo").style.top = "44%";
-                    document.getElementById("bubbleThree").style.top = "70%";
+                    document.getElementById("bubbleTwo").style.top = "60%";
+                    // document.getElementById("bubbleThree").style.top = "70%";
                 }
                 else{
-                  document.getElementById("bubbleTwo").style.top = "33%";
-                  document.getElementById("bubbleThree").style.top = "65%";
+                  document.getElementById("bubbleTwo").style.top = "50%";
+                  // document.getElementById("bubbleThree").style.top = "65%";
                 }
                 break;
         case "2":
@@ -238,7 +239,7 @@ export class FeeComponent implements OnInit {
                 document.getElementById("gradUp").style.height = "65%";
                 document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleTwoRing").style.border = "1px solid #1E90FF";
-                document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid #eae9e9";
 
 
@@ -246,26 +247,27 @@ export class FeeComponent implements OnInit {
                 document.getElementById("bubbleOne").style.background = "#BDD6F6";
                 document.getElementById("bubbleTwo").style.top = "33%";
                 document.getElementById("bubbleTwo").style.background = "#1E90FF";
-                document.getElementById("bubbleThree").style.top = "65%";
-                document.getElementById("bubbleThree").style.background = "#7CB9F9";
+                // document.getElementById("bubbleThree").style.top = "65%";
+                // document.getElementById("bubbleThree").style.background = "#7CB9F9";
                 // document.getElementById("bubbleFour").style.top = "107px";
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
                 if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1366){
-                  document.getElementById("bubbleTwo").style.top = "30%";
-                  document.getElementById("bubbleThree").style.top = "67%";
+                  document.getElementById("bubbleTwo").style.top = "45%";
+                  // document.getElementById("bubbleThree").style.top = "67%";
                 }
                 else if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
                   document.getElementById("bubbleOne").style.top = "0%";
-                  document.getElementById("bubbleThree").style.top = "62%";
+                  document.getElementById("bubbleTwo").style.top = "42%";
+                  // document.getElementById("bubbleThree").style.top = "62%";
                   document.getElementById("bubbleFour").style.top = "92%";
                 }
                 else if(document.documentElement.offsetWidth <= 1280){
-                  document.getElementById("bubbleTwo").style.top = "30%";
-                  document.getElementById("bubbleThree").style.top = "65%";
+                  document.getElementById("bubbleTwo").style.top = "44%";
+                  // document.getElementById("bubbleThree").style.top = "65%";
                 }
                 else{
-                  document.getElementById("bubbleTwo").style.top = "33%";
-                  document.getElementById("bubbleThree").style.top = "65%";
+                  document.getElementById("bubbleTwo").style.top = "44%";
+                  // document.getElementById("bubbleThree").style.top = "65%";
                 }
                 break;
         case "3":
@@ -273,25 +275,25 @@ export class FeeComponent implements OnInit {
                 document.getElementById("gradUp").style.height = "26%";
                 document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleThreeRing").style.border = "1px solid #1E90FF";
+                // document.getElementById("bubbleThreeRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleFourRing").style.border = "1px solid #eae9e9";
 
                 // document.getElementById("bubbleOne").style.top = "-6px";
                 document.getElementById("bubbleOne").style.background = "#BDD6F6";
                 document.getElementById("bubbleTwo").style.top = "30%";
                 document.getElementById("bubbleTwo").style.background = "#8DC0F8";
-                document.getElementById("bubbleThree").style.top = "62%";
-                document.getElementById("bubbleThree").style.background = "#1E90FF";
+                // document.getElementById("bubbleThree").style.top = "62%";
+                // document.getElementById("bubbleThree").style.background = "#1E90FF";
                 // document.getElementById("bubbleFour").style.top = "107px";
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
                 if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
                   document.getElementById("bubbleTwo").style.top = "30%";
-                  document.getElementById("bubbleThree").style.top = "59%";
+                  // document.getElementById("bubbleThree").style.top = "59%";
                   document.getElementById("bubbleFour").style.top = "92%";
                 }
                 else{
                   document.getElementById("bubbleTwo").style.top = "30%";
-                  document.getElementById("bubbleThree").style.top = "62%";
+                  // document.getElementById("bubbleThree").style.top = "62%";
                   document.getElementById("bubbleFour").style.top = "97%";
                 }
                 break;
@@ -300,7 +302,7 @@ export class FeeComponent implements OnInit {
                 document.getElementById("gradUp").style.height = "0%";
                 document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid #1E90FF";
 
                 // document.getElementById("bubbleOne").style.top = "-6px";
@@ -308,20 +310,21 @@ export class FeeComponent implements OnInit {
                 // document.getElementById("bubbleTwo").style.top = "30px";
                 document.getElementById("bubbleTwo").style.background = "#CADCF5";
                 // document.getElementById("bubbleThree").style.top = "66px";
-                document.getElementById("bubbleThree").style.background = "#9AC6F8";
+                // document.getElementById("bubbleThree").style.background = "#9AC6F8";
                 document.getElementById("bubbleFour").style.background = "#1E90FF";
                 if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1366){
-                  document.getElementById("bubbleTwo").style.top = "30%";
+                  document.getElementById("bubbleTwo").style.top = "43%";
                   document.getElementById("bubbleFour").style.top = "96%";
                 }
                 else if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
                   document.getElementById("sidenav").style.marginBottom = "4.5vh";
                 }
                 else if(document.documentElement.offsetWidth <= 1280 && document.documentElement.offsetWidth > 1024){
-                  document.getElementById("bubbleFour").style.top = "94%";
+                  document.getElementById("bubbleFour").style.top = "89%";
                 }
                 else{
                   document.getElementById("bubbleTwo").style.top = "31%";
+                  document.getElementById("bubbleTwo").style.top = "46%";
                   document.getElementById("bubbleFour").style.top = "96%";
                 }
                 break;
@@ -343,7 +346,8 @@ export class FeeComponent implements OnInit {
   } 
 
   sideNavMobile(sectionName){
-    let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile']
+    // let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile']
+    let listArray: string[] = ['section1_mobile','section2_mobile','section4_mobile']
     for (let entry of listArray) {
       document.getElementById(entry).classList.remove("sideNav-mobile-select");
     }
@@ -376,9 +380,9 @@ export class FeeComponent implements OnInit {
   }
   public onIntersection3({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("3","sectionThree");
-      this.sideNavMobile('section3_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("3","sectionThree");
+      // this.sideNavMobile('section3_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection4({ target, visible }: { target: Element; visible: boolean }): void {

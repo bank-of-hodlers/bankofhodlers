@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
   }
 
   sideNavAnimate(percen, tag){
-    let listArray: string[] = ['sectionOne_2','sectionTwo','sectionThree','sectionFour','sectionFive','sectionSix','sectionSeven','sectionEight','sectionNine']
+    // let listArray: string[] = ['sectionOne_2','sectionTwo','sectionThree','sectionFour','sectionFive','sectionSix','sectionSeven','sectionEight','sectionNine']
+    let listArray: string[] = ['sectionOne_2','sectionTwo','sectionThree','sectionFour','sectionSix','sectionSeven','sectionNine']
     this.isSkippingSection(listArray, tag)
     this.previousSection = tag
     for (let entry of listArray) {
@@ -69,31 +70,38 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #eae9e9";
                 // document.getElementById("bubbleTenRing").style.border = "1px solid transparent";
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "-0.5%";
                 document.getElementById("bubbleOne").style.background = "#1E90FF";
                 document.getElementById("bubbleTwo").style.top = "13.5%";
+                document.getElementById("bubbleTwo").style.top = "15.5%";
                 document.getElementById("bubbleTwo").style.background = "#6DB3FA";
                 document.getElementById("bubbleThree").style.top = "25%";
+                document.getElementById("bubbleThree").style.top = "32%";
                 document.getElementById("bubbleThree").style.background = "#AACDF7";
                 document.getElementById("bubbleFour").style.top = "37.5%";
+                document.getElementById("bubbleFour").style.top = "46.5%";
                 document.getElementById("bubbleFour").style.background = "#CADBF5";
-                document.getElementById("bubbleFive").style.top = "49%";
-                document.getElementById("bubbleFive").style.background = "#E3E6F3";
+                // document.getElementById("bubbleFive").style.top = "49%";
+                // document.getElementById("bubbleFive").style.background = "#E3E6F3";
                 document.getElementById("bubbleSix").style.top = "61.5%";
+                document.getElementById("bubbleSix").style.top = "62.5%";
                 document.getElementById("bubbleSix").style.background = "#E3E6F3";
                 document.getElementById("bubbleSeven").style.top = "73%";
+                document.getElementById("bubbleSeven").style.top = "78%";
                 document.getElementById("bubbleSeven").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#E3E6F3";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
+                document.getElementById("bubbleNine").style.top = "93%";
                 // document.getElementById("bubbleTen").style.background = "#E3E6F3";
                 break;
         case "2":
@@ -109,31 +117,38 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #eae9e9";
                 // document.getElementById("bubbleTenRing").style.border = "1px solid transparent";
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "0%";
                 document.getElementById("bubbleOne").style.background = "#6DB3FA";
                 document.getElementById("bubbleTwo").style.top = "12.5%";
+                document.getElementById("bubbleTwo").style.top = "14.5%";
                 document.getElementById("bubbleTwo").style.background = "#1E90FF";
                 document.getElementById("bubbleThree").style.top = "25%";
+                document.getElementById("bubbleThree").style.top = "32%";
                 document.getElementById("bubbleThree").style.background = "#6DB3FA";
                 document.getElementById("bubbleFour").style.top = "37.5%";
+                document.getElementById("bubbleFour").style.top = "46.5%";
                 document.getElementById("bubbleFour").style.background = "#AACDF7";
-                document.getElementById("bubbleFive").style.top = "49%";
-                document.getElementById("bubbleFive").style.background = "#CADBF5";
+                // document.getElementById("bubbleFive").style.top = "49%";
+                // document.getElementById("bubbleFive").style.background = "#CADBF5";
                 document.getElementById("bubbleSix").style.top = "61.5%";
+                document.getElementById("bubbleSix").style.top = "62.5%";
                 document.getElementById("bubbleSix").style.background = "#E3E6F3";
                 document.getElementById("bubbleSeven").style.top = "73%";
+                document.getElementById("bubbleSeven").style.top = "78%";
                 document.getElementById("bubbleSeven").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#E3E6F3";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
+                document.getElementById("bubbleNine").style.top = "93%";
                 break;
         case "3":
                 document.getElementById("gradDown").style.height = "25%";
@@ -148,30 +163,37 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid transparent";
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "0%";
                 document.getElementById("bubbleOne").style.background = "#AACDF7";
                 document.getElementById("bubbleTwo").style.top = "12.5%";
+                document.getElementById("bubbleTwo").style.top = "14.5%";
                 document.getElementById("bubbleTwo").style.background = "#6DB3FA";
                 document.getElementById("bubbleThree").style.top = "24%";
+                document.getElementById("bubbleThree").style.top = "30%";
                 document.getElementById("bubbleThree").style.background = "#1E90FF";
                 document.getElementById("bubbleFour").style.top = "37.5%";
+                document.getElementById("bubbleFour").style.top = "46.5%";
                 document.getElementById("bubbleFour").style.background = "#6DB3FA";
-                document.getElementById("bubbleFive").style.top = "49%";
-                document.getElementById("bubbleFive").style.background = "#CADBF5";
+                // document.getElementById("bubbleFive").style.top = "49%";
+                // document.getElementById("bubbleFive").style.background = "#CADBF5";
                 document.getElementById("bubbleSix").style.top = "61.5%";
+                document.getElementById("bubbleSix").style.top = "62.5%";
                 document.getElementById("bubbleSix").style.background = "#E3E6F3";
                 document.getElementById("bubbleSeven").style.top = "73%";
+                document.getElementById("bubbleSeven").style.top = "78%";
                 document.getElementById("bubbleSeven").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#E3E6F3";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
+                document.getElementById("bubbleNine").style.top = "93%";
                 break;
         case "4":
                 document.getElementById("gradDown").style.height = "39%";
@@ -186,30 +208,37 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid #1E90FF";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #eae9e9";
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "0%";
                 document.getElementById("bubbleOne").style.background = "#E3E6F3";
                 document.getElementById("bubbleTwo").style.top = "12.5%";
+                document.getElementById("bubbleTwo").style.top = "14.5%";
                 document.getElementById("bubbleTwo").style.background = "#6DB3FA";
                 document.getElementById("bubbleThree").style.top = "24%";
+                document.getElementById("bubbleThree").style.top = "30%";
                 document.getElementById("bubbleThree").style.background = "#6DB3FA";
                 document.getElementById("bubbleFour").style.top = "36.5%";
+                document.getElementById("bubbleFour").style.top = "45.5%";
                 document.getElementById("bubbleFour").style.background = "#1E90FF";
-                document.getElementById("bubbleFive").style.top = "49%";
-                document.getElementById("bubbleFive").style.background = "#6DB3FA";
+                // document.getElementById("bubbleFive").style.top = "49%";
+                // document.getElementById("bubbleFive").style.background = "#6DB3FA";
                 document.getElementById("bubbleSix").style.top = "61.5%";
+                document.getElementById("bubbleSix").style.top = "62.5%";
                 document.getElementById("bubbleSix").style.background = "#AACDF7";
                 document.getElementById("bubbleSeven").style.top = "73%";
+                document.getElementById("bubbleSeven").style.top = "78%";
                 document.getElementById("bubbleSeven").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#E3E6F3";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
+                document.getElementById("bubbleNine").style.top = "93%";
                 break;
         case "5":
                 document.getElementById("gradDown").style.height = "51%";
@@ -224,10 +253,10 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid #1E90FF";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #eae9e9";
 
                 document.getElementById("bubbleOne").style.top = "0%";
@@ -236,16 +265,16 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwo").style.background = "#E3E6F3";
                 document.getElementById("bubbleThree").style.top = "24%";
                 document.getElementById("bubbleThree").style.background = "#AACDF7";
-                document.getElementById("bubbleFour").style.top = "36.5%";
-                document.getElementById("bubbleFour").style.background = "#6DB3FA";
+                // document.getElementById("bubbleFour").style.top = "36.5%";
+                // document.getElementById("bubbleFour").style.background = "#6DB3FA";
                 document.getElementById("bubbleFive").style.top = "48%";
                 document.getElementById("bubbleFive").style.background = "#1E90FF";
                 document.getElementById("bubbleSix").style.top = "61.5%";
                 document.getElementById("bubbleSix").style.background = "#6DB3FA";
                 document.getElementById("bubbleSeven").style.top = "73%";
                 document.getElementById("bubbleSeven").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#E3E6F3";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 break;
@@ -262,31 +291,38 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #E3E6F3";
 
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "0%";
                 document.getElementById("bubbleOne").style.background = "#E3E6F3";
                 document.getElementById("bubbleTwo").style.top = "12.5%";
+                document.getElementById("bubbleTwo").style.top = "14.5%";
                 document.getElementById("bubbleTwo").style.background = "#E3E6F3";
                 document.getElementById("bubbleThree").style.top = "24%";
+                document.getElementById("bubbleThree").style.top = "30%";
                 document.getElementById("bubbleThree").style.background = "#E3E6F3";
                 document.getElementById("bubbleFour").style.top = "36.5%";
+                document.getElementById("bubbleFour").style.top = "45.5%";
                 document.getElementById("bubbleFour").style.background = "#AACDF7";
-                document.getElementById("bubbleFive").style.top = "48%";
-                document.getElementById("bubbleFive").style.background = "#6DB3FA";
+                // document.getElementById("bubbleFive").style.top = "48%";
+                // document.getElementById("bubbleFive").style.background = "#6DB3FA";
+                document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.background = "#1E90FF";
                 document.getElementById("bubbleSeven").style.top = "73%";
+                document.getElementById("bubbleSeven").style.top = "78%";
                 document.getElementById("bubbleSeven").style.background = "#6DB3FA";
-                document.getElementById("bubbleEight").style.background = "#E3E6F3";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#E3E6F3";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
+                document.getElementById("bubbleNine").style.top = "93%";
                 break;
         case "7":
                 document.getElementById("gradDown").style.height = "75%";
@@ -295,36 +331,43 @@ export class HomeComponent implements OnInit {
                 // document.getElementById("gradUp_2").style.height = "100%";
                 // document.getElementById("gradDown_2").style.background = "linear-gradient(0deg,#1E90FF 0%, #f4fdff 100%)";
                 // document.getElementById("gradUp_2").style.background = "linear-gradient(180deg,#1E90FF 0%, #f4fdff 100%)";
-                document.getElementById("gradDown").style.background = "linear-gradient(0deg,#E3E6F3 0%, #f4fdff 100%)";
-                document.getElementById("gradUp").style.background = "linear-gradient(180deg,#E3E6F3 0%, #f4fdff 100%)";
+                document.getElementById("gradDown").style.background = "linear-gradient(0deg,#1E90FF 0%, #f4fdff 100%)";
+                document.getElementById("gradUp").style.background = "linear-gradient(180deg,#1E90FF 0%, #f4fdff 100%)";
                 document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid #1E90FF";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #E3E6F3";
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "0%";
                 document.getElementById("bubbleOne").style.background = "#E3E6F3";
                 document.getElementById("bubbleTwo").style.top = "12.5%";
+                document.getElementById("bubbleTwo").style.top = "14.5%";
                 document.getElementById("bubbleTwo").style.background = "#E3E6F3";
                 document.getElementById("bubbleThree").style.top = "24%";
+                document.getElementById("bubbleThree").style.top = "30%";
                 document.getElementById("bubbleThree").style.background = "#E3E6F3";
                 document.getElementById("bubbleFour").style.top = "36.5%";
+                document.getElementById("bubbleFour").style.top = "45.5%";
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
-                document.getElementById("bubbleFive").style.top = "48%";
-                document.getElementById("bubbleFive").style.background = "#AACDF7";
+                // document.getElementById("bubbleFive").style.top = "48%";
+                // document.getElementById("bubbleFive").style.background = "#AACDF7";
+                document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.background = "#6DB3FA";
                 document.getElementById("bubbleSeven").style.top = "72%";
+                document.getElementById("bubbleSeven").style.top = "76%";
                 document.getElementById("bubbleSeven").style.background = "#1E90FF";
-                document.getElementById("bubbleEight").style.background = "#6DB3FA";
-                document.getElementById("bubbleEight").style.top = "85.5%";
+                // document.getElementById("bubbleEight").style.background = "#6DB3FA";
+                // document.getElementById("bubbleEight").style.top = "85.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
+                document.getElementById("bubbleNine").style.top = "93%";
                 break;
         case "8":
                 document.getElementById("gradDown").style.height = "86%";
@@ -339,10 +382,10 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid #1E90FF";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid #1E90FF";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #E3E6F3";
 
                 document.getElementById("bubbleOne").style.top = "0%";
@@ -353,54 +396,59 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleThree").style.background = "#E3E6F3";
                 document.getElementById("bubbleFour").style.top = "36.5%";
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
-                document.getElementById("bubbleFive").style.top = "48%";
-                document.getElementById("bubbleFive").style.background = "#E3E6F3";
+                // document.getElementById("bubbleFive").style.top = "48%";
+                // document.getElementById("bubbleFive").style.background = "#E3E6F3";
                 document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.background = "#AACDF7";
                 document.getElementById("bubbleSeven").style.top = "72%";
                 document.getElementById("bubbleSeven").style.background = "#6DB3FA";
-                document.getElementById("bubbleEight").style.background = "#1E90FF";
-                document.getElementById("bubbleEight").style.top = "84.5%";
+                // document.getElementById("bubbleEight").style.background = "#1E90FF";
+                // document.getElementById("bubbleEight").style.top = "84.5%";
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 break;
         case "9":
-                document.getElementById("gradDown").style.height = "100%";
+                document.getElementById("gradDown").style.height = "95%";
                 document.getElementById("gradUp").style.height = "0%";
                 // document.getElementById("gradDown_2").style.height = "100%";
                 // document.getElementById("gradUp_2").style.height = "0%";
                 // document.getElementById("gradDown_2").style.background = "linear-gradient(0deg,#1E90FF 0%, #f4fdff 100%)";
                 // document.getElementById("gradUp_2").style.background = "linear-gradient(180deg,#1E90FF 0%, #f4fdff 100%)";
-                document.getElementById("gradDown").style.background = "linear-gradient(0deg,#E3E6F3 0%, #f4fdff 100%)";
-                document.getElementById("gradUp").style.background = "linear-gradient(180deg,#E3E6F3 0%, #f4fdff 100%)";
                 document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleFiveRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSixRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleSevenRing").style.border = "1px solid transparent";
-                document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
+                // document.getElementById("bubbleEightRing").style.border = "1px solid transparent";
                 document.getElementById("bubbleNineRing").style.border = "1px solid #1E90FF";
 
                 document.getElementById("bubbleOne").style.top = "0%";
+                document.getElementById("bubbleOne").style.top = "0%";
                 document.getElementById("bubbleOne").style.background = "#E3E6F3";
                 document.getElementById("bubbleTwo").style.top = "12.5%";
+                document.getElementById("bubbleTwo").style.top = "14.5%";
                 document.getElementById("bubbleTwo").style.background = "#E3E6F3";
                 document.getElementById("bubbleThree").style.top = "24%";
+                document.getElementById("bubbleThree").style.top = "30%";
                 document.getElementById("bubbleThree").style.background = "#E3E6F3";
                 document.getElementById("bubbleFour").style.top = "36.5%";
+                document.getElementById("bubbleFour").style.top = "45.5%";
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
-                document.getElementById("bubbleFive").style.top = "48%";
-                document.getElementById("bubbleFive").style.background = "#E3E6F3";
+                // document.getElementById("bubbleFive").style.top = "48%";
+                // document.getElementById("bubbleFive").style.background = "#E3E6F3";
+                document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.top = "60.5%";
                 document.getElementById("bubbleSix").style.background = "#E3E6F3";
                 document.getElementById("bubbleSeven").style.top = "72%";
+                document.getElementById("bubbleSeven").style.top = "76%";
                 document.getElementById("bubbleSeven").style.background = "#AACDF7";
-                document.getElementById("bubbleEight").style.background = "#6DB3FA";
-                document.getElementById("bubbleEight").style.top = "84.5%";
+                // document.getElementById("bubbleEight").style.background = "#6DB3FA";
+                // document.getElementById("bubbleEight").style.top = "84.5%";
                 document.getElementById("bubbleNine").style.background = "#1E90FF";
                 document.getElementById("bubbleNine").style.top = "97%";
+                document.getElementById("bubbleNine").style.top = "92%";
                 break;
       default:
                 break;
@@ -420,7 +468,8 @@ export class HomeComponent implements OnInit {
   } 
 
   sideNavMobile(sectionName){
-    let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile','section5_mobile','section6_mobile','section7_mobile','section8_mobile','section9_mobile']
+    // let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile','section5_mobile','section6_mobile','section7_mobile','section8_mobile','section9_mobile']
+    let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile','section6_mobile','section7_mobile','section9_mobile']
     for (let entry of listArray) {
       document.getElementById(entry).classList.remove("sideNav-mobile-select");
     }
@@ -490,13 +539,13 @@ export class HomeComponent implements OnInit {
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
-  public onIntersection5({ target, visible }: { target: Element; visible: boolean }): void {
-    if(visible && !this.isSkip){
-      this.sideNavAnimate("5","sectionFive");
-      this.sideNavMobile("section5_mobile")
-      // document.getElementById("sideNavContain").style.transform = "translate(4%)";
-    }
-  }
+  // public onIntersection5({ target, visible }: { target: Element; visible: boolean }): void {
+  //   if(visible && !this.isSkip){
+  //     // this.sideNavAnimate("5","sectionFive");
+  //     // this.sideNavMobile("section5_mobile")
+  //     // document.getElementById("sideNavContain").style.transform = "translate(4%)";
+  //   }
+  // }
   public onIntersection6({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
       this.sideNavAnimate("6","sectionSix");
@@ -511,13 +560,13 @@ export class HomeComponent implements OnInit {
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
-  public onIntersection8({ target, visible }: { target: Element; visible: boolean }): void {
-    if(visible && !this.isSkip){
-      this.sideNavAnimate("8","sectionEight");
-      this.sideNavMobile("section8_mobile")
-      // document.getElementById("sideNavContain").style.transform = "translate(4%)";
-    }
-  }
+  // public onIntersection8({ target, visible }: { target: Element; visible: boolean }): void {
+  //   if(visible && !this.isSkip){
+  //     // this.sideNavAnimate("8","sectionEight");
+  //     // this.sideNavMobile("section8_mobile")
+  //     // document.getElementById("sideNavContain").style.transform = "translate(4%)";
+  //   }
+  // }
   public onIntersection9({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
       this.sideNavAnimate("9","sectionNine");

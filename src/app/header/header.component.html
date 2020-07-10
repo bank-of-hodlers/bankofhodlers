@@ -20,9 +20,9 @@
       <li class="nav-item" id="/faq" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
         <a class="nav-link" routerLink="/faq">{{dyna.faq}}</a>
       </li>
-      <li class="nav-item" id="/market" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
+      <!-- <li class="nav-item" id="/market" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
         <a class="nav-link" routerLink="/market">{{dyna.market}}</a>
-      </li>
+      </li> -->
       <li class="nav-item" id="/fee" data-toggle="collapse" data-target=".navbar-collapse.show"  (click)="linkGetter()">
         <a class="nav-link" routerLink="/fee">{{dyna.fee}}</a>
       </li>
@@ -36,7 +36,9 @@
       </li>
       <!-- routerLink="/faq" [queryParams]="{ faq_qid: 'faTrada'}" -->
     </ul>
-    <div class="navbar-signup" data-toggle="collapse" data-target=".navbar-collapse.show" >{{dyna.signup}}</div>
+    <div class="navbar-signup" data-toggle="collapse" data-target=".navbar-collapse.show" >
+      <a class="signup-anchor" href="https://app.bankofhodlers.com/register">{{dyna.signup}}</a> 
+    </div>
   </div>
 </nav>
 

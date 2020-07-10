@@ -24,9 +24,9 @@
                     </div>
                     <div class="col-10 sidenav-text">
                         <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne" (click)="sideNavAnimate('1','sectionOne')">Earning Interest</p>
-                        <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">Trading</p>
+                        <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">INR Deposits & Withdrawals</p>
                         <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">Deposits & Withdrawals</p>
-                        <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">Fees</p>
+                        <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">Other Product Queries</p>
                         <p [ngxScrollTo]="sectionFive" id="sectionFive" (click)="sideNavAnimate('5','sectionFive')">The Company</p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                                           </button>
                                     </ng-template>
                                   <ng-template ngbPanelContent>
-                                    {{item.answer}}
+                                    <span [innerHTML]="item.answer"></span>
                                   </ng-template>
                                 </ngb-panel>
                             </ngb-accordion>
@@ -88,7 +88,7 @@
                                           </button>
                                     </ng-template>
                                   <ng-template ngbPanelContent>
-                                    {{item.answer}}
+                                    <span [innerHTML]="item.answer"></span>
                                   </ng-template>
                                 </ngb-panel>
                             </ngb-accordion>
@@ -113,7 +113,7 @@
                                           </button>
                                     </ng-template>
                                   <ng-template ngbPanelContent>
-                                    {{item.answer}}
+                                    <span [innerHTML]="item.answer"></span>
                                   </ng-template>
                                 </ngb-panel>
                             </ngb-accordion>
@@ -137,7 +137,7 @@
                                           </button>
                                     </ng-template>
                                   <ng-template ngbPanelContent>
-                                    {{item.answer}}
+                                    <span [innerHTML]="item.answer"></span>
                                   </ng-template>
                                 </ngb-panel>
                             </ngb-accordion>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionFive></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection5($event)">
+                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '0%' }" (inViewportAction)="onIntersection5($event)">
                     <div class="col-lg-12" *ngIf="isEmptyDisplayFaqComp()">
                         <h4><span>{{dynm.faqs_header_four}}</span> {{dynm.faqs_header_four_cont}}</h4>
 
@@ -161,7 +161,7 @@
                                           </button>
                                     </ng-template>
                                   <ng-template ngbPanelContent>
-                                    {{item.answer}}
+                                      <span [innerHTML]="item.answer"></span>
                                   </ng-template>
                                 </ngb-panel>
                             </ngb-accordion>

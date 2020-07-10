@@ -18,6 +18,11 @@
     cursor: pointer;
 }
 
+.signup-anchor{
+    color: white;
+    text-decoration: none;
+}
+
 
 .support{
     font-family: RobotoLight !important;

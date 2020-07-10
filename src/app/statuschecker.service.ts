@@ -9,7 +9,8 @@ export class StatuscheckerService {
   constructor( public router: Router, ) { }
 
   onRefreashUrlChecker(){
-    let listArray: string[] = ['/','/about','/enterprise','/faq','/telegram','/market','/fee']
+//     let listArray: string[] = ['/','/about','/enterprise','/faq','/telegram','/market','/fee']
+    let listArray: string[] = ['/','/about','/enterprise','/faq','/telegram','/fee']
     for (let entry of listArray) {
       document.getElementById(entry).classList.remove("active");
     }

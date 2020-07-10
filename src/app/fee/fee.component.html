@@ -12,9 +12,9 @@
                         <div id="bubbleTwo" class="sidenav-bubble-two">
                             <div id="bubbleTwoRing" class="sidenav-ring"></div>
                         </div>
-                        <div id="bubbleThree" class="sidenav-bubble-three">
+                        <!-- <div id="bubbleThree" class="sidenav-bubble-three">
                             <div id="bubbleThreeRing" class="sidenav-ring"></div>
-                        </div>
+                        </div> -->
                         <div id="bubbleFour" class="sidenav-bubble-four">
                             <div id="bubbleFourRing" class="sidenav-ring"></div>
                         </div>
@@ -22,7 +22,7 @@
                     <div class="col-10 sidenav-text">
                         <p class="select" [ngxScrollTo]="sectionOne" id="sectionOne" (click)="sideNavAnimate('1','sectionOne')">Deposit & Withdrawals</p>
                         <p  id="sectionTwo" [ngxScrollTo]="sectionTwo" (click)="sideNavAnimate('2','sectionTwo')">INR FEES</p>
-                        <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">Trading Fees</p>
+                        <!-- <p [ngxScrollTo]="sectionThree" id="sectionThree" (click)="sideNavAnimate('3','sectionThree')">Trading Fees</p> -->
                         <p [ngxScrollTo]="sectionFour" id="sectionFour" (click)="sideNavAnimate('4','sectionFour')">Interest Rates</p>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                             <div class="header-item">Fees</div>
                             <div class="header-item">Minimum amount</div>
                             <div class="header-item">maximum amount</div>
-                            <div class="header-item">Maximum Processing Time</div>
+                            <div class="header-item">Processing Time</div>
                         </div>
     
                         <div class="row list-contain list-min-width">
@@ -99,7 +99,7 @@
                 </div>
                 <div class="inner-padding" #sectionThree></div>
                 <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection3($event)">
-                    <h4 class="row"><span>{{dynm.fee_header_three}}</span>  {{dynm.fee_header_three_cont}}</h4>
+                    <!-- <h4 class="row"><span>{{dynm.fee_header_three}}</span>  {{dynm.fee_header_three_cont}}</h4>
 
                     <div class="row scroll-row">
 
@@ -123,16 +123,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="inner-padding" #sectionFour></div>
                 <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection4($event)">
                     <h4 class="row"><span>{{dynm.fee_header_four}}</span>  {{dynm.fee_header_four_cont}}</h4>
 
-                    <div class="mt-24 row">
+                    <div class="mt-24 row" style="display: block;">
                         <p><span>{{dynm.fee_rate_one}}</span> {{dynm.fee_rate_one_cont}}</p>
-                        <p><span>F{{dynm.fee_rate_two}}</span> {{dynm.fee_rate_two_cont}}</p>
+                        <p><span>{{dynm.fee_rate_two}}</span> {{dynm.fee_rate_two_cont}}</p>
                         <p><span>{{dynm.fee_rate_three}}</span> {{dynm.fee_rate_three_cont}}</p>
                     </div>
 
@@ -170,6 +170,6 @@
 <div class="mobile-sidenav" id="mobile_side">
     <div class="mobile-sidenav-header" id="section1_mobile" [ngxScrollTo]="sectionOne">Deposit & Withdrawals</div>
     <div class="mobile-sidenav-header" id="section2_mobile" [ngxScrollTo]="sectionTwo">Inr Fees</div>
-    <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">Trading Fees</div>
+    <!-- <div class="mobile-sidenav-header" id="section3_mobile" [ngxScrollTo]="sectionThree">Trading Fees</div> -->
     <div class="mobile-sidenav-header" id="section4_mobile" [ngxScrollTo]="sectionFour">Interest Rates</div>
 </div>

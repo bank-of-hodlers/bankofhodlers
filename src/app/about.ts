@@ -108,12 +108,12 @@ export class AboutText{
     public static exe_time_five = ["&#9679; FIAT Rails in INR","&#9679; Instant Buy & Sell in INR"]
     public static exe_time_five_mobile = ["FIAT Rails in INR","Instant Buy & Sell in INR"]
     public static exe_time_six_title = "2020 Q1"
-    public static exe_time_six = ["Enterprise APIs for INR FIAT Rails &#9679;","Android APP &#9679;","iOS APP &#9679;","Cards &#9679;","Exchange (Crypto) &#9679;","Exchange (FIAT) &#9679;"]
-    public static exe_time_six_two = ["&#9679; Enterprise APIs for INR FIAT Rails","&#9679; Android APP","&#9679; iOS APP","&#9679; Cards","&#9679; Exchange (Crypto) ","&#9679; Exchange (FIAT)"]
-    public static exe_time_six_two_mobile = ["Enterprise APIs for INR FIAT Rails","Android APP","iOS APP","Cards","Exchange (Crypto) ","Exchange (FIAT)"]
+    public static exe_time_six = ["Enterprise APIs for INR FIAT Rails &#9679;","Android APP &#9679;","iOS APP &#9679;","Cards &#9679;"]
+    public static exe_time_six_two = ["&#9679; Enterprise APIs for INR FIAT Rails","&#9679; Android APP","&#9679; iOS APP","&#9679; Cards"]
+    public static exe_time_six_two_mobile = ["Enterprise APIs for INR FIAT Rails","Android APP","iOS APP","Cards","Exchange (Crypto) "]
     public static exe_time_seven_title = "Coming Soon"
-    public static exe_time_seven = ["&#9679; FIAT Rails in USD, GBP, EUR, SGD and other major currencies","&#9679; Cross Token Payments","&#9679; Cross Border Remittances","&#9679; Bank Accounts"]
-    public static exe_time_seven_mobile = ["FIAT Rails in USD, GBP, EUR, SGD and other major currencies","Cross Token Payments","Cross Border Remittances","Bank Accounts"]
+    public static exe_time_seven = ["&#9679; Exchange (Crypto)","&#9679; Exchange (FIAT)","&#9679; FIAT Rails in USD, GBP, EUR, SGD and other major currencies","&#9679; Cross Token Payments","&#9679; Cross Border Remittances","&#9679; Bank Accounts"]
+    public static exe_time_seven_mobile = ["Exchange (Crypto)","Exchange (FIAT)", "FIAT Rails in USD, GBP, EUR, SGD and other major currencies","Cross Token Payments","Cross Border Remittances","Bank Accounts"]
 
     // About Us Our Tream Section
 

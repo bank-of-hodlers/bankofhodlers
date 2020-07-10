@@ -624,10 +624,10 @@
                             </div>
                             <div class="col-lg-7 p0-res">
                                 <div class="email-contain">
-                                    <input class="api-email" id="emailInput" placeholder="{{apiText.api_partner_link_two}}">
+                                    <input class="api-email" id="emailInput" placeholder="{{apiText.api_partner_link_two}}"(keyup.enter)="submitEmail()" >
                                     <button class="api-submit" (click)="submitEmail()">{{apiText.api_partner_link_two_text}}</button>
                                 </div>
-                                <p *ngIf="isNotEmail" style="padding: 10px 25px 10px 25px;color: black;" id="emailMsg">Please enter a vaild Email ID</p>
+                                <p *ngIf="isNotEmail" style="padding: 10px 25px 10px 25px;color: black;position: absolute;" id="emailMsg">{{email_notification_text}}</p>
                             </div>
 
                         </div>

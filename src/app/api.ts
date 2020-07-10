@@ -202,10 +202,10 @@ export class ApiText{
     api_row_five = "Matic Network"
 
     api_colomn_two_title = "Pricing Model"
-    api_row_two_one = "Wallet Creation Fess"
+    api_row_two_one = "Transaction Fees"
     api_row_two_two = "No Charges Or Fees"
     api_row_two_three = "Interest On The Borrowed Token"
-    api_row_two_four = "Wallet Creation Fees & Conversion Fees"
+    api_row_two_four = "Conversion Fees"
     api_row_two_five = "Matic Network Fees On The Redeemed Amount"
 
     api_pricing_link_one = "#"

@@ -108,7 +108,7 @@ a{
     background: #1E90FF;
     transition: background ease-in var(--animation-time);
     position: absolute;
-    top: 0.5%;
+    top: -0.5%;
 }
 .sidenav-bubble-two{
     height: 10px;
@@ -120,6 +120,7 @@ a{
     transition: background ease-in var(--animation-time);
     position: absolute;
     top: 13.5%;
+    top: 15.5%;
 }
 .sidenav-bubble-three{
     height: 10px;
@@ -131,6 +132,7 @@ a{
     transition: background ease-in var(--animation-time);
     position: absolute;
     top: 25%;
+    top: 32%;
 }
 .sidenav-bubble-four{
     height: 10px;
@@ -142,6 +144,7 @@ a{
     transition: background ease-in var(--animation-time);
     position: absolute;
     top: 37.5%;
+    top: 46.5%;
 }
 .sidenav-bubble-five{
     height: 10px;
@@ -164,6 +167,7 @@ a{
     transition: background ease-in var(--animation-time);
     position: absolute;
     top: 61.5%;
+    top: 62.5%;
 }
 .sidenav-bubble-seven{
     height: 10px;
@@ -175,6 +179,7 @@ a{
     transition: background ease-in var(--animation-time);
     position: absolute;
     top: 73%;
+    top: 78%;
 }
 .sidenav-bubble-eight{
     height: 10px;
@@ -197,6 +202,7 @@ a{
     transition: background ease-in var(--animation-time);
     position: absolute;
     top: 97%;
+    top: 93%;
 }
 .sidenav-bubble-ten{
     height: 10px;
@@ -415,7 +421,7 @@ h4 span{
 }
 
 .pos-1{
-    top: 10px;
+    top: 7px;
     left: -26px;
 }
 
@@ -826,7 +832,7 @@ h4 span{
 
 
     .home-landing-image{
-        width: 84vw;
+        width: 75vw;
         height: auto;
         position: relative;
         left: 15%;

@@ -51,19 +51,22 @@ export class AboutComponent implements OnInit {
         document.getElementById("gradDown").style.height = "0%";
         document.getElementById("gradDown").style.display = "block";
         document.getElementById("gradUp").style.height = "100%";
+        document.getElementById("gradUp").style.height = "67%";
         document.getElementById("bubbleOneRing").style.border = "1px solid #1E90FF";
         document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
-        document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
+        document.getElementById("bubbleThreeRing").style.border = "1px solid #E3E6F3";
         document.getElementById("bubbleFourRing").style.border = "1px solid #E3E6F3";
+        document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
 
         document.getElementById("bubbleOne").style.top = "-2%";
         document.getElementById("bubbleOne").style.background = "#1E90FF";
         document.getElementById("bubbleTwo").style.top = "29%";
         document.getElementById("bubbleTwo").style.background = "#9AC6F8";
         document.getElementById("bubbleThree").style.top = "63%";
-        document.getElementById("bubbleThree").style.background = "#BDD6F6";
+        document.getElementById("bubbleThree").style.background = "#E3E6F3";
         document.getElementById("bubbleFour").style.top = "96%";
         document.getElementById("bubbleFour").style.background = "#E3E6F3";
+        document.getElementById("bubbleFour").style.background = "transparent";
         if(document.documentElement.offsetWidth <= 1280){
           // document.getElementById("sidenav").style.height = "151px";
           document.getElementById("bubbleTwo").style.top = "32%";
@@ -83,18 +86,23 @@ export class AboutComponent implements OnInit {
         document.getElementById("gradDown").style.height = "34%";
         document.getElementById("gradDown").style.display = "block";
         document.getElementById("gradUp").style.height = "66%";
+        document.getElementById("gradUp").style.height = "34%";
         document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
         document.getElementById("bubbleTwoRing").style.border = "1px solid #1E90FF";
         document.getElementById("bubbleThreeRing").style.border = "1px solid transparent";
+        document.getElementById("bubbleThreeRing").style.border = "1px solid #E3E6F3";
         document.getElementById("bubbleFourRing").style.border = "1px solid #E3E6F3";
+        document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
 
         document.getElementById("bubbleOne").style.top = "-2%";
         document.getElementById("bubbleOne").style.background = "#EEF0F8";
         document.getElementById("bubbleTwo").style.top = "31%";
         document.getElementById("bubbleTwo").style.background = "#1E90FF";
         document.getElementById("bubbleThree").style.background = "#A5CBF7";
+        document.getElementById("bubbleThree").style.background = "#E3E6F3";
         document.getElementById("bubbleThree").style.top = "63%";
         document.getElementById("bubbleFour").style.background = "#E3E6F3";
+        document.getElementById("bubbleFour").style.background = "transparent";
         if(document.documentElement.offsetWidth <= 1280){
           document.getElementById("sidenav").style.height = "151px";
           document.getElementById("bubbleThree").style.top = "69%";
@@ -112,10 +120,12 @@ export class AboutComponent implements OnInit {
         document.getElementById("gradDown").style.height = "68%";
         document.getElementById("gradDown").style.display = "block";
         document.getElementById("gradUp").style.height = "32%";
+        document.getElementById("gradUp").style.height = "0%";
         document.getElementById("bubbleOneRing").style.border = "1px solid transparent";
         document.getElementById("bubbleTwoRing").style.border = "1px solid transparent";
         document.getElementById("bubbleThreeRing").style.border = "1px solid #1E90FF";
         document.getElementById("bubbleFourRing").style.border = "1px solid #E3E6F3";
+        document.getElementById("bubbleFourRing").style.border = "1px solid transparent";
 
         document.getElementById("bubbleOne").style.background = "#E3E6F3";
         document.getElementById("bubbleTwo").style.top = "29%";
@@ -124,6 +134,7 @@ export class AboutComponent implements OnInit {
         document.getElementById("bubbleThree").style.background = "#1E90FF";
         document.getElementById("bubbleFour").style.background = "#E3E6F3";  
         document.getElementById("bubbleFour").style.background = "#E3E6F3";
+        document.getElementById("bubbleFour").style.background = "transparent";
         if(document.documentElement.offsetWidth <= 1280){
           document.getElementById("bubbleThree").style.top = "63%";
         }
@@ -174,7 +185,8 @@ export class AboutComponent implements OnInit {
   } 
 
   sideNavMobile(sectionName){
-    let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile']
+    // let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile','section4_mobile']
+    let listArray: string[] = ['section1_mobile','section2_mobile','section3_mobile']
     for (let entry of listArray) {
       document.getElementById(entry).classList.remove("sideNav-mobile-select");
     }
@@ -214,8 +226,8 @@ export class AboutComponent implements OnInit {
   }
   public onIntersection4({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("100","invest")
-      this.sideNavMobile("section4_mobile")
+      // this.sideNavAnimate("100","invest")
+      // this.sideNavMobile("section4_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
