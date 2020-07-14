@@ -98,9 +98,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 body-left-padding" >
+            
+            <div class="col-lg-9 body-left-padding">
                 <div class="inner-padding" #sectionOne></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection1($event)">
+                <div class="row" id="sectionDiv1"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection1($event)">
                     <div>
                         <h4>{{dynm.api_interest_header_bold}} <span>{{dynm.api_interest_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_interest_para}}</p>
@@ -240,7 +241,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionTwo></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%'  }" (inViewportAction)="onIntersection2($event)">
+                <div class="row" id="sectionDiv2" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%'  }" (inViewportAction)="onIntersection2($event)">
                     <div>
                         <h4>{{dynm.api_borrow_header_bold}} <span>{{dynm.api_borrow_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_borrow_para}}</p>
@@ -378,7 +379,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionThree></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+                <div class="row" id="sectionDiv3" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
                     <div>
                         <h4>{{dynm.api_trade_header_bold}} <span>{{dynm.api_trade_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_trade_para}}</p>
@@ -436,7 +437,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionFour></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection4($event)">
+                <div class="row" id="sectionDiv4" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%',partial: true}" (inViewportAction)="onIntersection4($event)">
                     <div>
                         <h4>{{dynm.api_crypto_header_bold}} <span>{{dynm.api_crypto_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_crypto_para}}</p>
@@ -531,7 +532,7 @@
                     </div>
                 </div> -->
                 <div class="inner-padding" #sectionSix></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection6($event)">
+                <div class="row" id="sectionDiv5"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection6($event)">
                     <div>
                         <h4>{{dynm.api_pipeline_header_bold}} <span>{{dynm.api_pipeline_header}}</span></h4>
                         <p class="api-sub-header">{{dynm.api_pipeline_para}}</p>
@@ -559,7 +560,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionSeven></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection7($event)">
+                <div class="row" id="sectionDiv6"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection7($event)">
                     <h4 class="center-align-mobile"><span>{{dynm.home_partner_header}} </span> {{dynm.home_partner_header_bold}}</h4>
 
                     <div class="row p0 m-top-4 m-top-4-2 grid-partners" style="width: 100%;">
@@ -653,7 +654,7 @@
                 </div> -->
 
                 <div class="inner-padding" #sectionNine></div>
-                <div class="row"  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection9($event)">
+                <div class="row" id="sectionDiv7" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection9($event)">
                     <h4><span>{{dynm.home_why_header}}</span> {{dynm.home_why_header_bold}}</h4>
                     <p class="api-sub-header">{{dynm.home_why_para}}</p>
 

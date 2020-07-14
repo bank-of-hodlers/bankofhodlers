@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-9" >
                 <div class="inner-padding" #sectionOne></div>
-                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+                <div class="row " id="sectionDiv1" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
                     <div class="col-lg-12 no-padding">
                         <h4 class="row"><span>{{dynm.fee_header_one}}</span>  {{dynm.fee_header_one_cont}}</h4>
 
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #sectionTwo></div>
-                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection2($event)">
+                <div class="row " id="sectionDiv2" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection2($event)">
                     <h4 class="row"><span>{{dynm.fee_header_two}}</span>  {{dynm.fee_header_two_cont}}</h4>
 
                     <div class="row scroll-row">
@@ -127,7 +127,7 @@
 
                 </div>
                 <div class="inner-padding" #sectionFour></div>
-                <div class="row " inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection4($event)">
+                <div class="row " id="sectionDiv3" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-50%' }" (inViewportAction)="onIntersection4($event)">
                     <h4 class="row"><span>{{dynm.fee_header_four}}</span>  {{dynm.fee_header_four_cont}}</h4>
 
                     <div class="mt-24 row" style="display: block;">

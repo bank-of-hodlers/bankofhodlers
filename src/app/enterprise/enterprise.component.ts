@@ -419,7 +419,7 @@ export class EnterpriseComponent implements OnInit {
     }
   }
         isSkippingSection(listArray: string[], tag: any) {
-                if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 2){
+                if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 1){
                         this.isSkip = true;
                         setTimeout(() =>{
                                 this.isSkip = false
@@ -474,76 +474,131 @@ export class EnterpriseComponent implements OnInit {
 
 public onIntersection1({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
-          this.sideNavAnimate("1","wallets");
-          this.sideNavMobile("section1_mobile")
+        //   this.sideNavAnimate("1","wallets");
+        //   this.sideNavMobile("section1_mobile")
         }
 }
 public onIntersection2({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
-                this.sideNavAnimate("2","lending");
-                this.sideNavMobile("section2_mobile")
+                // this.sideNavAnimate("2","lending");
+                // this.sideNavMobile("section2_mobile")
                 // document.getElementById("sideNavContain").style.transform = "translate(0%)";
         }
 }
 public onIntersection3({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
-                this.sideNavAnimate("3","borrow");
-                this.sideNavMobile("section3_mobile")
+                // this.sideNavAnimate("3","borrow");
+                // this.sideNavMobile("section3_mobile")
                 // document.getElementById("sideNavContain").style.transform = "translate(0%)";
         }
 }
 public onIntersection4({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
-                this.sideNavAnimate("4","inr");
-                this.sideNavMobile("section4_mobile")
+                // this.sideNavAnimate("4","inr");
+                // this.sideNavMobile("section4_mobile")
                 // document.getElementById("sideNavContain").style.transform = "translate(0%)";
         }
 }
 public onIntersection5({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
-                this.sideNavAnimate("5","credit");
-                this.sideNavMobile("section5_mobile")
+                // this.sideNavAnimate("5","credit");
+                // this.sideNavMobile("section5_mobile")
                 // document.getElementById("sideNavContain").style.transform = "translate(0%)";
         }
 }
 public onIntersection6({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
                 // console.log("onthersection6")
-                this.sideNavAnimate("6","pricing");
-                this.sideNavMobile("section6_mobile")
+                // this.sideNavAnimate("6","pricing");
+                // this.sideNavMobile("section6_mobile")
                 // document.getElementById("sideNavContain").style.transform = "translate(0%)";
         }
 }
 public onIntersection7({ target, visible }: { target: Element; visible: boolean }): void {
         if(visible && !this.isSkip){
-                this.sideNavAnimate("7","partner");
-                this.sideNavMobile("section7_mobile")
+                // this.sideNavAnimate("7","partner");
+                // this.sideNavMobile("section7_mobile")
                 // document.getElementById("sideNavContain").style.transform = "translate(0%)";
         }
 }
 public onIntersection8({ target, visible }: { target: Element; visible: boolean }): void {
-        // if(!visible){
-        //         document.getElementById("sideNavContain").style.position = "sticky";
-        //         document.getElementById("sideNavContain").style.width = "100%";
-        // }
-        // else if(visible){
-        //         document.getElementById("sideNavContain").style.position = "relative";
-        //         document.getElementById("sideNavContain").style.width = "100%";
-        // }
+        if(!visible){
+                document.getElementById("sideNavContain").style.position = "sticky";
+                document.getElementById("sideNavContain").style.width = "100%";
+        }
+        else if(visible){
+                document.getElementById("sideNavContain").style.position = "relative";
+                document.getElementById("sideNavContain").style.width = "100%";
+        }
 
 }
 
 @HostListener('window:scroll', ['$event'])
-handleKeyDown(event: Scroll) {
-  if(window.scrollY>document.getElementById("landing_section").offsetHeight+15){
-        document.getElementById("sideNavContain").style.position = "sticky";
-        document.getElementById("sideNavContain").style.width = "100%";
-  }
-  else{
-        document.getElementById("sideNavContain").style.position = "relative";
-        document.getElementById("sideNavContain").style.width = "100%";
-  }
-// console.log(window.scrollY)
-}
+
+srcollHandler(event) {
+        var section1 = document.getElementById("sectionDiv1").getBoundingClientRect().top
+        var section2 = document.getElementById("sectionDiv2").getBoundingClientRect().top
+        var section3 = document.getElementById("sectionDiv3").getBoundingClientRect().top
+        var section4 = document.getElementById("sectionDiv4").getBoundingClientRect().top
+        var section5 = document.getElementById("sectionDiv5").getBoundingClientRect().top
+        var section6 = document.getElementById("sectionDiv6").getBoundingClientRect().top
+        var section7 = document.getElementById("sectionDiv7").getBoundingClientRect().top
+        var section1bound = document.getElementById("sectionDiv1").offsetHeight + section1 -200
+        var section2bound = document.getElementById("sectionDiv2").offsetHeight + section2 -200
+        var section3bound = document.getElementById("sectionDiv3").offsetHeight + section3 -200
+        var section4bound = document.getElementById("sectionDiv4").offsetHeight + section4 -200
+        var section5bound = document.getElementById("sectionDiv5").offsetHeight + section5 -200
+        var section6bound = document.getElementById("sectionDiv6").offsetHeight + section6 -200
+        var section7bound = document.getElementById("sectionDiv7").offsetHeight + section7 -300
+    
+        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        var limit = vh * 1/2
+        // console.log(limit)
+        // console.log(section1)
+        // console.log("height : "+ (document.getElementById("sectionDiv1").offsetHeight+section1) )
+        // console.log("limit : "+ limit)
+        // console.log(section2)
+        // console.log(section3)
+        // console.log(section4)
+        // console.log(section5)
+        // console.log(section6)
+        // console.log(section7)
+        if(section1 < limit && section1bound > 0 && !this.isSkip){
+                this.sideNavAnimate("1","wallets");
+                this.sideNavMobile("section1_mobile")
+        }
+        else if(section2 < limit && section2bound > 0 && !this.isSkip){
+                this.sideNavAnimate("2","lending");
+                this.sideNavMobile("section2_mobile")
+        }
+        else if(section3 < limit && section3bound > 0 && !this.isSkip){
+                this.sideNavAnimate("3","borrow");
+                this.sideNavMobile("section3_mobile")
+        }
+        else if(section4 < limit && section4bound > 0 && !this.isSkip){
+                this.sideNavAnimate("4","inr");
+                this.sideNavMobile("section4_mobile")
+        }
+        else if(section5 < limit && section5bound > 0 && !this.isSkip){
+                this.sideNavAnimate("5","credit");
+                this.sideNavMobile("section5_mobile")
+        }
+        else if(section6 < limit && section6bound > 0 && !this.isSkip){
+                this.sideNavAnimate("6","pricing");
+                this.sideNavMobile("section6_mobile")
+        }
+        else if(section7 < limit && section7bound > 0 && !this.isSkip){
+                this.sideNavAnimate("7","partner");
+                this.sideNavMobile("section7_mobile")
+        }
+        else if(window.scrollY>document.getElementById("landing_section").offsetHeight+15){
+                document.getElementById("sideNavContain").style.position = "sticky";
+                document.getElementById("sideNavContain").style.width = "100%";
+        }
+        else{
+                document.getElementById("sideNavContain").style.position = "relative";
+                document.getElementById("sideNavContain").style.width = "100%";
+        }
+      }
 
 }

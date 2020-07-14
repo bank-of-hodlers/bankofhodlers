@@ -158,7 +158,7 @@ export class HomeText{
     api_crypto_point_one = "You can instantly trade between all of our token pairs, in an easy to use interface."
 
     api_crypto_point_two_tittle = "Swap On The Go"
-    api_crypto_point_two = "wap on our Android or iOS APP to manage your tokens on the go."
+    api_crypto_point_two = "Swap on our Android or iOS APP to manage your tokens on the go."
 
     api_crypto_point_three_tittle = "Seamless Portfolio Management"
     api_crypto_point_three = "Seamlessly allocate funds to Trade or to Earn Interest. Manage your crypto efficiently based on your management style."

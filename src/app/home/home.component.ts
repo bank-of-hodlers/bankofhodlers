@@ -103,6 +103,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.top = "98%";
                 document.getElementById("bubbleNine").style.top = "93%";
                 // document.getElementById("bubbleTen").style.background = "#E3E6F3";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "-0.5%";
+                  document.getElementById("bubbleTwo").style.top = "17.5%";
+                  document.getElementById("bubbleThree").style.top = "33%";
+                  document.getElementById("bubbleFour").style.top = "48.5%";
+                  document.getElementById("bubbleSix").style.top = "63.5%";
+                  document.getElementById("bubbleSeven").style.top = "79%";
+                  document.getElementById("bubbleNine").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "-0.5%";
+                  document.getElementById("bubbleTwo").style.top = "16.5%";
+                  document.getElementById("bubbleThree").style.top = "32%";
+                  document.getElementById("bubbleFour").style.top = "47.5%";
+                  document.getElementById("bubbleSix").style.top = "63.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0.5%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "32%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
                 break;
         case "2":
                 document.getElementById("gradDown").style.height = "15%";
@@ -149,6 +176,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 document.getElementById("bubbleNine").style.top = "93%";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "33%";
+                  document.getElementById("bubbleFour").style.top = "48.5%";
+                  document.getElementById("bubbleSix").style.top = "63.5%";
+                  document.getElementById("bubbleSeven").style.top = "79%";
+                  document.getElementById("bubbleNine").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "32%";
+                  document.getElementById("bubbleFour").style.top = "47.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "32%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
                 break;
         case "3":
                 document.getElementById("gradDown").style.height = "25%";
@@ -194,6 +248,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 document.getElementById("bubbleNine").style.top = "93%";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "48.5%";
+                  document.getElementById("bubbleSix").style.top = "63.5%";
+                  document.getElementById("bubbleSeven").style.top = "79%";
+                  document.getElementById("bubbleNine").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "30%";
+                  document.getElementById("bubbleFour").style.top = "47.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "30%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
                 break;
         case "4":
                 document.getElementById("gradDown").style.height = "39%";
@@ -239,6 +320,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 document.getElementById("bubbleNine").style.top = "93%";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "63.5%";
+                  document.getElementById("bubbleSeven").style.top = "79%";
+                  document.getElementById("bubbleNine").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "46%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "30%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
                 break;
         case "5":
                 document.getElementById("gradDown").style.height = "51%";
@@ -323,6 +431,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 document.getElementById("bubbleNine").style.top = "93%";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "61.5%";
+                  document.getElementById("bubbleSeven").style.top = "79%";
+                  document.getElementById("bubbleNine").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "60.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "30%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "60.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
                 break;
         case "7":
                 document.getElementById("gradDown").style.height = "75%";
@@ -368,6 +503,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.background = "#E3E6F3";
                 document.getElementById("bubbleNine").style.top = "98%";
                 document.getElementById("bubbleNine").style.top = "93%";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "61.5%";
+                  document.getElementById("bubbleSeven").style.top = "78%";
+                  document.getElementById("bubbleNine").style.top = "95%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "61.5%";
+                  document.getElementById("bubbleSeven").style.top = "77%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "30%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "60.5%";
+                  document.getElementById("bubbleSeven").style.top = "76%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
                 break;
         case "8":
                 document.getElementById("gradDown").style.height = "86%";
@@ -449,6 +611,33 @@ export class HomeComponent implements OnInit {
                 document.getElementById("bubbleNine").style.background = "#1E90FF";
                 document.getElementById("bubbleNine").style.top = "97%";
                 document.getElementById("bubbleNine").style.top = "92%";
+                if(document.documentElement.offsetWidth <= 1366 && document.documentElement.offsetWidth > 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "15.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "46.5%";
+                  document.getElementById("bubbleSix").style.top = "62.5%";
+                  document.getElementById("bubbleSeven").style.top = "77%";
+                  document.getElementById("bubbleNine").style.top = "93%";
+                }
+                else if(document.documentElement.offsetWidth <= 1280){
+                  document.getElementById("bubbleOne").style.top = "0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "31%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "61.5%";
+                  document.getElementById("bubbleSeven").style.top = "77%";
+                  document.getElementById("bubbleNine").style.top = "94%";
+                }
+                else{
+                  document.getElementById("bubbleOne").style.top = "-0%";
+                  document.getElementById("bubbleTwo").style.top = "14.5%";
+                  document.getElementById("bubbleThree").style.top = "30%";
+                  document.getElementById("bubbleFour").style.top = "45.5%";
+                  document.getElementById("bubbleSix").style.top = "60.5%";
+                  document.getElementById("bubbleSeven").style.top = "76%";
+                  document.getElementById("bubbleNine").style.top = "92%";
+                }
                 break;
       default:
                 break;
@@ -456,7 +645,7 @@ export class HomeComponent implements OnInit {
   }
 
   isSkippingSection(listArray: string[], tag: any) {
-    if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 2){
+    if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 1){
       this.isSkip = true;
       setTimeout(() =>{
         this.isSkip = false
@@ -499,43 +688,81 @@ export class HomeComponent implements OnInit {
   hubspotInit(){
     document.getElementById("/telegram").click();
   }
-  // @HostListener('window:scroll', ['$event']) 
-  // doSomething(event) {
-  //   var scrollPos :any = window.pageYOffset;
-  //   // console.log(scrollPos)
-  //   if(scrollPos >= 560 && scrollPos < 6530){
-  //       document.getElementById("sideNavContain").style.transform = "translate(4%)";
-  //   }
-  //   else{
-  //       document.getElementById("sideNavContain").style.transform = "translate(-110%)";
-  //   }
-  // }
+  @HostListener('window:scroll', ['$event']) 
+  srcollHandler(event) {
+    var section1 = document.getElementById("sectionDiv1").getBoundingClientRect().top
+    var section2 = document.getElementById("sectionDiv2").getBoundingClientRect().top
+    var section3 = document.getElementById("sectionDiv3").getBoundingClientRect().top
+    var section4 = document.getElementById("sectionDiv4").getBoundingClientRect().top
+    var section5 = document.getElementById("sectionDiv5").getBoundingClientRect().top
+    var section6 = document.getElementById("sectionDiv6").getBoundingClientRect().top
+    var section7 = document.getElementById("sectionDiv7").getBoundingClientRect().top
+
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    var limit = vh * 1/2
+    // console.log(limit)
+    // console.log(section1)
+    // console.log(section2)
+    // console.log(section3)
+    // console.log(section4)
+    // console.log(section5)
+    // console.log(section6)
+    // console.log(section7)
+    if(section1 < limit && section1 > 0 && !this.isSkip){
+      this.sideNavAnimate("1","sectionOne_2");
+      this.sideNavMobile("section1_mobile")
+    }
+    else if(section2 < limit && section2 > 0 && !this.isSkip){
+      this.sideNavAnimate("2","sectionTwo");
+      this.sideNavMobile("section2_mobile")
+    }
+    else if(section3 < limit && section3 > 0 && !this.isSkip){
+      this.sideNavAnimate("3","sectionThree");
+      this.sideNavMobile("section3_mobile")
+    }
+    else if(section4 < limit && section4 > 0 && !this.isSkip){
+      this.sideNavAnimate("4","sectionFour");
+      this.sideNavMobile("section4_mobile")
+    }
+    else if(section5 < limit && section5 > 0 && !this.isSkip){
+      this.sideNavAnimate("6","sectionSix");
+      this.sideNavMobile("section6_mobile")
+    }
+    else if(section6 < limit && section6 > 0 && !this.isSkip){
+      this.sideNavAnimate("7","sectionSeven");
+      this.sideNavMobile("section7_mobile")
+    }
+    else if(section7 < limit && section7 > 0 && !this.isSkip){
+      this.sideNavAnimate("9","sectionNine");
+      this.sideNavMobile("section9_mobile")
+    }
+  }
 
   public onIntersection1({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("1","sectionOne_2");
-      this.sideNavMobile("section1_mobile")
+      // this.sideNavAnimate("1","sectionOne_2");
+      // this.sideNavMobile("section1_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
   public onIntersection2({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("2","sectionTwo");
-      this.sideNavMobile("section2_mobile")
+      // this.sideNavAnimate("2","sectionTwo");
+      // this.sideNavMobile("section2_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
   public onIntersection3({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("3","sectionThree");
-      this.sideNavMobile("section3_mobile")
+      // this.sideNavAnimate("3","sectionThree");
+      // this.sideNavMobile("section3_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
   public onIntersection4({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("4","sectionFour");
-      this.sideNavMobile("section4_mobile")
+      // this.sideNavAnimate("4","sectionFour");
+      // this.sideNavMobile("section4_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
@@ -548,15 +775,15 @@ export class HomeComponent implements OnInit {
   // }
   public onIntersection6({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("6","sectionSix");
-      this.sideNavMobile("section6_mobile")
+      // this.sideNavAnimate("6","sectionSix");
+      // this.sideNavMobile("section6_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
   public onIntersection7({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("7","sectionSeven");
-      this.sideNavMobile("section7_mobile")
+      // this.sideNavAnimate("7","sectionSeven");
+      // this.sideNavMobile("section7_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }
@@ -569,8 +796,8 @@ export class HomeComponent implements OnInit {
   // }
   public onIntersection9({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("9","sectionNine");
-      this.sideNavMobile("section9_mobile")
+      // this.sideNavAnimate("9","sectionNine");
+      // this.sideNavMobile("section9_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(4%)";
     }
   }

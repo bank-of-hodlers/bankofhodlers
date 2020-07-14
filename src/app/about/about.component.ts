@@ -23,6 +23,8 @@ export class AboutComponent implements OnInit {
     this.statusCheck.onRefreashUrlChecker();
     this.titleService.setTitle('About Us - Bank of Hodlers');
     document.getElementById("bubbleOneRing").style.border = "1px solid #1E90FF";
+    this.sideNavAnimate("0","story")
+    this.sideNavMobile("section1_mobile")
   }
 
   sideNavAnimate(percen, tag){
@@ -173,7 +175,7 @@ export class AboutComponent implements OnInit {
   }
 
   isSkippingSection(listArray: string[], tag: any) {
-    if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 2){
+    if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 1){
       this.isSkip = true;
       setTimeout(() =>{
         this.isSkip = false
@@ -205,22 +207,22 @@ export class AboutComponent implements OnInit {
 
   public onIntersection1({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("0","story")
-      this.sideNavMobile("section1_mobile")
+      // this.sideNavAnimate("0","story")
+      // this.sideNavMobile("section1_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection2({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("34","exe")
-      this.sideNavMobile("section2_mobile")
+      // this.sideNavAnimate("34","exe")
+      // this.sideNavMobile("section2_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection3({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("68","team")
-      this.sideNavMobile("section3_mobile")
+      // this.sideNavAnimate("68","team")
+      // this.sideNavMobile("section3_mobile")
       // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
@@ -241,5 +243,40 @@ export class AboutComponent implements OnInit {
   //       document.getElementById("sideNavContain").style.width = "100%";
   //     }
   // }
+
+  @HostListener('window:scroll', ['$event']) 
+  srcollHandler(event) {
+    var section1 = document.getElementById("sectionDiv1").getBoundingClientRect().top
+    var section2 = document.getElementById("sectionDiv2").getBoundingClientRect().top
+    var section3 = document.getElementById("sectionDiv3").getBoundingClientRect().top
+    var section1bound = document.getElementById("sectionDiv1").offsetHeight + section1 -200
+    var section2bound = document.getElementById("sectionDiv2").offsetHeight + section2 -200
+    var section3bound = document.getElementById("sectionDiv3").offsetHeight + section3 -200
+
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    var limit = vh * 1/2
+    // console.log(limit)
+    // console.log(section1)
+    // console.log("height : "+ (document.getElementById("sectionDiv1").offsetHeight+section1) )
+    // console.log("limit : "+ limit)
+    // console.log(section2)
+    // console.log(section3)
+    // console.log(section4)
+    // console.log(section5)
+    // console.log(section6)
+    // console.log(section7)
+    if(section1 < limit && section1bound > 0 && !this.isSkip){
+      this.sideNavAnimate("0","story")
+      this.sideNavMobile("section1_mobile")
+    }
+    else if(section2 < limit && section2bound > 0 && !this.isSkip){
+      this.sideNavAnimate("34","exe")
+      this.sideNavMobile("section2_mobile")
+    }
+    else if(section3 < limit && section3bound > 0 && !this.isSkip){
+      this.sideNavAnimate("68","team")
+      this.sideNavMobile("section3_mobile")
+    }
+  }
 
 }

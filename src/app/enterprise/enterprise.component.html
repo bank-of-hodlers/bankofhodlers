@@ -70,7 +70,7 @@
             </div>
             <div class="col-lg-9 body-left-padding" >
                 <div class="inner-padding" #wallet></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+                <div class="row" id="sectionDiv1" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
                     <div>
                         <h4>{{apiText.api_wallets_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_wallets_sub_header}}</p>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #lendings></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
+                <div class="row" id="sectionDiv2" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
                     <div>
                         <h4>{{apiText.api_lending_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_lending_sub_header}}</p>
@@ -275,7 +275,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #borrow></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+                <div class="row" id="sectionDiv3" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
                     <div>
                         <h4>{{apiText.api_borrow_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_borrow_sub_header}}</p>
@@ -411,7 +411,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #inr></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection4($event)">
+                <div class="row" id="sectionDiv4" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection4($event)">
                     <div>
                         <h4>{{apiText.api_inr_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_inr_sub_header}}</p>
@@ -481,7 +481,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #credit></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection5($event)">
+                <div class="row" id="sectionDiv5" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection5($event)">
                     <div>
                         <h4>{{apiText.api_credit_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_credit_sub_header}}</p>
@@ -531,7 +531,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #pricing></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection6($event)">
+                <div class="row" id="sectionDiv6" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-10%' }" (inViewportAction)="onIntersection6($event)">
                     <div>
                         <h4>{{apiText.api_pricing_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_pricing_sub_header}}</p>
@@ -600,7 +600,7 @@
                     </div>
                 </div>
                 <div class="inner-padding" #partner></div>
-                <div class="row" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection7($event)">
+                <div class="row" id="sectionDiv7" inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-40%' }" (inViewportAction)="onIntersection7($event)">
                     <div style="width: 100%;">
                         <h4>{{apiText.api_partner_header}}</h4>
                         <p class="api-sub-header">{{apiText.api_partner_sub_header}}</p>

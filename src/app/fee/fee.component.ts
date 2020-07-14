@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { FeeText } from '../fees';
 import { Title }     from '@angular/platform-browser';
 import { StatuscheckerService } from '../statuschecker.service';
@@ -366,16 +366,16 @@ export class FeeComponent implements OnInit {
 
   public onIntersection1({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("1","sectionOne");
-      this.sideNavMobile('section1_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("1","sectionOne");
+      // this.sideNavMobile('section1_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection2({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("2","sectionTwo");
-      this.sideNavMobile('section2_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("2","sectionTwo");
+      // this.sideNavMobile('section2_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection3({ target, visible }: { target: Element; visible: boolean }): void {
@@ -387,10 +387,49 @@ export class FeeComponent implements OnInit {
   }
   public onIntersection4({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
+      // this.sideNavAnimate("4","sectionFour");
+      // this.sideNavMobile('section4_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  srcollHandler(event) {
+    var section1 = document.getElementById("sectionDiv1").getBoundingClientRect().top
+    var section2 = document.getElementById("sectionDiv2").getBoundingClientRect().top
+    var section3 = document.getElementById("sectionDiv3").getBoundingClientRect().top
+
+    var section1bound = document.getElementById("sectionDiv1").offsetHeight + section1 -200
+    var section2bound = document.getElementById("sectionDiv2").offsetHeight + section2 -200
+    var section3bound = document.getElementById("sectionDiv3").offsetHeight + section3 -200
+
+
+
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    var limit = vh * 1/2
+    // console.log(limit)
+    // console.log(section1)
+    // console.log("height : "+ (document.getElementById("sectionDiv1").offsetHeight+section1) )
+    // console.log("limit : "+ limit)
+    // console.log(section2)
+    // console.log(section3)
+    // console.log(section4)
+    // console.log(section5)
+    // console.log(section6)
+    // console.log(section7)
+    if(section1 < limit && section1bound > 0 && !this.isSkip){
+      this.sideNavAnimate("1","sectionOne");
+      this.sideNavMobile('section1_mobile');
+    }
+    else if(section2 < limit && section2bound > 0 && !this.isSkip){
+      this.sideNavAnimate("2","sectionTwo");
+      this.sideNavMobile('section2_mobile');
+    }
+    else if(section3 < limit && section3bound > 0 && !this.isSkip){
       this.sideNavAnimate("4","sectionFour");
       this.sideNavMobile('section4_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
+
   }
 
 }

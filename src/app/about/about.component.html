@@ -35,7 +35,7 @@
         <div class="col-lg-10 body-left-padding">
             
             <div #story></div>
-            <section inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
+            <section inViewport id="sectionDiv1" [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection1($event)">
                     <div class="container story-origin">
                         <div class="row margin-top-about">
                             <div class="col-lg-5 left-align no-display">
@@ -132,7 +132,7 @@
                                     <!-- <iframe 
                                     src="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                                     </iframe>  -->
-                                    <iframe class="origin-video" src="https://www.youtube.com/embed/Cu61qgp6XoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe class="origin-video" src="https://www.youtube.com/embed/R5lZPWNFizQ?wmode=opaque&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <!-- <iframe class="origin-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                 </div>
                             </div>
@@ -258,11 +258,8 @@
                     </div>
             </section>
 
-
-
-            
             <div class="inner-padding" #exe></div>
-            <section  inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
+            <section  inViewport id="sectionDiv2" [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection2($event)">
                 <div class="container story-origin">
                     <div class="row origin-header-two">
                         <h4 class="origin-header" [innerHTML]="dynm.exe_header"></h4>
@@ -390,7 +387,7 @@
             </section>
             
             <div class="inner-padding" #team></div>
-            <section inViewport [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
+            <section inViewport id="sectionDiv3" [inViewportOptions]="{ threshold: [0],rootMargin: '-20%' }" (inViewportAction)="onIntersection3($event)">
                 <div class="container story-origin">
                     <div class="row">
                         <h4>{{dynm.team_header}}</h4>

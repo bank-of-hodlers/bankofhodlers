@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 import { FaqsText } from '../faqstext';
 import { ActivatedRoute } from '@angular/router';
@@ -134,10 +134,13 @@ export class FaqsComponent implements OnInit {
                 document.getElementById("bubbleFour").style.background = "#E3E6F3";
                 document.getElementById("bubbleFive").style.top = "97%";
                 document.getElementById("bubbleFive").style.background = "#E3E6F3";
-                if(document.documentElement.offsetWidth <= 1440){
+                if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1366){
                   document.getElementById("bubbleTwo").style.top = "24%";
                   document.getElementById("bubbleFour").style.top = "76%";
                   document.getElementById("bubbleThree").style.top = "54%";
+                }
+                else if(document.documentElement.offsetWidth <= 1366){
+                  document.getElementById("bubbleThree").style.top = "50%";
                 }
                 else{
                   document.getElementById("bubbleTwo").style.top = "26%";
@@ -167,10 +170,13 @@ export class FaqsComponent implements OnInit {
                 // document.getElementById("bubbleFive").style.top = "107px";
                 document.getElementById("bubbleFive").style.top = "97%";
                 document.getElementById("bubbleFive").style.background = "#C5D9F5";
-                if(document.documentElement.offsetWidth <= 1440){
+                if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1366){
                   document.getElementById("bubbleTwo").style.top = "23%";
                   document.getElementById("bubbleFour").style.top = "77%";
                   document.getElementById("bubbleThree").style.top = "54%";
+                }
+                else if(document.documentElement.offsetWidth <= 1366){
+                  document.getElementById("bubbleThree").style.top = "50%";
                 }
                 else{
                   document.getElementById("bubbleTwo").style.top = "24%";
@@ -199,10 +205,13 @@ export class FaqsComponent implements OnInit {
                 // document.getElementById("bubbleFive").style.top = "107px";
                 document.getElementById("bubbleFive").style.top = "97%";
                 document.getElementById("bubbleFive").style.background = "#E3E6F3";
-                if(document.documentElement.offsetWidth <= 1440){
+                if(document.documentElement.offsetWidth <= 1440 && document.documentElement.offsetWidth > 1366){
                   document.getElementById("bubbleFour").style.top = "78%";
                   document.getElementById("bubbleTwo").style.top = "23%";
                   document.getElementById("bubbleThree").style.top = "52%";
+                }
+                else if(document.documentElement.offsetWidth <= 1366){
+                  document.getElementById("bubbleThree").style.top = "48%";
                 }
                 else{
                   document.getElementById("bubbleFour").style.top = "74%";
@@ -232,6 +241,10 @@ export class FaqsComponent implements OnInit {
                 document.getElementById("bubbleFive").style.background = "#E3E6F3";
                 if(document.documentElement.offsetWidth <= 1440){
                   document.getElementById("bubbleFour").style.top = "74%";
+                  document.getElementById("bubbleThree").style.top = "47%";
+                }
+                else if(document.documentElement.offsetWidth <= 1366){
+                  document.getElementById("bubbleThree").style.top = "50%";
                 }
                 else{
                   document.getElementById("bubbleFour").style.top = "71%";
@@ -278,11 +291,11 @@ export class FaqsComponent implements OnInit {
 
   // To check if users has selected a distant section to skip side nav animation
   isSkippingSection(listArray: string[], tag: any) {
-    if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 2){
+    if(Math.abs(listArray.indexOf(tag) - listArray.indexOf(this.previousSection)) >= 1){
       this.isSkip = true;
       setTimeout(() =>{
         this.isSkip = false
-      },2000)
+      },1000)
     }
     else{
       this.isSkip = false
@@ -574,38 +587,89 @@ export class FaqsComponent implements OnInit {
   // Code to trigger side nav animations when the associated section scrolls to viewport 
   public onIntersection1({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("1","sectionOne");
-      this.sideNavMobile('section1_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("1","sectionOne");
+      // this.sideNavMobile('section1_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection2({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("2","sectionTwo");
-      this.sideNavMobile('section2_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("2","sectionTwo");
+      // this.sideNavMobile('section2_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection3({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("3","sectionThree");
-      this.sideNavMobile('section3_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("3","sectionThree");
+      // this.sideNavMobile('section3_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection4({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
-      this.sideNavAnimate("4","sectionFour");
-      this.sideNavMobile('section4_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
+      // this.sideNavAnimate("4","sectionFour");
+      // this.sideNavMobile('section4_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
   }
   public onIntersection5({ target, visible }: { target: Element; visible: boolean }): void {
     if(visible && !this.isSkip){
+      // this.sideNavAnimate("5","sectionFive");
+      // this.sideNavMobile('section5_mobile');
+      // document.getElementById("sideNavContain").style.transform = "translate(0%)";
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  srcollHandler(event) {
+    var section1 = document.getElementById("sectionDiv1").getBoundingClientRect().top
+    var section2 = document.getElementById("sectionDiv2").getBoundingClientRect().top
+    var section3 = document.getElementById("sectionDiv3").getBoundingClientRect().top
+    var section4 = document.getElementById("sectionDiv4").getBoundingClientRect().top
+    var section5 = document.getElementById("sectionDiv5").getBoundingClientRect().top
+
+    var section1bound = document.getElementById("sectionDiv1").offsetHeight + section1 -200
+    var section2bound = document.getElementById("sectionDiv2").offsetHeight + section2 -200
+    var section3bound = document.getElementById("sectionDiv3").offsetHeight + section3 -200
+    var section4bound = document.getElementById("sectionDiv4").offsetHeight + section4 -200
+    var section5bound = document.getElementById("sectionDiv5").offsetHeight + section5 -300
+
+
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    var limit = vh * 1/2
+    // console.log(limit)
+    // console.log(section1)
+    // console.log("height : "+ (document.getElementById("sectionDiv1").offsetHeight+section1) )
+    // console.log("limit : "+ limit)
+    // console.log(section2)
+    // console.log(section3)
+    // console.log(section4)
+    // console.log(section5)
+    // console.log(section6)
+    // console.log(section7)
+    if(section1 < limit && section1bound > 0 && !this.isSkip){
+      this.sideNavAnimate("1","sectionOne");
+      this.sideNavMobile('section1_mobile');
+    }
+    else if(section2 < limit && section2bound > 0 && !this.isSkip){
+      this.sideNavAnimate("2","sectionTwo");
+      this.sideNavMobile('section2_mobile');
+    }
+    else if(section3 < limit && section3bound > 0 && !this.isSkip){
+      this.sideNavAnimate("3","sectionThree");
+      this.sideNavMobile('section3_mobile');
+    }
+    else if(section4 < limit && section4bound > 0 && !this.isSkip){
+      this.sideNavAnimate("4","sectionFour");
+      this.sideNavMobile('section4_mobile');
+    }
+    else if(section5 < limit && section5bound > 0 && !this.isSkip){
       this.sideNavAnimate("5","sectionFive");
       this.sideNavMobile('section5_mobile');
-      document.getElementById("sideNavContain").style.transform = "translate(0%)";
     }
+
+
   }
 
 }
